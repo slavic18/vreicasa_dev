@@ -1,179 +1,192 @@
 /* Fonts */
+@media only screen and (max-width: 1200px) {
+  /* line 5, ../../scss/_media.scss */
+  .service-img img {
+    width: 100%;
+    height: 414px !important;
+  }
+}
 /* Medium Devices, Desktops */
 /* Small Devices, Tablets */
 @media only screen and (max-width: 991px) {
-  /* line 13, ../../scss/_media.scss */
+  /* line 19, ../../scss/_media.scss */
   .contact-row .contact-description, .contact-row .contact-phone, .contact-row .tr {
     text-align: center;
   }
-  /* line 16, ../../scss/_media.scss */
+  /* line 22, ../../scss/_media.scss */
   .contact-row .add-favorit-wrapper {
     border: none;
   }
 
-  /* line 20, ../../scss/_media.scss */
+  /* line 26, ../../scss/_media.scss */
   .contact-description .command {
     margin-top: 50px;
   }
-  /* line 22, ../../scss/_media.scss */
+  /* line 28, ../../scss/_media.scss */
   .contact-description .command .person {
     margin-top: 30px;
   }
-  /* line 24, ../../scss/_media.scss */
+  /* line 30, ../../scss/_media.scss */
   .contact-description .command .person .contact-about {
     text-align: center !important;
   }
 
-  /* line 29, ../../scss/_media.scss */
+  /* line 35, ../../scss/_media.scss */
   .contact-info .contact-details {
     max-width: 300px;
     margin: 0 auto;
   }
-  /* line 32, ../../scss/_media.scss */
+  /* line 38, ../../scss/_media.scss */
   .contact-info .contact-details:first-child {
     margin-top: 40px !important;
   }
-  /* line 35, ../../scss/_media.scss */
+  /* line 41, ../../scss/_media.scss */
   .contact-info .contact-details:last-child {
     margin-bottom: 0;
   }
 
-  /* line 39, ../../scss/_media.scss */
+  /* line 45, ../../scss/_media.scss */
   .footer .footer-logo {
     display: none;
   }
 
-  /* line 42, ../../scss/_media.scss */
+  /* line 48, ../../scss/_media.scss */
   .contact-about {
     text-align: center !important;
   }
 }
 @media only screen and (max-width: 991px) {
-  /* line 49, ../../scss/_media.scss */
+  /* line 55, ../../scss/_media.scss */
   .home-page .main-headline {
     padding-top: 100px;
   }
 
-  /* line 52, ../../scss/_media.scss */
+  /* line 58, ../../scss/_media.scss */
   .mob-hide {
     display: none;
   }
 
-  /* line 55, ../../scss/_media.scss */
+  /* line 61, ../../scss/_media.scss */
   .main-header .mob-menu-icon {
     display: block;
   }
 
-  /* line 59, ../../scss/_media.scss */
+  /* line 65, ../../scss/_media.scss */
   .footer-info:nth-child(2n+2) {
     clear: both;
   }
 
-  /* line 63, ../../scss/_media.scss */
+  /* line 69, ../../scss/_media.scss */
   body .footer .footer-bottom p {
     padding: 0 20px;
     line-height: 20px;
   }
 
-  /* line 70, ../../scss/_media.scss */
+  /* line 76, ../../scss/_media.scss */
   .home-page .main-filter .filters-container .filter-list {
     background: transparent;
   }
-  /* line 72, ../../scss/_media.scss */
+  /* line 78, ../../scss/_media.scss */
   .home-page .main-filter .filters-container .filter-list li.sub-menu-mobile {
     display: none;
   }
 
-  /* line 80, ../../scss/_media.scss */
+  /* line 86, ../../scss/_media.scss */
   .sub-menu-full-width {
     width: 100%;
     max-width: 100% !important;
     margin-bottom: 15px;
   }
 
-  /* line 85, ../../scss/_media.scss */
+  /* line 91, ../../scss/_media.scss */
   .chosen-container-single .chosen-single {
     border-radius: 0;
     height: 38px;
     padding: 7px 0 0 8px;
   }
 
-  /* line 90, ../../scss/_media.scss */
+  /* line 96, ../../scss/_media.scss */
   .main-filter .chosen-container-single .chosen-single div b:before {
     top: 7px !important;
   }
 
-  /* line 93, ../../scss/_media.scss */
+  /* line 99, ../../scss/_media.scss */
   .sub-menu-bg {
     background: #fff;
     width: 60%;
     float: right;
   }
 
-  /* line 98, ../../scss/_media.scss */
+  /* line 104, ../../scss/_media.scss */
   .button-desctop {
     display: none !important;
   }
 
-  /* line 103, ../../scss/_media.scss */
+  /* line 109, ../../scss/_media.scss */
   .main-container .main-filter .filter-search {
     width: 100%;
   }
-  /* line 108, ../../scss/_media.scss */
+  /* line 114, ../../scss/_media.scss */
   .main-container .main-filter .filters-container .filter-list li.with-sub-menu > span:after {
     position: absolute;
     top: 12px;
     right: 10px;
   }
-  /* line 113, ../../scss/_media.scss */
+  /* line 119, ../../scss/_media.scss */
   .main-container .main-filter .filters-container .filter-list li {
     max-width: 100%;
   }
-  /* line 118, ../../scss/_media.scss */
+  /* line 124, ../../scss/_media.scss */
   .main-container .main-filter .filters-container .filter-list-wrapper {
     display: block;
     margin-top: 75px;
   }
-  /* line 124, ../../scss/_media.scss */
+  /* line 130, ../../scss/_media.scss */
   .main-container .main-filter .button-mobile {
     display: block !important;
   }
-  /* line 128, ../../scss/_media.scss */
+  /* line 134, ../../scss/_media.scss */
   .main-container .sub-menu-desctop {
     display: none !important;
   }
-  /* line 131, ../../scss/_media.scss */
+  /* line 137, ../../scss/_media.scss */
   .main-container .sub-menu-mobile-show {
     width: 38%;
   }
 
-  /* line 135, ../../scss/_media.scss */
+  /* line 141, ../../scss/_media.scss */
   .pagination-container, .sort-list {
     text-align: center !important;
   }
 }
 @media only screen and (max-width: 768px) {
-  /* line 141, ../../scss/_media.scss */
+  /* line 147, ../../scss/_media.scss */
   .card-service-wrapper {
     width: 80%;
     margin: 0 auto;
   }
 
-  /* line 145, ../../scss/_media.scss */
+  /* line 151, ../../scss/_media.scss */
   .service-block-title hr {
     padding-bottom: 60px;
     margin-bottom: 0px !important;
   }
+
+  /* line 155, ../../scss/_media.scss */
+  .service-img img {
+    width: 100%;
+    height: auto !important;
+  }
 }
 @media only screen and (max-width: 480px) {
-  /* line 152, ../../scss/_media.scss */
+  /* line 162, ../../scss/_media.scss */
   .contact .main-form-wrapper .go-right .btn-default {
     padding: 6px 25px;
   }
 }
 /* Custom, iPhone Retina */
 @media only screen and (max-width: 320px) {
-  /* line 160, ../../scss/_media.scss */
+  /* line 170, ../../scss/_media.scss */
   .header-top .partners-description {
     font-size: 13px;
   }
@@ -2926,5 +2939,5 @@ ul {
 /* line 744, ../../scss/app.scss */
 .service-img img {
   width: 100%;
-  height: auto;
+  height: 387px;
 }
