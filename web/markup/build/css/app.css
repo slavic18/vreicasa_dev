@@ -158,16 +158,22 @@
     width: 80%;
     margin: 0 auto;
   }
+
+  /* line 145, ../../scss/_media.scss */
+  .service-block-title hr {
+    padding-bottom: 60px;
+    margin-bottom: 0px !important;
+  }
 }
 @media only screen and (max-width: 480px) {
-  /* line 149, ../../scss/_media.scss */
+  /* line 152, ../../scss/_media.scss */
   .contact .main-form-wrapper .go-right .btn-default {
     padding: 6px 25px;
   }
 }
 /* Custom, iPhone Retina */
 @media only screen and (max-width: 320px) {
-  /* line 157, ../../scss/_media.scss */
+  /* line 160, ../../scss/_media.scss */
   .header-top .partners-description {
     font-size: 13px;
   }
