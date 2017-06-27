@@ -1,0 +1,130 @@
+!!! 5
+<!--[if IE 7]>    <html class="no-js ie7 oldie"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie"> <![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js"><!--<![endif]-->
+  %head
+    @@include('./_head.html', {
+      "title": "Vrei casa"
+    })
+  %body
+    .service-page
+      @@include('./_header.html')
+
+
+        %section.service
+          %h3.section-title.orange SERVICIILE NOASTRE
+          .container-fluid
+            .row
+              .col-sm-12.bg-gray
+                .service-block-title
+                  %p
+                    Beneficiază de experiența noastră în materie de arhitecutra, designde interior, cadastru etc evsdsdfgșdfaghfdgfdgeg er Beneficiază de experiența noastră în materie de arhitecutra, designde interior
+                  %hr
+          .container-fluid.service-post
+            .row.border-gray
+              .col-sm-6
+                .service-item
+                  .icon-container
+                    %img(src="images/service-architecture.png" )
+                  %h4 ARHITECTURĂ
+                  %hr
+                  .gray-letter
+                    %p
+                      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                      nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum d
+                      cepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                      t laborum."
+              .col-sm-6
+                .service-img
+                  %img.img-responsive(src="images/poza-arhitectura.jpg" )
+            .row.border-gray
+              .col-sm-6
+                .service-img
+                  %img.img-responsive(src="images/Bed-01.jpg" )
+              .col-sm-6.block-gray
+                .service-item.bg-gray
+                  .icon-container
+                    %img(src="images/service-design.png" )
+                  %h4 DESIGN DE INTERIOR
+                  %hr
+                  .gray-letter
+                    %p
+                      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                      nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum d
+                      cepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                      t laborum."
+            .row.border-gray
+              .col-sm-6
+                .service-item
+                  .icon-container
+                    %img(src="images/service-cadastre.png" )
+                  %h4 CADASTRU
+                  %hr
+                  .gray-letter
+                    %p
+                      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                      nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum d
+                      cepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                      t laborum."
+              .col-sm-6
+                .service-img
+                  %img.img-responsive(src="images/Cadastru.jpg" )
+          .contact-description
+            .container
+              .row
+                .col-md-5
+                  .main-form-wrapper
+                    %h3 Salut!
+                    %p Cu ce te putem ajuta?
+                    %form.main-form.go-right
+                      .form-group
+                        %input#name.form-control(name="name" required="" type="text" placeholder="Nume" )
+                        %label.form-label(name="name") Nume
+                      .form-group
+                        %input#email.form-control(name="email" required="" type="email" placeholder="E-mail" )
+                        %label.form-label(for="email") E-mail
+                      .form-group
+                        %input#phone.form-control(name="phone" required="" type="phone" placeholder="Număr telefon" )
+                        %label.form-label(for="phone") Telefon
+
+                      .form-group
+                        %textarea#message.form-control(name="phone" required="" rows="3" placeholder="As dori mai multe detalii referitoare la.." )
+                        %label.form-label(for="message") Mesaj
+                      .form-group.text-center
+                        %label.uploadbutton
+                          .button Atașează fișier
+                          %input.input-hide(type="file")
+                      .form-group
+                        .input-group
+                          %input.form-control.search-input(type="text")
+                          %span.input-group-btn
+                            %button.btn.btn-default(type="button") Caută
+                      .form-group.text-center
+                        %button.send-button Trimite
+
+                .col-md-4.col-md-offset-2
+                  .contact-info
+                    .contact-details
+                      .phone
+                        %h5 Telefon
+                        %p 0754 843 242
+                    .contact-details
+                      .mail
+                        %h5 Mail
+                        %p Vreicasa@gmail.com
+                    .contact-details
+                      .skype
+                        %h5 Skype
+                        %p Vreicasa
+                    .contact-details
+                      .facebook
+                        %h5 Facebook
+                        %p Vreicasa
+
+
+
+
+
+
+
+        @@include('./_footer.html')
