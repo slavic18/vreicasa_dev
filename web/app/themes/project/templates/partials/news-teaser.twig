@@ -1,0 +1,19 @@
+<div class="news-item">
+    {% if post.thumbnail is not empty %}
+        <div class="news-thumbnail">
+            <img src="{{ post.thumbnail|resize(210, 210) }}"/>
+        </div>
+    {% endif %}
+    <div class="news-content">
+        <a class="title" href="{{ post.link }}">
+            {{ post.title }}
+        </a>
+
+        <div class="news-description">
+            {{ post.get_preview(40, true, false) }}
+        </div>
+        <a class="read-more" href="{{ post.link }}">
+            {{ __('Citeşte articolul', 'project') }}
+        </a>
+    </div>
+</div>

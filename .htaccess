@@ -1,0 +1,58 @@
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteRule ^android-chrome-144x144\.png /app/uploads/fbrfg/android-chrome-144x144.png [QSA,L]
+RewriteRule ^android-chrome-192x192\.png /app/uploads/fbrfg/android-chrome-192x192.png [QSA,L]
+RewriteRule ^android-chrome-36x36\.png /app/uploads/fbrfg/android-chrome-36x36.png [QSA,L]
+RewriteRule ^android-chrome-48x48\.png /app/uploads/fbrfg/android-chrome-48x48.png [QSA,L]
+RewriteRule ^android-chrome-72x72\.png /app/uploads/fbrfg/android-chrome-72x72.png [QSA,L]
+RewriteRule ^android-chrome-96x96\.png /app/uploads/fbrfg/android-chrome-96x96.png [QSA,L]
+RewriteRule ^apple-touch-icon-114x114\.png /app/uploads/fbrfg/apple-touch-icon-114x114.png [QSA,L]
+RewriteRule ^apple-touch-icon-120x120\.png /app/uploads/fbrfg/apple-touch-icon-120x120.png [QSA,L]
+RewriteRule ^apple-touch-icon-144x144\.png /app/uploads/fbrfg/apple-touch-icon-144x144.png [QSA,L]
+RewriteRule ^apple-touch-icon-152x152\.png /app/uploads/fbrfg/apple-touch-icon-152x152.png [QSA,L]
+RewriteRule ^apple-touch-icon-180x180\.png /app/uploads/fbrfg/apple-touch-icon-180x180.png [QSA,L]
+RewriteRule ^apple-touch-icon-57x57\.png /app/uploads/fbrfg/apple-touch-icon-57x57.png [QSA,L]
+RewriteRule ^apple-touch-icon-60x60\.png /app/uploads/fbrfg/apple-touch-icon-60x60.png [QSA,L]
+RewriteRule ^apple-touch-icon-72x72\.png /app/uploads/fbrfg/apple-touch-icon-72x72.png [QSA,L]
+RewriteRule ^apple-touch-icon-76x76\.png /app/uploads/fbrfg/apple-touch-icon-76x76.png [QSA,L]
+RewriteRule ^apple-touch-icon-precomposed\.png /app/uploads/fbrfg/apple-touch-icon-precomposed.png [QSA,L]
+RewriteRule ^apple-touch-icon\.png /app/uploads/fbrfg/apple-touch-icon.png [QSA,L]
+RewriteRule ^browserconfig\.xml /app/uploads/fbrfg/browserconfig.xml [QSA,L]
+RewriteRule ^favicon-16x16\.png /app/uploads/fbrfg/favicon-16x16.png [QSA,L]
+RewriteRule ^favicon-32x32\.png /app/uploads/fbrfg/favicon-32x32.png [QSA,L]
+RewriteRule ^favicon-96x96\.png /app/uploads/fbrfg/favicon-96x96.png [QSA,L]
+RewriteRule ^favicon\.ico /app/uploads/fbrfg/favicon.ico [QSA,L]
+RewriteRule ^manifest\.json /app/uploads/fbrfg/manifest.json [QSA,L]
+RewriteRule ^mstile-144x144\.png /app/uploads/fbrfg/mstile-144x144.png [QSA,L]
+RewriteRule ^mstile-150x150\.png /app/uploads/fbrfg/mstile-150x150.png [QSA,L]
+RewriteRule ^mstile-310x150\.png /app/uploads/fbrfg/mstile-310x150.png [QSA,L]
+RewriteRule ^mstile-310x310\.png /app/uploads/fbrfg/mstile-310x310.png [QSA,L]
+RewriteRule ^mstile-70x70\.png /app/uploads/fbrfg/mstile-70x70.png [QSA,L]
+RewriteRule ^safari-pinned-tab\.svg /app/uploads/fbrfg/safari-pinned-tab.svg [QSA,L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+
+
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+
+# add a trailing slash to /wp-admin
+RewriteRule ^wp-admin$ wp-admin/ [R=301,L]
+
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+RewriteRule ^(wp-(content|admin|includes).*) wp/$1 [L]
+RewriteRule ^(.*\.php)$ wp/$1 [L]
+RewriteRule . index.php [L]
+
+</IfModule>
+
+
+
+# END WordPress

@@ -1,0 +1,51 @@
+{% extends 'base.twig' %}
+{% block content %}
+    <div class="category-container">
+        <div class="section-title pink">{{ post.title }}</div>
+    </div>
+    <div class="bg-light-grey">
+    {% if posts is not empty %}
+    <div class="container pt-40">
+        <div class="row">
+            {% if popularPosts %}
+            <div class="col-md-8">
+                {% else %}
+                <div class="col-md-12">
+                    {% endif %}
+                    <div class="single-news-item">
+                        <article>
+                            {% if post.thumbnail is not empty %}
+                                <div class="news-thumbnail">
+                                    <img src="{{ post.thumbnail|resize(800, 400) }}"/>
+                                </div>
+                            {% endif %}
+                            <div class="news-content">
+                                <h4 class="title">
+                                    {{ post.title }}
+                                </h4>
+                                <div class="news-description">
+                                    {{ post.content }}
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                {% if popularPosts is not empty %}
+                    <div class="col-md-4">
+                        <div class="news-sidebar">
+                            <div class="sidebar-title">
+                                {{ __('Cele mai citite', 'project') }}
+                            </div>
+                            {% for post in popularPosts %}
+                                {% include 'partials/sidebar-post.twig' %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+        {% else %}
+            {% include 'partials/not-founded.twig' %}
+        {% endif %}
+    </div>
+{% endblock %}

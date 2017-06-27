@@ -1,0 +1,78 @@
+<div class="col-md-4">
+    <div class="project-item">
+        {% if post.thumbnail is not empty %}
+            <div class="img-container">
+                <a href="{{ post.link }}">
+                    <img src="{{ post.thumbnail.src|resize(350, 250) }}"/>
+                </a>
+            </div>
+        {% endif %}
+        <div class="description">
+            <h3 class="title">
+                <a href="{{ post.link }}">{{ post.title }}</a>
+                {% if post.phone_number %}
+                    <span class="phone"> {{ post.phone_number }}</span>
+                {% endif %}
+            </h3>
+            {% if post.firm is not empty %}
+                <div class="name">{{ post.firm }}</div>
+            {% endif %}
+            {% if post.address %}
+                <div class="address">
+                    {{ post.address }}
+                    <a href="{{ post.link }}#scroll-to-map" class="scroll-to-map">{{ __('Localizare', 'project') }}</a>
+                </div>
+            {% endif %}
+            <div class="meta">
+                <table class="atributtes">
+                    <tbody>
+                    {% if post.numar_de_apartamente is not empty %}
+                        <tr>
+                            <td class="label">{{ __('Nr de apartamente', 'project') }}</td>
+                            <td class="value">{{ post.numar_de_apartamente }}</td>
+                        </tr>
+                    {% endif %}
+                    {% if post.dat_in_exploatare is not empty %}
+                        <tr>
+                            <td class="label">{{ __('Dat în exploatare', 'project') }}</td>
+                            <td class="value">{{ post.dat_in_exploatare }}</td>
+                        </tr>
+                    {% endif %}
+
+                    {% if post.numarul_de_etaje is not empty %}
+                        <tr>
+                            <td class="label">{{ __('Numărul de etaje', 'project') }}</td>
+                            <td class="value">{{ post.numarul_de_etaje }}</td>
+                        </tr>
+                    {% endif %}
+
+
+                    {% if post.suprafata_min is not empty %}
+                        <tr>
+                            <td class="label">{{ __('Suprafață minimă', 'project') }}</td>
+                            <td class="value">{{ post.suprafata_min }} mp</td>
+                        </tr>
+                    {% endif %}
+                    {% if post.suprafata_max is not empty %}
+                        <tr>
+                            <td class="label">{{ __('Suprafață maximă', 'project') }}</td>
+                            <td class="value">{{ post.suprafata_max }} mp</td>
+                        </tr>
+                    {% endif %}
+                    </tbody>
+                </table>
+            </div>
+            <div class="footer">
+                <a href="{{ post.link }}" class="details">{{ __('Detalii', 'project') }}</a>
+                <a class="favorite js-add-to-favorites   {{ post.isFavoritePost() ? 'active' }} "
+                   data-post_id="{{ post.id }}">
+                    <i class="icon-inimacasa-01"></i>
+                    {{ __('Adaugă la favorite' ,'project') }}
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

@@ -1,0 +1,395 @@
+{% extends 'base.twig' %}
+{% block content %}
+    <section class="details">
+        <h3 class="section-title pink">{{ __('Detalii proiect', 'project') }}</h3>
+        <div class="container">
+            <div class="row">
+                <div class="image-preview-wrapper">
+                    <div class="col-md-8">
+                        {% if post.thumbnail is not empty %}
+                            <div class="image-preview image-preview-first">
+                                <img src="{{ post.thumbnail.src }}"/>
+                            </div>
+                        {% endif %}
+                    </div>
+                    {% if post.images_gallery is not empty %}
+                        <div class="col-md-4 p-no">
+                            {% for field in post.get_field('images_gallery') %}
+                                {% if loop.index <= 2 %}
+                                    <div class="col-md-12 ">
+                                        <div class="image-preview {{ loop.index == 2  ? 'more-image-wrapper' }}">
+                                            <img src="{{ field.image }}"/>
+                                            {% if loop.index == 2 %}
+                                                {% set remainingImages =  loop.length - 2 %}
+                                                <a href="#" class="more-image">
+                                                    {{ remainingImages }} {{ __('imagini', 'project') }}
+                                                </a>
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+            {% if post.images_gallery is not empty %}
+                <div class="image-hide-block">
+                    <div class="row mb-35">
+                        {% for field in post.get_field('images_gallery') %}
+                            {% if loop.index > 2 %}
+                                <div class="col-md-4">
+                                    <div class="image-preview">
+                                        <img src="{{ field.image|resize(360, 250) }}"/>
+                                    </div>
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+    </section>
+    <section class="contact-row">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="contact-about">
+                        <h4>{{ post.title }}</h4>
+                        <span>{{ post.firm }}</span>
+                        {% if post.address is not empty %}
+                            <p>{{ post.address }}</p>
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    {% if post.phone_number is not empty %}
+                        <div class="contact-phone">
+                            <a href="tel:{{ post.phone_number }}">{{ post.phone_number }}</a>
+                        </div>
+                    {% endif %}
+                </div>
+                <div class="col-md-4 add-favorit-wrapper tc">
+                    <a href="#" class="add-favorit js-add-to-favorites {{  post.isFavoritePost() ? 'active'  }}" data-post_id="{{ post.id }}">{{ __('Adaugă la favorite', 'project') }}</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section class="info">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="left-block">
+                        <div class="info-content">
+                            <h3 class="block-headline">{{ __('Informaţii', 'project') }}</h3>
+                        </div>
+                        <div class="info-descriotion">
+                            <div class="contaier">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        {% if post.numar_de_apartamente is not empty %}
+                                            <div class="info-item clearfix">
+                                                <div class="info-item-icon">
+                                                    <img src="{{ theme.link }}/assets/images/icn-apartaments.png"
+                                                         class="icn-apartaments"/>
+                                                </div>
+                                                <div class="info-item-content">
+                                                    <h5>{{ __('Număr de apartamente', 'project') }}</h5>
+                                                    <p>{{ post.numar_de_apartamente }}</p>
+                                                </div>
+                                            </div>
+                                        {% endif %}
+                                        {% if post.dat_in_exploatare is not empty %}
+                                            <div class="info-item clearfix">
+                                                <div class="info-item-icon"><i class="icon-calendar"></i>
+                                                </div>
+                                                <div class="info-item-content">
+                                                    <h5>{{ __('Dat în exploatare', 'project') }}</h5>
+                                                    <p>{{ post.dat_in_exploatare }}</p>
+                                                </div>
+                                            </div>
+                                        {% endif %}
+                                        {% if post.numarul_de_etaje is not empty %}
+                                            <div class="info-item clearfix">
+                                                <div class="info-item-icon"><i class="icon-etaj"></i>
+                                                </div>
+                                                <div class="info-item-content">
+                                                    <h5>{{ __('Numărul de etaje', 'project') }}</h5>
+                                                    <p>{{ post.numarul_de_etaje }}</p>
+                                                </div>
+                                            </div>
+                                        {% endif %}
+                                    </div>
+                                    <div class="col-sm-6">
+                                        {% if post.configuratie is not empty %}
+                                            <div class="info-item clearfix">
+                                                <div class="info-item-icon"><i class="icon-camere"></i>
+                                                </div>
+                                                <div class="info-item-content">
+                                                    <h5>{{ __('Configuraţii', 'project') }}</h5>
+                                                    <p>
+                                                        {% for field in post.get_field('configuratie') %}
+                                                            {{ field }}{{ loop.last is empty ? ',' }}
+                                                        {% endfor %}
+                                                        {{ __('camere', 'project') }}
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        {% endif %}
+                                        {% if post.pret_minim is not empty %}
+                                            <div class="info-item clearfix">
+                                                <div class="info-item-icon"><i class="icon-pret"></i>
+                                                </div>
+                                                <div class="info-item-content">
+                                                    <h5>{{ __('Preţ', 'project') }}</h5>
+                                                    <p>{{ post.pret_minim }} {{ __('euro', 'project') }}</p>
+                                                </div>
+                                            </div>
+                                        {% endif %}
+                                        {% if post.suprafata_min is not empty %}
+                                            <div class="info-item clearfix">
+                                                <div class="info-item-icon">
+                                                    <i class="icon-suprafata"></i>
+                                                </div>
+                                                <div class="info-item-content">
+                                                    <h5>{{ __('Suprafaţă min/max', 'project') }}</h5>
+                                                    <p>{{ post.suprafata_min }} mp - {{ post.suprafata_max }} mp</p>
+                                                </div>
+                                            </div>
+                                        {% endif %}
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="info-item-row">
+                                            {{ post.content }}
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <h3 class="block-headline">{{ __('Facilităţi în proiect', 'project') }}</h3>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        {% if post.spatii_de_joaca_pentru_copii is not empty %}
+                                            <div class="info-item info-item-single clearfix">
+                                                <div class="info-item-icon"><i class="icon-joacacopii"></i>
+                                                </div>
+                                                <div class="info-item-content">
+                                                    <h5>{{ __('Zonă joacă pentru copii') }}</h5>
+                                                </div>
+                                            </div>
+                                        {% endif %}
+                                        {% if post.lift is not empty %}
+                                            <div class="info-item info-item-single clearfix">
+                                                <div class="info-item-icon"><i class="icon-lift"></i>
+                                                </div>
+                                                <div class="info-item-content">
+                                                    <h5>{{ __('Lift', 'project') }}</h5>
+                                                </div>
+                                            </div>
+                                        {% endif %}
+                                        {% if post.zona_verde is not empty %}
+                                            <div class="info-item info-item-single clearfix">
+                                                <div class="info-item-icon"><i class="icon-pom"></i>
+                                                </div>
+                                                <div class="info-item-content">
+                                                    <h5>{{ __('Zonă verde', 'project') }}</h5>
+                                                </div>
+                                            </div>
+                                        {% endif %}
+                                    </div>
+                                    <div class="col-sm-6">
+                                        {% if post.piscina is not empty %}
+                                            <div class="info-item info-item-single clearfix">
+                                                <div class="info-item-icon"><i class="icon-piscina"></i>
+                                                </div>
+                                                <div class="info-item-content">
+                                                    <h5>{{ __('Piscina', 'project') }}</h5>
+                                                </div>
+                                            </div>
+                                        {% endif %}
+                                        {% if post.parcare is not empty %}
+                                            <div class="info-item info-item-single clearfix">
+                                                <div class="info-item-icon"><i class="icon-masina"></i>
+                                                </div>
+                                                <div class="info-item-content">
+                                                    <h5>{{ __('Parcare', 'project') }}</h5>
+                                                </div>
+                                            </div>
+                                        {% endif %}
+                                        {% if post.administratie is not empty %}
+                                            <div class="info-item info-item-single clearfix">
+                                                <div class="info-item-icon"><i class="icon-om"></i>
+                                                </div>
+                                                <div class="info-item-content">
+                                                    <h5>{{ __('Administraţie', 'project') }}</h5>
+                                                </div>
+                                            </div>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="left-block">
+                        <div class="info-descriotion">
+                            <div class="contaier">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <h3 class="block-headline">{{ __('Împrejurimi', 'project') }}</h3>
+                                    </div>
+                                    <div class="col-sm-12">
+                                        {% if post.spitale is not empty %}
+                                            <div class="info-item info-item-single clearfix">
+                                                <div class="info-item-icon"><i class="icon-spital"></i>
+                                                </div>
+                                                <div class="info-item-content">
+                                                    <h5>{{ __('Spitale', 'project') }}</h5>
+                                                </div>
+                                            </div>
+                                        {% endif %}
+                                        {% if post.parcuri is not empty %}
+                                            <div class="info-item info-item-single clearfix">
+                                                <div class="info-item-icon">
+                                                    <i class="icon-pom"></i>
+                                                </div>
+                                                <div class="info-item-content">
+                                                    <h5>{{ __('Parcuri', 'project') }}</h5>
+                                                </div>
+                                            </div>
+                                        {% endif %}
+                                        {% if post.banci_atm is not empty %}
+                                            <div class="info-item info-item-single clearfix">
+                                                <div class="info-item-icon"><i class="icon-banca"></i>
+                                                </div>
+                                                <div class="info-item-content">
+                                                    <h5>{{ __('Bănci, Atm', 'project') }}</h5>
+                                                </div>
+                                            </div>
+                                        {% endif %}
+                                        {% if post.scoli_gradinite is not empty %}
+                                            <div class="info-item info-item-single clearfix">
+                                                <div class="info-item-icon"><i class="icon-carte"></i>
+                                                </div>
+                                                <div class="info-item-content">
+                                                    <h5>{{ __('Şcoli, Grădiniţe', 'project') }}</h5>
+                                                </div>
+                                            </div>
+                                        {% endif %}
+                                        {% if post.statii_autobus is not empty %}
+                                            <div class="info-item info-item-single clearfix">
+                                                <div class="info-item-icon"><i class="icon-autobuz"></i>
+                                                </div>
+                                                <div class="info-item-content">
+                                                    <h5>{{ __('Staţii autobuz', 'project') }}</h5>
+                                                </div>
+                                            </div>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    {% if post.map_location is not empty %}
+                        <div class="left-block">
+                            <div class="container container-fluid">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="map-wrapper">
+                                            <h3 class="block-headline">{{ __('Localizare', 'project') }}</h3>
+                                            {% if post.map_location.address is not empty %}
+                                                <p>{{ post.map_location.address }}</p>
+                                            {% endif %}
+                                            <div class="map-container">
+                                                <div class="js-init-map" data-lat="{{ post.map_location.lat }}"
+                                                     data-lng="{{ post.map_location.lng }}">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endif %}
+                </div>
+
+
+                <div class="col-md-4">
+                    <div class="right-block">
+                        <div class="main-form-wrapper">
+                            <h3 class="block-headline">{{ __('Pentru mai multe informații') }}:</h3>
+                            {% if fn('project_show_error_messages', 'successfully_send_contact_email') is empty %}
+                                <form class="main-form go-right" method="post">
+                                    <input type="hidden" name="form_type" value="contact_form">
+                                    <input type="hidden" name="form[post_id]" value="{{ post.id }}">
+                                    <div class="form-group">
+                                        <input name="form[name]" type="text" class="form-control" id="name"
+                                               required/>
+                                        <label for="name" class="form-label">{{ __('Nume', 'project') }}</label>
+                                    </div>
+                                    <div class="form-group">
+                                        <input name="form[email]" type="email" class="form-control"
+                                               id="email" required/>
+                                        <label for="email" class="form-label">{{ __('E-mail', 'project') }}</label>
+                                    </div>
+                                    <div class="form-group">
+                                        <input name="form[phone]" type="tel" class="form-control" id="phone"
+                                               required/>
+                                        <label for="phone" class="form-label">{{ __('Telefon', 'project') }}</label>
+                                    </div>
+                                    <div class="form-group">
+                                        <textarea name="form[details]" rows="3"
+                                                  placeholder="As dori mai multe detalii referitoare la.."
+                                                  class="form-control" id="message">
+                                        </textarea>
+                                        <label for="message" class="form-label">{{ __('Mesaj', 'project') }}</label>
+                                    </div>
+                                    <div class="form-group text-center">
+                                        <button class="send-button">{{ __('Trimite', 'project') }}</button>
+                                    </div>
+                                </form>
+                            {% else %}
+                                <div class="successfully-sended-form">
+                                    {{ __('Thank you!', 'project') }}
+                                </div>
+                            {% endif %}
+                        </div>
+
+                        <div class="share-block">
+                            <h3 class="block-headline">{{ __('Share', 'project') }}</h3>
+                            <a href="#" class="social-button fb">facebook</a>
+                            <a href="#" class="social-button tw">twitter</a>
+                            <a href="#" class="social-button gmail">gmail</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <h3 class="section-title pink">{{ __('Apartamente disponibile', 'project') }}</h3>
+        </div>
+
+        {% if relatedPosts is not empty %}
+            <div class="estate-list mt-35">
+                <div class="container">
+                    <div class="row">
+                        {% for post in relatedPosts %}
+                            {% include 'partials/related-item-teaser.twig' %}
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+    </section>
+    {% include 'partials/sections/subscribe-form.twig' %}
+{% endblock %}

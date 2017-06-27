@@ -1,0 +1,38 @@
+<div class="col-md-4">
+    <div class="home-item">
+        {% if post.thumbnail is not empty %}
+            <div class="img-container">
+                <a href="{{ post.link }}">
+                    <img src="{{ post.thumbnail.src|resize(350, 250) }}"/>
+                </a>
+            </div>
+        {% endif %}
+        <div class="description">
+            <h3 class="title">
+                <a href="{{ post.link }}" class="adress">{{ post.title }}</a>
+                {% if post.price %}
+                    <span class="price">€ {{ post.price }}</span>
+                {% endif %}
+            </h3>
+            <div class="meta">
+                <table class="atributtes">
+                    <tbody>
+                    {% if post.rooms is not empty %}
+                        <tr>
+                            <td class="label">{{ __('Nr camere', 'project') }} {{ post.rooms }}</td>
+                        </tr>
+                    {% endif %}
+                    {% if post.floor is not empty %}
+                        <tr>
+                            <td class="label">{{ __('Etaj', 'project') }} {{ post.floor }}</td>
+                        </tr>
+                    {% endif %}
+                    </tbody>
+                </table>
+            </div>
+            <div class="footer">
+                <a href="{{ post.link }}" class="details text-center">{{ __('Detalii', 'project') }}</a>
+            </div>
+        </div>
+    </div>
+</div>

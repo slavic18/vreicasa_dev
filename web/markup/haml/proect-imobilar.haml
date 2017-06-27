@@ -1,0 +1,283 @@
+!!! 5
+<!--[if IE 7]>    <html class="no-js ie7 oldie"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie"> <![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js"><!--<![endif]-->
+  %head
+    @@include('./_head.html', {
+      "title": "Vrei casa"
+    })
+  %body
+    @@include('./_header.html')
+    .main-container
+      .category-container
+        .section-title.pink
+          proecte imobilare
+        .filters-container.container-fluid
+          .row
+            .col-sm-12.col-md-8
+              %ul.filter-list
+                %li
+                  %span Filtre
+                %li
+                  .input-container
+                    %input(type="text" placeholder="Localitate, zonă" name="form[address]" )
+                %li.with-sub-menu
+                  %span
+                    Preț
+                  .sub-menu.price-submenu
+                    .switch-currency-container
+                      .currency
+                        .radio-container
+                          %input#currency-lei(type="radio" name="form[currency]" value="lei")
+                          %label(for="currency-lei")
+                            Lei
+                        .radio-container
+                          %input#currency-euro(type="radio" name="form[currency]" value="euro")
+                          %label(for="currency-euro")
+                            Euro
+                    .min-max
+                      .input-container
+                        %input(type="number" placeholder="Min" min="0" name="form[min_price]" )
+                      .delimiter
+                        &#45;
+                      .input-container
+                        %input(type="number" placeholder="Max" min="0" name="form[max_price]" )
+                    .range
+                      .checkbox-container
+                        %label
+                          %input( type="checkbox" name="form[range][20000]" value="1" )
+                          %span max 20.000 €
+                      .checkbox-container
+                        %label
+                          %input( type="checkbox" name="form[range][20000-40000]" value="1" )
+                          %span 20.000 - 40.000 €
+                      .checkbox-container
+                        %label
+                          %input( type="checkbox" name="form[range][40000-60000]" value="1" )
+                          %span 40.000 - 60.000 €
+                      .checkbox-container
+                        %label
+                          %input( type="checkbox" name="form[range][60000-80000]" value="1" )
+                          %span 60.000 - 80.000 €
+                      .checkbox-container
+                        %label
+                          %input( type="checkbox" name="form[range][80000-100000]" value="1" )
+                          %span 80.000 - 100.000 €
+                      .checkbox-container
+                        %label
+                          %input( type="checkbox" name="form[range][10000-150000]" value="1" )
+                          %span 100.000 - 150.000 €
+                      .checkbox-container
+                        %label
+                          %input( type="checkbox" name="form[range][150000-300000]" value="1" )
+                          %span 150.000 - 300.000 €
+                %li.with-sub-menu
+                  %span Camere
+                  .sub-menu
+                    .checkbox-container
+                      %label
+                        %input( type="checkbox" name="form[rooms][1]" value="1" )
+                        %span 1
+                    .checkbox-container
+                      %label
+                        %input( type="checkbox" name="form[rooms][2]" value="1" )
+                        %span 2
+                    .checkbox-container
+                      %label
+                        %input( type="checkbox" name="form[rooms][3]" value="1" )
+                        %span 3
+                    .checkbox-container
+                      %label
+                        %input( type="checkbox" name="form[rooms][4]" value="1" )
+                        %span 4
+                    .checkbox-container
+                      %label
+                        %input( type="checkbox" name="form[rooms][4+]" value="1" )
+                        %span 4+
+                %li.with-sub-menu
+                  %span Suprafață
+                  .sub-menu.price-submenu
+                    .min-max
+                      .input-container
+                        %input(type="number" placeholder="Min" min="0" name="form[min_area]" )
+                      .delimiter
+                      .input-container
+                        %input(type="number" placeholder="Max" min="0" name="form[max_area]" )
+                %li.with-sub-menu
+                  %span Stare proiect
+                  .sub-menu
+                    .checkbox-container
+                      %label
+                        %input( type="checkbox" name="form[status][finalizate]" value="1" )
+                        %span finalizate
+                    .checkbox-container
+                      %label
+                        %input( type="checkbox" name="form[status][development]" value="1" )
+                        %span în dezvoltare
+            .col-md-4.col-sm-12
+              .ta-c
+                %ul.filter-list
+                  %li.with-sub-menu.filter-group-container
+                    %span.js-open-more-filters
+                      Mai multe
+                    .sub-menu
+                      %ul.filter-group-list
+                        %li.filter-group.js-equal-height
+                          .title
+                            Tipul proprietății
+                          .content
+                            .checkbox-container
+                              %label
+                                %input( type="checkbox" name="form[type][studio]" value="1" )
+                                %span Garsonieră
+                            .checkbox-container
+                              %label
+                                %input( type="checkbox" name="form[type][appartment]" value="1" )
+                                %span Apartament
+                            .checkbox-container
+                              %label
+                                %input( type="checkbox" name="form[type][house]" value="1" )
+                                %span Casă
+                            .checkbox-container
+                              %label
+                                %input( type="checkbox" name="form[type][duplex]" value="1" )
+                                %span Duplex
+                            .checkbox-container
+                              %label
+                                %input( type="checkbox" name="form[type][penthouse]" value="1" )
+                                %span Penthouse
+                        %li.filter-group.js-equal-height
+                          .title
+                            Utilități
+                          .content
+                            .checkbox-container
+                              %label
+                                %input( type="checkbox" name="form[advantages][elevator]" value="1" )
+                                %span Lift
+                            .checkbox-container
+                              %label
+                                %input( type="checkbox" name="form[advantages][parking]" value="1" )
+                                %span Parcare
+                            .checkbox-container
+                              %label
+                                %input( type="checkbox" name="form[advantages][gym]" value="1" )
+                                %span Sală fitness
+                            .checkbox-container
+                              %label
+                                %input( type="checkbox" name="form[advantages][market]" value="1" )
+                                %span Spații comerciale parter
+                            .checkbox-container
+                              %label
+                                %input( type="checkbox" name="form[advantages][penthouse]" value="1" )
+                                %span Spațiu joacă copii
+                            .checkbox-container
+                              %label
+                                %input( type="checkbox" name="form[advantages][children-play-area]" value="1" )
+                                %span Spațiu joacă copii
+                        %li.filter-group.js-equal-height
+                          .title
+                            Niveluri imobil
+                          .content
+                            .checkbox-container
+                              %label
+                                %input( type="checkbox" name="form[floor_range][1-4]" value="1" )
+                                %span 1-4
+                            .checkbox-container
+                              %label
+                                %input( type="checkbox" name="form[floor_range][5-10]" value="1" )
+                                %span 5-10
+                            .checkbox-container
+                              %label
+                                %input( type="checkbox" name="form[floor_range][10+]" value="1" )
+                                %span 10+
+                  %li
+                    %button.reset-search-form
+                      Resetare căutare
+      .gray-bg
+        .order-list-container
+          .container
+            %ul
+              %li
+                %span Ordonați după:
+              %li
+                %a.active(href="#" ) Preț crescător
+              %li
+                %a(href="#" ) Preț descrescător
+              %li
+                %a(href="#" ) Cele mai noi
+              %li
+                %a(href="#" ) Cele mai vechi
+        .estate-list
+          .container
+            .row
+              .col-md-4
+                @@include('./_project-imobilar_item.html')
+              .col-md-4
+                @@include('./_project-imobilar_item.html')
+              .col-md-4
+                @@include('./_project-imobilar_item.html')
+              .col-md-4
+                @@include('./_project-imobilar_item.html')
+              .col-md-4
+                @@include('./_project-imobilar_item.html')
+              .col-md-4
+                @@include('./_project-imobilar_item.html')
+              .col-md-4
+                @@include('./_project-imobilar_item.html')
+              .col-md-4
+                @@include('./_project-imobilar_item.html')
+              .col-md-4
+                @@include('./_project-imobilar_item.html')
+              .col-md-4
+                @@include('./_project-imobilar_item.html')
+              .col-md-4
+                @@include('./_project-imobilar_item.html')
+              .col-md-4
+                @@include('./_project-imobilar_item.html')
+
+          .container.sort-wrapper
+            .row
+              .col-sm-6
+                %ul.sort-list
+                  %li
+                    %span Numărul de anunțuri pe pagină
+                  %li
+                    %a(href="#" )
+                      21
+                  %li
+                    %a.active(href="#" )
+                      48
+                  %li
+                    %a(href="#" )
+                      72
+              .col-sm-6
+                .pagination-container.tr
+                  %ul.pagination
+                    %li.pag-btn.prev
+                      %a(href="#" )
+                        %i.fa.fa-backward
+                    %li.pag-btn.hidden.prev
+                      %a(href="#" )
+                        %i.fa.fa-caret-left
+                    %li
+                      %a(href="" )
+                        1
+                    %li.active
+                      %span
+                        2
+                    %li
+                      %a(href="" )
+                        3
+                    %li
+                      %span.pag-btn-more
+                        ...
+                    %li
+                      %a(href="" )
+                        5
+                    %li.pag-btn.hidden.next
+                      %a(href="#" )
+                        %i.fa.fa-caret-right
+                    %li.pag-btn.prev
+                      %a(href="#" )
+                        %i.fa.fa-forward
+      @@include('./_footer.html')

@@ -1,0 +1,36 @@
+{
+  "name": "Basic-Gulp-Package",
+  "version": "0.0.2",
+  "description": "A basic Gulp package to start the things",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@git.fruitware.ru:1020/md-35/mtg.git"
+  },
+  "author": "Andrei T.",
+  "license": "MIT",
+  "devDependencies": {
+    "brace-expansion": "^1.1.6",
+    "connect-livereload": "^0.4.0",
+    "express": "^4.3.1",
+    "gulp": "^3.6.2",
+    "gulp-changed": "^1.0.0",
+    "gulp-concat": "^2.2.0",
+    "gulp-file-include": "^0.4.1",
+    "gulp-haml": "0.0.8",
+    "gulp-imagemin": "^0.5.0",
+    "gulp-livereload": "^1.5.0",
+    "gulp-prettify": "^0.2.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^0.3.0",
+    "gulp.spritesmith": "^1.1.1",
+    "imagemin-gifsicle": "^5.1.0",
+    "imagemin-optipng": "^5.2.1",
+    "imagemin-pngquant": "^5.0.0",
+    "tiny-lr": "0.0.7"
+  },
+  "dependencies": {}
+}

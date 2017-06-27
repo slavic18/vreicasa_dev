@@ -1,0 +1,126 @@
+{% extends 'base.twig' %}
+{% block content %}
+    <section class="contact">
+        <div class="contact-headline">
+            <h3>{{ __('Contact', 'project') }}</h3>
+        </div>
+        <div class="contact-description">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="main-form-wrapper">
+                            <h3>{{ __('Salut!', 'project') }}</h3>
+                            <p>{{ __('Cu ce te putem ajuta?', 'project') }}</p>
+                            <form class="main-form go-right" method="post">
+                                <div class="form-group">
+                                    <input name="form[name]" type="text" placeholder="{{ __('Nume', 'project') }}"
+                                           class="form-control" id="name"/>
+                                    <label class="form-label">{{ __('Nume', 'project') }}</label>
+                                </div>
+                                <div class="form-group">
+                                    <input name="form[email]" type="email" placeholder="E-mail" class="form-control"
+                                           id="email"/>
+                                    <label for="email" class="form-label">E-mail</label>
+                                </div>
+                                <div class="form-group">
+                                    <input name="form[phone]" type="tel"
+                                           placeholder="{{ __('Număr telefon', 'project') }}"
+                                           class="form-control"
+                                           id="phone"/>
+                                    <label for="phone" class="form-label">{{ __('Telefon', 'project') }}</label>
+                                </div>
+                                <div class="form-group">
+                                <textarea name="form[message]" rows="3"
+                                          placeholder="{{ __('As dori mai multe detalii referitoare la..', 'project') }}"
+                                          class="form-control" id="message"></textarea>
+                                    <label for="message" class="form-label">{{ __('Mesaj', 'project') }}</label>
+                                </div>
+                                <div class="form-group text-center">
+                                    <label class="uploadbutton">
+                                        <div class="button">{{ __('Atașează fișier', 'project') }}</div>
+                                    </label>
+                                </div>
+                                <div class="form-group upload-file-form-row">
+                                    <input type="file" name="form[fisier]"/>
+                                </div>
+                                <div class="form-group text-center">
+                                    <button class="send-button">{{ __('Trimite', 'project') }}</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-md-5 col-md-offset-1">
+                        <div class="command">
+                            {{ post.content }}
+                            {% if post.partners is not empty %}
+                                <div class="wrapper">
+                                    <h3>{{ __('Echipa', 'project') }}</h3>
+                                    <div class="row">
+                                        {% for field in post.get_field('partners') %}
+                                            <div class="col-md-6">
+                                                <div class="person">
+                                                    <p class="name">{{ field.name }}</p>
+                                                    <p class="position">{{ field.post }}</p>
+                                                    {% if field.image %}
+                                                        <img src="{{ field.image }}" class="person-img"/>
+                                                    {% endif %}
+                                                    <p class="description">{{ field.description }}</p>
+                                                </div>
+                                            </div>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="contact-info">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                        {% if post.map_location is not empty %}
+                            <div class="map-container" data-lat="{{ post.map_location.lat }}" data-lng="{{ post.map_location.lng }}">
+                            </div>
+                        {% endif %}
+                    </div>
+                    <div class="col-md-4">
+                        {% if post.telefon is not empty %}
+                            <div class="contact-details">
+                                <div class="phone">
+                                    <h5>{{ __('Telefon', 'project') }}</h5>
+                                    <p>{{ post.telefon }}</p>
+                                </div>
+                            </div>
+                        {% endif %}
+                        {% if post.email is not empty %}
+                            <div class="contact-details">
+                                <div class="mail">
+                                    <h5>Mail</h5>
+                                    <p>{{ post.email }}</p>
+                                </div>
+                            </div>
+                        {% endif %}
+                        {% if post.skype is not empty %}
+                            <div class="contact-details">
+                                <div class="skype">
+                                    <h5>Skype</h5>
+                                    <p>{{ post.skype }}</p>
+                                </div>
+                            </div>
+                        {% endif %}
+                        {% if post.facebook is not empty %}
+                            <div class="contact-details">
+                                <div class="facebook">
+                                    <h5>Facebook</h5>
+                                    <p>{{ post.facebook }}</p>
+                                </div>
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

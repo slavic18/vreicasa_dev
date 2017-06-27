@@ -1,0 +1,18 @@
+<div class="container service-wrapper">
+    <div class="row">
+        <div class="card-service-wrapper clearfix">
+            {% for field in fields %}
+                <div class="col-sm-4">
+                    <div class="card-service clearfix">
+                        <a href="{{ field.link }}" class="full-size-link"></a>
+                        <h4>{{ field.title }}</h4>
+                        <p>{{ field.subtitle }}</p>
+                        {% if field.thumbnail %}
+                            <img src="{{ field.thumbnail }}"/>
+                        {% endif %}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>

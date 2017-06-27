@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<!--[if IE 7]>    <html class="no-js ie7 oldie"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>@@include('./_head.html', { "title": "Vrei casa"})</head>
+
+<body>@@include('./_header.html')
+    <div class="main-container">
+        <div class="category-container">
+            <div class="section-title pink">proecte imobilare</div>
+            <div class="filters-container container-fluid">
+                <div class="row">
+                    <div class="col-sm-12 col-md-8">
+                        <ul class="filter-list">
+                            <li><span>Filtre</span>
+                            </li>
+                            <li>
+                                <div class="input-container">
+                                    <input type="text" placeholder="Localitate, zonă" name="form[address]" />
+                                </div>
+                            </li>
+                            <li class="with-sub-menu"><span>Preț</span>
+                                <div class="sub-menu price-submenu">
+                                    <div class="switch-currency-container">
+                                        <div class="currency">
+                                            <div class="radio-container">
+                                                <input type="radio" name="form[currency]" value="lei" id="currency-lei" />
+                                                <label for="currency-lei">Lei</label>
+                                            </div>
+                                            <div class="radio-container">
+                                                <input type="radio" name="form[currency]" value="euro" id="currency-euro" />
+                                                <label for="currency-euro">Euro</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="min-max">
+                                        <div class="input-container">
+                                            <input type="number" placeholder="Min" min="0" name="form[min_price]" />
+                                        </div>
+                                        <div class="delimiter">&#45;</div>
+                                        <div class="input-container">
+                                            <input type="number" placeholder="Max" min="0" name="form[max_price]" />
+                                        </div>
+                                    </div>
+                                    <div class="range">
+                                        <div class="checkbox-container">
+                                            <label>
+                                                <input type="checkbox" name="form[range][20000]" value="1" /><span>max 20.000 €</span>
+                                            </label>
+                                        </div>
+                                        <div class="checkbox-container">
+                                            <label>
+                                                <input type="checkbox" name="form[range][20000-40000]" value="1" /><span>20.000 - 40.000 €</span>
+                                            </label>
+                                        </div>
+                                        <div class="checkbox-container">
+                                            <label>
+                                                <input type="checkbox" name="form[range][40000-60000]" value="1" /><span>40.000 - 60.000 €</span>
+                                            </label>
+                                        </div>
+                                        <div class="checkbox-container">
+                                            <label>
+                                                <input type="checkbox" name="form[range][60000-80000]" value="1" /><span>60.000 - 80.000 €</span>
+                                            </label>
+                                        </div>
+                                        <div class="checkbox-container">
+                                            <label>
+                                                <input type="checkbox" name="form[range][80000-100000]" value="1" /><span>80.000 - 100.000 €</span>
+                                            </label>
+                                        </div>
+                                        <div class="checkbox-container">
+                                            <label>
+                                                <input type="checkbox" name="form[range][10000-150000]" value="1" /><span>100.000 - 150.000 €</span>
+                                            </label>
+                                        </div>
+                                        <div class="checkbox-container">
+                                            <label>
+                                                <input type="checkbox" name="form[range][150000-300000]" value="1" /><span>150.000 - 300.000 €</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="with-sub-menu"><span>Camere</span>
+                                <div class="sub-menu">
+                                    <div class="checkbox-container">
+                                        <label>
+                                            <input type="checkbox" name="form[rooms][1]" value="1" /><span>1</span>
+                                        </label>
+                                    </div>
+                                    <div class="checkbox-container">
+                                        <label>
+                                            <input type="checkbox" name="form[rooms][2]" value="1" /><span>2</span>
+                                        </label>
+                                    </div>
+                                    <div class="checkbox-container">
+                                        <label>
+                                            <input type="checkbox" name="form[rooms][3]" value="1" /><span>3</span>
+                                        </label>
+                                    </div>
+                                    <div class="checkbox-container">
+                                        <label>
+                                            <input type="checkbox" name="form[rooms][4]" value="1" /><span>4</span>
+                                        </label>
+                                    </div>
+                                    <div class="checkbox-container">
+                                        <label>
+                                            <input type="checkbox" name="form[rooms][4+]" value="1" /><span>4+</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="with-sub-menu"><span>Suprafață</span>
+                                <div class="sub-menu price-submenu">
+                                    <div class="min-max">
+                                        <div class="input-container">
+                                            <input type="number" placeholder="Min" min="0" name="form[min_area]" />
+                                        </div>
+                                        <div class="delimiter"></div>
+                                        <div class="input-container">
+                                            <input type="number" placeholder="Max" min="0" name="form[max_area]" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="with-sub-menu"><span>Stare proiect</span>
+                                <div class="sub-menu">
+                                    <div class="checkbox-container">
+                                        <label>
+                                            <input type="checkbox" name="form[status][finalizate]" value="1" /><span>finalizate</span>
+                                        </label>
+                                    </div>
+                                    <div class="checkbox-container">
+                                        <label>
+                                            <input type="checkbox" name="form[status][development]" value="1" /><span>în dezvoltare</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 col-sm-12">
+                        <div class="ta-c">
+                            <ul class="filter-list">
+                                <li class="with-sub-menu filter-group-container"><span class="js-open-more-filters">Mai multe</span>
+                                    <div class="sub-menu">
+                                        <ul class="filter-group-list">
+                                            <li class="filter-group js-equal-height">
+                                                <div class="title">Tipul proprietății</div>
+                                                <div class="content">
+                                                    <div class="checkbox-container">
+                                                        <label>
+                                                            <input type="checkbox" name="form[type][studio]" value="1" /><span>Garsonieră</span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="checkbox-container">
+                                                        <label>
+                                                            <input type="checkbox" name="form[type][appartment]" value="1" /><span>Apartament</span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="checkbox-container">
+                                                        <label>
+                                                            <input type="checkbox" name="form[type][house]" value="1" /><span>Casă</span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="checkbox-container">
+                                                        <label>
+                                                            <input type="checkbox" name="form[type][duplex]" value="1" /><span>Duplex</span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="checkbox-container">
+                                                        <label>
+                                                            <input type="checkbox" name="form[type][penthouse]" value="1" /><span>Penthouse</span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="filter-group js-equal-height">
+                                                <div class="title">Utilități</div>
+                                                <div class="content">
+                                                    <div class="checkbox-container">
+                                                        <label>
+                                                            <input type="checkbox" name="form[advantages][elevator]" value="1" /><span>Lift</span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="checkbox-container">
+                                                        <label>
+                                                            <input type="checkbox" name="form[advantages][parking]" value="1" /><span>Parcare</span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="checkbox-container">
+                                                        <label>
+                                                            <input type="checkbox" name="form[advantages][gym]" value="1" /><span>Sală fitness</span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="checkbox-container">
+                                                        <label>
+                                                            <input type="checkbox" name="form[advantages][market]" value="1" /><span>Spații comerciale parter</span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="checkbox-container">
+                                                        <label>
+                                                            <input type="checkbox" name="form[advantages][penthouse]" value="1" /><span>Spațiu joacă copii</span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="checkbox-container">
+                                                        <label>
+                                                            <input type="checkbox" name="form[advantages][children-play-area]" value="1" /><span>Spațiu joacă copii</span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="filter-group js-equal-height">
+                                                <div class="title">Niveluri imobil</div>
+                                                <div class="content">
+                                                    <div class="checkbox-container">
+                                                        <label>
+                                                            <input type="checkbox" name="form[floor_range][1-4]" value="1" /><span>1-4</span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="checkbox-container">
+                                                        <label>
+                                                            <input type="checkbox" name="form[floor_range][5-10]" value="1" /><span>5-10</span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="checkbox-container">
+                                                        <label>
+                                                            <input type="checkbox" name="form[floor_range][10+]" value="1" /><span>10+</span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <button class="reset-search-form">Resetare căutare</button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="gray-bg">
+            <div class="order-list-container">
+                <div class="container">
+                    <ul>
+                        <li><span>Ordonați după:</span>
+                        </li>
+                        <li><a href="#" class="active">Preț crescător</a>
+                        </li>
+                        <li><a href="#">Preț descrescător</a>
+                        </li>
+                        <li><a href="#">Cele mai noi</a>
+                        </li>
+                        <li><a href="#">Cele mai vechi</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="estate-list">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4">@@include('./_project-imobilar_item.html')</div>
+                        <div class="col-md-4">@@include('./_project-imobilar_item.html')</div>
+                        <div class="col-md-4">@@include('./_project-imobilar_item.html')</div>
+                        <div class="col-md-4">@@include('./_project-imobilar_item.html')</div>
+                        <div class="col-md-4">@@include('./_project-imobilar_item.html')</div>
+                        <div class="col-md-4">@@include('./_project-imobilar_item.html')</div>
+                        <div class="col-md-4">@@include('./_project-imobilar_item.html')</div>
+                        <div class="col-md-4">@@include('./_project-imobilar_item.html')</div>
+                        <div class="col-md-4">@@include('./_project-imobilar_item.html')</div>
+                        <div class="col-md-4">@@include('./_project-imobilar_item.html')</div>
+                        <div class="col-md-4">@@include('./_project-imobilar_item.html')</div>
+                        <div class="col-md-4">@@include('./_project-imobilar_item.html')</div>
+                    </div>
+                </div>
+                <div class="container sort-wrapper">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <ul class="sort-list">
+                                <li><span>Numărul de anunțuri pe pagină</span>
+                                </li>
+                                <li><a href="#">21</a>
+                                </li>
+                                <li><a href="#" class="active">48</a>
+                                </li>
+                                <li><a href="#">72</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="pagination-container tr">
+                                <ul class="pagination">
+                                    <li class="pag-btn prev"><a href="#"><i class="fa fa-backward"></i></a>
+                                    </li>
+                                    <li class="pag-btn hidden prev"><a href="#"><i class="fa fa-caret-left"></i></a>
+                                    </li>
+                                    <li><a>1</a>
+                                    </li>
+                                    <li class="active"><span>2</span>
+                                    </li>
+                                    <li><a>3</a>
+                                    </li>
+                                    <li><span class="pag-btn-more">...</span>
+                                    </li>
+                                    <li><a>5</a>
+                                    </li>
+                                    <li class="pag-btn hidden next"><a href="#"><i class="fa fa-caret-right"></i></a>
+                                    </li>
+                                    <li class="pag-btn prev"><a href="#"><i class="fa fa-forward"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>@@include('./_footer.html')</div>
+</body>

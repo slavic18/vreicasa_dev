@@ -1,0 +1,264 @@
+!!! 5
+<!--[if IE 7]>    <html class="no-js ie7 oldie"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie"> <![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js"><!--<![endif]-->
+  %head
+    @@include('./_head.html', {
+      "title": "Vrei casa"
+    })
+  %body
+    .details-apartament
+      @@include('./_header.html')
+
+
+        %section.details
+          %h3.section-title.pink Detalii apartament
+          .container
+            .row
+              .image-preview-wrapper
+                .col-md-8
+                  .image-preview.image-preview-first
+                    %img(src="images/preview-img-big.jpg" )
+                .col-md-4.p-no
+                  .col-md-12
+                    .image-preview
+                      %img(src="images/preview-img-small.jpg" )
+                  .col-md-12
+                    .image-preview.more-image-wrapper
+                      %img(src="images/preview-img-small.jpg" )
+                      %a.more-image(href="#") 6 imagini
+            .image-hide-block
+              .row.mb-35
+                .col-md-4
+                  .image-preview
+                    %img(src="images/preview-img-small.jpg" )
+                .col-md-4
+                  .image-preview
+                    %img(src="images/preview-img-small.jpg" )
+                .col-md-4
+                  .image-preview
+                    %img(src="images/preview-img-small.jpg" )
+              .row
+                .col-md-4
+                  .image-preview
+                    %img(src="images/preview-img-small.jpg" )
+                .col-md-4
+                  .image-preview
+                    %img(src="images/preview-img-small.jpg" )
+                .col-md-4
+                  .image-preview
+                    %img(src="images/preview-img-small.jpg" )
+        %section.contact-row
+          .container
+            .row
+              .col-md-5
+                .contact-about
+                  %h4 Complex “Honey”
+                  %span SC.Harmony.SRL
+                  %p Adresă: str Calea lui traina nr 89
+              .col-md-3
+                .price
+                  %span  € 64.000
+                .contact-phone
+                  %a(href="#") 079584782
+
+              .col-md-4.add-favorit-wrapper.tc
+                %a.add-favorit(href="#" ) Adaugă la favorite
+        %section.info
+          .container
+            .row
+              .col-md-8
+                .left-block
+                  .info-content
+                    %h3.block-headline Informaţii
+                  .info-descriotion
+                    .contaier
+                      .row
+                        .col-sm-6
+                          .info-item.clearfix
+                            .info-item-icon
+                              %i.icon-locatie
+                            .info-item-content
+                              %h5 Locație
+                              %p 3 km de centru
+
+                          .info-item.clearfix
+                            .info-item-icon
+                              %i.icon-mp
+                            .info-item-content
+                              %h5 Suprafață utilă
+                              %p 70 mp
+                          .info-item.clearfix
+                            .info-item-icon
+                              %i.icon-etaj
+                            .info-item-content
+                              %h5 Etaj
+                              %p 7
+                          .info-item.clearfix
+                            .info-item-icon
+                              %img(src="images/icn-constructie.png" )
+                            .info-item-content
+                              %h5 Construcție
+                              %p 2005
+                        .col-sm-6
+                          .info-item.clearfix
+                            .info-item-icon
+                              %i.icon-camere
+                            .info-item-content
+                              %h5 Camere
+                              %p 3
+                          .info-item.clearfix
+                            .info-item-icon
+                              %i.icon-balcon
+                            .info-item-content
+                              %h5 Balcoane
+                              %p 2
+                          .info-item.clearfix
+                            .info-item-icon
+                              %img(src="images/icn-compartimentare.png" )
+                            .info-item-content
+                              %h5 Compartimentare
+                              %p decomandat
+                          .info-item.clearfix
+                            .info-item-icon
+                              %i.icon-wc
+                            .info-item-content
+                              %h5 Băi
+                              %p 1
+
+                  .info-item-row.facilities-wrapper
+                    .info-content
+                      %h3.block-headline Dotări apartament:
+                      %p.info-facilities termopan,  centrală, aer condiționat,  usă metalică.
+                  .info-descriotion
+                    .row
+                      .col-md-8
+                        %h3.block-headline Facilităţi în proiect
+                      .col-sm-6
+                        .info-item.info-item-single.clearfix
+                          .info-item-icon
+                            %i.icon-joacacopii
+                          .info-item-content
+                            %h5 Zonă joacă pentru copii
+
+                        .info-item.info-item-single.clearfix
+                          .info-item-icon
+                            %i.icon-lift
+                          .info-item-content
+                            %h5 Lift
+                        .info-item.info-item-single.clearfix
+                          .info-item-icon
+                            %i.icon-pom
+                          .info-item-content
+                            %h5 Zonă verde
+                      .col-sm-6
+                        .info-item.info-item-single.clearfix
+                          .info-item-icon
+                            %i.icon-piscina
+                          .info-item-content
+                            %h5 Piscina
+
+                        .info-item.info-item-single.clearfix
+                          .info-item-icon
+                            %i.icon-masina
+                          .info-item-content
+                            %h5 Parcare
+                        .info-item.info-item-single.clearfix
+                          .info-item-icon
+                            %i.icon-om
+                          .info-item-content
+                            %h5 Administraţie
+                .left-block
+                  .info-descriotion
+                    .contaier
+                      .row
+                        .col-md-12
+                          %h3.block-headline Împrejurimi
+                        .col-sm-12
+                          .info-category
+                            %p Obiective turistice:
+                          .info-item.info-item-single.clearfix
+                            .info-item-icon
+                              %i.icon-spital
+                            .info-item-content
+                              %h5 Sănătate:    farmacii, spitale
+                          .info-item.info-item-single.clearfix
+                            .info-item-icon
+                              %i.icon-pom
+                            .info-item-content
+                              %h5 Timp liber: cluburi, teatre, cinema, teren sport, piscine
+                          .info-category
+                            %p Shopping: Magazine, marketuri
+                          .info-item.info-item-single.clearfix
+                            .info-item-icon
+                              %i.icon-banca
+                            .info-item-content
+                              %h5 Bănci, Atm
+                          .info-item.info-item-single.clearfix
+                            .info-item-icon
+                              %i.icon-carte
+                            .info-item-content
+                              %h5 Şcoli, Grădiniţe
+                          .info-item.info-item-single.clearfix
+                            .info-item-icon
+                              %i.icon-autobuz
+                            .info-item-content
+                              %h5 Staţii autobuz
+
+
+                .left-block
+                  .contaier
+                    .row
+                      .col-md-12
+                        .map-wrapper
+                          %h3.block-headline Localizare
+                          %p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                          %iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2842064.057454162!2d22.76140647552017!3d45.922241558182385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b1ff26958976c3%3A0x84ef4f92a804b194!2z0KDRg9C80YvQvdC40Y8!5e0!3m2!1sru!2s!4v1484580768762" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen)
+
+
+
+
+              .col-md-4
+                .right-block
+                  .main-form-wrapper
+                    %h3.block-headline Pentru mai multe informații:
+                    %form.main-form.go-right
+                      .form-group
+                        %input#name.form-control(name="name" required="" type="text" placeholder="Nume" )
+                        %label.form-label(name="name") Nume
+                      .form-group
+                        %input#email.form-control(name="email" required="" type="email" placeholder="E-mail" )
+                        %label.form-label(for="email") E-mail
+                      .form-group
+                        %input#phone.form-control(name="phone" required="" type="phone" placeholder="Număr telefon" )
+                        %label.form-label(for="phone") Telefon
+
+                      .form-group
+                        %textarea#message.form-control(name="phone" required="" rows="3" placeholder="As dori mai multe detalii referitoare la.." )
+                        %label.form-label(for="message") Mesaj
+                      .form-group.text-center
+                        %button.send-button Trimite
+                  .share-block
+                    %h3.block-headline Share
+                    %a.social-button.fb(href="#" ) facebook
+                    %a.social-button.tw(href="#" ) twitter
+                    %a.social-button.gmail(href="#" ) gmail
+          .estate-list.mt-35
+            .container
+              .row
+                .col-md-4
+                  @@include('./_house_item.html')
+                .col-md-4
+                  @@include('./_house_item.html')
+                .col-md-4
+                  @@include('./_house_item.html')
+
+
+
+
+
+
+
+
+
+      @@include('./_footer.html')

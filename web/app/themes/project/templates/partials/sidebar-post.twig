@@ -1,0 +1,15 @@
+<div class="sidebar-item">
+    <div class="sidebar-content">
+        {% if post.thumbnail is not empty %}
+            <div class="img-container">
+                <img src="{{ post.thumbnail|resize(80, 80) }}"/>
+            </div>
+        {% endif %}
+        <div class="thumb-info">
+            <a class="title" href="{{ post.link }}">
+                {{ post.title }}
+            </a>
+            <p class="meta">{{ post.date }}</p>
+        </div>
+    </div>
+</div>

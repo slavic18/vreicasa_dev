@@ -1,0 +1,29 @@
+<div class="order-list-container">
+    <div class="container">
+        <ul>
+            <li>
+                <span>{{ __('Ordonați după:', 'project') }}</span>
+            </li>
+            <li>
+                <a href="?" class="js-change-order active" data-order-type="price-asc">
+                    {{ __('Preț crescător', 'project') }}
+                </a>
+            </li>
+            <li>
+                <a href="#" class="js-change-order" data-order-type="price-desc">
+                    {{ __('Preț descrescător', 'project') }}
+                </a>
+            </li>
+            <li>
+                <a href="#" class="js-change-order" data-order-type="date-desc">
+                    {{ __('Cele mai noi','project') }}
+                </a>
+            </li>
+            <li>
+                <a href="#" class="js-change-order" data-order-type="date-asc">
+                    {{ __('Cele mai vechi', 'project') }}
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>

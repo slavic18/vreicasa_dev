@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<!--[if IE 7]>    <html class="no-js ie7 oldie"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>@@include('./_head.html', { "title": "Vrei casa"})</head>
+
+<body>
+    <div class="home-page">@@include('./_header.html')
+        <div class="main-container">
+            <section class="main-filter">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h1 class="main-headline">Drumul către casă</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="filters-container container-fluid">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="filter-list-wrapper clearfix">
+                                    <ul class="filter-list">
+                                        <li class="with-sub-menu sub-menu-desctop">
+                                            <select class="switch-select">
+                                                <option>Cumpara</option>
+                                                <option>Închiriază</option>
+                                            </select>
+                                        </li>
+                                        <li class="sub-menu-full-width">
+                                            <select class="switch-select">
+                                                <option>Bucuresti</option>
+                                                <option>Timișoara</option>
+                                                <option>Brașov</option>
+                                            </select>
+                                        </li>
+                                        <li class="with-sub-menu sub-menu-mobile-show">
+                                            <select class="switch-select">
+                                                <option>Cumpara</option>
+                                                <option>Închiriază</option>
+                                            </select>
+                                        </li>
+                                        <li class="with-sub-menu sub-menu-bg"><span>Casă/Apartament</span>
+                                            <div class="sub-menu">
+                                                <div class="checkbox-container">
+                                                    <label>
+                                                        <input type="checkbox" name="form[real-estate][1]" value="1" /><span>Case</span>
+                                                    </label>
+                                                </div>
+                                                <div class="checkbox-container">
+                                                    <label>
+                                                        <input type="checkbox" name="form[real-estate][2]" value="1" /><span>Apartamente</span>
+                                                    </label>
+                                                </div>
+                                                <div class="checkbox-container">
+                                                    <label>
+                                                        <input type="checkbox" name="form[real-estate][3]" value="1" /><span>Spaţii comerciale</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="with-sub-menu sub-menu-mobile"><span>Camere</span>
+                                            <div class="sub-menu">
+                                                <div class="checkbox-container">
+                                                    <label>
+                                                        <input type="checkbox" name="form[rooms][1]" value="1" /><span>1</span>
+                                                    </label>
+                                                </div>
+                                                <div class="checkbox-container">
+                                                    <label>
+                                                        <input type="checkbox" name="form[rooms][2]" value="1" /><span>2</span>
+                                                    </label>
+                                                </div>
+                                                <div class="checkbox-container">
+                                                    <label>
+                                                        <input type="checkbox" name="form[rooms][3]" value="1" /><span>3</span>
+                                                    </label>
+                                                </div>
+                                                <div class="checkbox-container">
+                                                    <label>
+                                                        <input type="checkbox" name="form[rooms][4]" value="1" /><span>4</span>
+                                                    </label>
+                                                </div>
+                                                <div class="checkbox-container">
+                                                    <label>
+                                                        <input type="checkbox" name="form[rooms][4+]" value="1" /><span>4+</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="with-sub-menu sub-menu-mobile"><span>Suprafață</span>
+                                            <div class="sub-menu price-submenu">
+                                                <div class="min-max">
+                                                    <div class="input-container">
+                                                        <input type="number" placeholder="Min" min="0" name="form[min_area]" />
+                                                    </div>
+                                                    <div class="delimiter"></div>
+                                                    <div class="input-container">
+                                                        <input type="number" placeholder="Max" min="0" name="form[max_area]" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="with-sub-menu sub-menu-mobile"><span>Stare proiect</span>
+                                            <div class="sub-menu">
+                                                <div class="checkbox-container">
+                                                    <label>
+                                                        <input type="checkbox" name="form[status][finalizate]" value="1" /><span>finalizate</span>
+                                                    </label>
+                                                </div>
+                                                <div class="checkbox-container">
+                                                    <label>
+                                                        <input type="checkbox" name="form[status][development]" value="1" /><span>în dezvoltare</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="with-sub-menu sub-menu-mobile"><span>Buget</span>
+                                            <div class="sub-menu price-submenu">
+                                                <div class="switch-currency-container">
+                                                    <div class="currency">
+                                                        <div class="radio-container">
+                                                            <input type="radio" name="form[currency]" value="lei" id="currency-lei" />
+                                                            <label for="currency-lei">Lei</label>
+                                                        </div>
+                                                        <div class="radio-container">
+                                                            <input type="radio" name="form[currency]" value="euro" id="currency-euro" />
+                                                            <label for="currency-euro">Euro</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="min-max">
+                                                    <div class="input-container">
+                                                        <input type="number" placeholder="Min" min="0" name="form[min_price]" />
+                                                    </div>
+                                                    <div class="delimiter">&#45;</div>
+                                                    <div class="input-container">
+                                                        <input type="number" placeholder="Max" min="0" name="form[max_price]" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <li class="with-sub-menu button-desctop">
+                                                <button class="filter-search">Caută</button>
+                                            </li>
+                                        </li>
+                                    </ul>
+                                    <div class="status-wrapper">
+                                        <div class="checkbox-container">
+                                            <label>
+                                                <input type="checkbox" name="form[status][1]" value="1" /><span>În construcție</span>
+                                            </label>
+                                        </div>
+                                        <div class="checkbox-container">
+                                            <label>
+                                                <input type="checkbox" name="form[status][2]" value="1" /><span>Finalizate</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="button-mobile">
+                                        <button class="filter-search">Caută</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="featured-projects">
+                <h3 class="section-title vinous">Proiecte Recomandate</h3>
+                <div class="container card-wrapper">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="owl-carousel">
+                                <div class="item">
+                                    <div class="card-project">
+                                        <img src="images/proeject-img.png" />
+                                        <div class="card-descroption">
+                                            <p>Ansmablu resedinţe Cartier Nord</p><a href="#">Detalii</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="card-project">
+                                        <img src="images/proeject-img.png" />
+                                        <div class="card-descroption">
+                                            <p>Ansmablu resedinţe Cartier Nord</p><a href="#">Detalii</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="card-project">
+                                        <img src="images/proeject-img.png" />
+                                        <div class="card-descroption">
+                                            <p>Ansmablu resedinţe Cartier Nord</p><a href="#">Detalii</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="card-project">
+                                        <img src="images/proeject-img.png" />
+                                        <div class="card-descroption">
+                                            <p>Ansmablu resedinţe Cartier Nord</p><a href="#">Detalii</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="card-project">
+                                        <img src="images/proeject-img.png" />
+                                        <div class="card-descroption">
+                                            <p>Ansmablu resedinţe Cartier Nord</p><a href="#">Detalii</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="card-project">
+                                        <img src="images/proeject-img.png" />
+                                        <div class="card-descroption">
+                                            <p>Ansmablu resedinţe Cartier Nord</p><a href="#">Detalii</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row text-center"><a href="#" class="more-projects">Vezi toate proiectele imobiliare</a>
+                    </div>
+                </div>
+            </section>
+            <section class="service">
+                <h3 class="section-title purple">Servicii</h3>
+                <div class="container service-wrapper">
+                    <div class="row">
+                        <div class="card-service-wrapper clearfix">
+                            <div class="col-sm-4">
+                                <div class="card-service clearfix">
+                                    <h4>DESIGN DE INTERIOR</h4>
+                                    <p>Cele mai noi stiluri de arhitectura si mobila</p>
+                                    <img src="images/service-design.png" />
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="card-service clearfix">
+                                    <h4>ARHITECTURA</h4>
+                                    <p>Cele mai noi stiluri de arhitectura si mobila</p>
+                                    <img src="images/service-architecture.png" />
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="card-service clearfix">
+                                    <h4>CADASTRU</h4>
+                                    <p>Cele mai noi stiluri de arhitectura si mobila</p>
+                                    <img src="images/service-cadastre.png" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="service">
+                <h3 class="section-title red">De ce vreicasă.ro?</h3>
+                <div class="container service-wrapper">
+                    <div class="row">
+                        <div class="card-service-wrapper clearfix">
+                            <div class="col-sm-4">
+                                <div class="card-service clearfix">
+                                    <h4>De ce case noi?</h4>
+                                    <p>Cele mai noi stiluri de arhitectura si mobila</p>
+                                    <img src="images/service-whi-we.png" />
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="card-service clearfix">
+                                    <h4>Despre noi</h4>
+                                    <p>Despre noi</p>
+                                    <img src="images/service-about.png" class="card-service-top" />
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="card-service clearfix">
+                                    <h4>În pas cu moda</h4>
+                                    <p>Cele mai noi stiluri de arhitectura si mobila</p>
+                                    <img src="images/service-moda.png" class="card-service-bottom" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>@@include('./_footer.html')</div>
+    </div>
+</body>

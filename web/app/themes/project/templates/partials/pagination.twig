@@ -1,0 +1,37 @@
+<div class="pagination-container">
+    <ul class="pagination">
+        {% if pagination.pages|first and pagination.pages|first.current != true %}
+            <li class="pag-btn prev ">
+                <a href="{{pagination.pages|first.link}}"><i class="fa fa-backward"></i></a>
+            </li>
+        {% endif %}
+        {% if pagination.prev %}
+            <li class="pag-btn hidden prev {{pagination.prev.link|length ? '' : 'hidden'}}">
+                <a href="{{pagination.prev.link}}"><i class="fa fa-caret-left"></i></a>
+            </li>
+        {% endif %}
+        {% for page in pagination.pages %}
+            {% if page.link %}
+                <li>
+                    <a href="{{page.link}}" class="{{page.class}}">{{page.title}}</a>
+                </li>
+            {% else %}
+                <li class="active">
+                    <span class="{{page.class}}">{{page.title}}</span>
+                </li>
+            {% endif %}
+        {% endfor %}
+        {% if pagination.next %}
+            <li class="pag-btn hidden next">
+                <a href="{{pagination.next.link}}" class="next {{pagination.next.link|length ? '' : 'hidden'}}">
+                    <i class="fa fa-caret-right"></i></a>
+            </li>
+        {% endif %}
+        {% if pagination.pages|last and pagination.pages|last.current != true %}
+            <li class="pag-btn prev ">
+                <a href="{{pagination.pages|last.link}}"><i class="fa fa-forward"></i></a>
+            </li>
+        {% endif %}
+    </ul>
+</div>
+

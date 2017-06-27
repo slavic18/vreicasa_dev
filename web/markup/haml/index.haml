@@ -1,0 +1,228 @@
+!!! 5
+<!--[if IE 7]>    <html class="no-js ie7 oldie"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie"> <![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js"><!--<![endif]-->
+  %head
+    @@include('./_head.html', {
+      "title": "Vrei casa"
+    })
+  %body
+    .home-page
+      @@include('./_header.html')
+      .main-container
+        %section.main-filter
+          .container
+            .row
+              .col-md-12
+                %h1.main-headline Drumul către casă
+          .container
+            .filters-container.container-fluid
+              .row
+                .col-sm-12
+                  .filter-list-wrapper.clearfix
+                    %ul.filter-list
+                      %li.with-sub-menu.sub-menu-desctop
+                        %select.switch-select
+                          %option Cumpara
+                          %option Închiriază
+
+
+                      %li.sub-menu-full-width
+                        %select.switch-select
+                          %option Bucuresti
+                          %option Timișoara
+                          %option Brașov
+                      %li.with-sub-menu.sub-menu-mobile-show
+                        %select.switch-select
+                          %option Cumpara
+                          %option Închiriază
+                      %li.with-sub-menu.sub-menu-bg
+                        %span
+                          Casă/Apartament
+                        .sub-menu
+                          .checkbox-container
+                            %label
+                              %input( type="checkbox" name="form[real-estate][1]" value="1" )
+                              %span Case
+                          .checkbox-container
+                            %label
+                              %input( type="checkbox" name="form[real-estate][2]" value="1" )
+                              %span Apartamente
+                          .checkbox-container
+                            %label
+                              %input( type="checkbox" name="form[real-estate][3]" value="1" )
+                              %span Spaţii comerciale
+
+                      %li.with-sub-menu.sub-menu-mobile
+                        %span Camere
+                        .sub-menu
+                          .checkbox-container
+                            %label
+                              %input( type="checkbox" name="form[rooms][1]" value="1" )
+                              %span 1
+                          .checkbox-container
+                            %label
+                              %input( type="checkbox" name="form[rooms][2]" value="1" )
+                              %span 2
+                          .checkbox-container
+                            %label
+                              %input( type="checkbox" name="form[rooms][3]" value="1" )
+                              %span 3
+                          .checkbox-container
+                            %label
+                              %input( type="checkbox" name="form[rooms][4]" value="1" )
+                              %span 4
+                          .checkbox-container
+                            %label
+                              %input( type="checkbox" name="form[rooms][4+]" value="1" )
+                              %span 4+
+                      %li.with-sub-menu.sub-menu-mobile
+                        %span Suprafață
+                        .sub-menu.price-submenu
+                          .min-max
+                            .input-container
+                              %input(type="number" placeholder="Min" min="0" name="form[min_area]" )
+                            .delimiter
+                            .input-container
+                              %input(type="number" placeholder="Max" min="0" name="form[max_area]" )
+                      %li.with-sub-menu.sub-menu-mobile
+                        %span Stare proiect
+                        .sub-menu
+                          .checkbox-container
+                            %label
+                              %input( type="checkbox" name="form[status][finalizate]" value="1" )
+                              %span finalizate
+                          .checkbox-container
+                            %label
+                              %input( type="checkbox" name="form[status][development]" value="1" )
+                              %span în dezvoltare
+                      %li.with-sub-menu.sub-menu-mobile
+                        %span
+                          Buget
+                        .sub-menu.price-submenu
+                          .switch-currency-container
+                            .currency
+                              .radio-container
+                                %input#currency-lei(type="radio" name="form[currency]" value="lei")
+                                %label(for="currency-lei")
+                                  Lei
+                              .radio-container
+                                %input#currency-euro(type="radio" name="form[currency]" value="euro")
+                                %label(for="currency-euro")
+                                  Euro
+                          .min-max
+                            .input-container
+                              %input(type="number" placeholder="Min" min="0" name="form[min_price]" )
+                            .delimiter
+                              &#45;
+                            .input-container
+                              %input(type="number" placeholder="Max" min="0" name="form[max_price]" )
+                        %li.with-sub-menu.button-desctop
+                          %button.filter-search Caută
+                    .status-wrapper
+                      .checkbox-container
+                        %label
+                          %input( type="checkbox" name="form[status][1]" value="1" )
+                          %span În construcție
+
+                      .checkbox-container
+                        %label
+                          %input( type="checkbox" name="form[status][2]" value="1" )
+                          %span Finalizate
+                    .button-mobile
+                      %button.filter-search Caută
+
+        %section.featured-projects
+          %h3.section-title.vinous Proiecte Recomandate
+          .container.card-wrapper
+            .row
+              .col-md-12
+                .owl-carousel
+                  .item
+                    .card-project
+                      %img(src="images/proeject-img.png" )
+                      .card-descroption
+                        %p Ansmablu resedinţe Cartier Nord
+                        %a(href="#" ) Detalii
+                  .item
+                    .card-project
+                      %img(src="images/proeject-img.png" )
+                      .card-descroption
+                        %p Ansmablu resedinţe Cartier Nord
+                        %a(href="#" ) Detalii
+                  .item
+                    .card-project
+                      %img(src="images/proeject-img.png" )
+                      .card-descroption
+                        %p Ansmablu resedinţe Cartier Nord
+                        %a(href="#" ) Detalii
+                  .item
+                    .card-project
+                      %img(src="images/proeject-img.png" )
+                      .card-descroption
+                        %p Ansmablu resedinţe Cartier Nord
+                        %a(href="#" ) Detalii
+                  .item
+                    .card-project
+                      %img(src="images/proeject-img.png" )
+                      .card-descroption
+                        %p Ansmablu resedinţe Cartier Nord
+                        %a(href="#" ) Detalii
+                  .item
+                    .card-project
+                      %img(src="images/proeject-img.png" )
+                      .card-descroption
+                        %p Ansmablu resedinţe Cartier Nord
+                        %a(href="#" ) Detalii
+
+
+
+            .row.text-center
+              %a.more-projects(href="#") Vezi toate proiectele imobiliare
+        %section.service
+          %h3.section-title.purple Servicii
+          .container.service-wrapper
+            .row
+              .card-service-wrapper.clearfix
+                .col-sm-4
+                  .card-service.clearfix
+                    %h4 DESIGN DE INTERIOR
+                    %p Cele mai noi stiluri de arhitectura si mobila
+                    %img(src="images/service-design.png" )
+                .col-sm-4
+                  .card-service.clearfix
+                    %h4 ARHITECTURA
+                    %p Cele mai noi stiluri de arhitectura si mobila
+                    %img(src="images/service-architecture.png" )
+
+                .col-sm-4
+                  .card-service.clearfix
+                    %h4 CADASTRU
+                    %p Cele mai noi stiluri de arhitectura si mobila
+                    %img(src="images/service-cadastre.png" )
+        %section.service
+          %h3.section-title.red De ce vreicasă.ro?
+          .container.service-wrapper
+            .row
+              .card-service-wrapper.clearfix
+                .col-sm-4
+                  .card-service.clearfix
+                    %h4 De ce case noi?
+                    %p Cele mai noi stiluri de arhitectura si mobila
+                    %img(src="images/service-whi-we.png" )
+                .col-sm-4
+                  .card-service.clearfix
+                    %h4 Despre noi
+                    %p Despre noi
+                    %img.card-service-top(src="images/service-about.png" )
+
+                .col-sm-4
+                  .card-service.clearfix
+                    %h4 În pas cu moda
+                    %p Cele mai noi stiluri de arhitectura si mobila
+                    %img.card-service-bottom(src="images/service-moda.png" )
+
+
+
+
+        @@include('./_footer.html')

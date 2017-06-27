@@ -1,0 +1,142 @@
+{% block html_head_container %}
+
+    {% include 'html-header.twig' %}
+    {% block head %}
+    {% endblock %}
+    </head>
+{% endblock %}
+
+<body class="{{ body_class }}" data-template="base.twig">
+<header>
+    {% block header %}
+        <div class="header-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <p class="partners-description">Acest site este cofinanţat din Fondul Social European prin
+                            Programul Operaţional Sectorial Dezvoltarea Resurselor Umane 2007-2013</p>
+                        <div class="logo-partners"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-2 col-xs-4">
+                        <a href="{{ site.url }}" rel="home" title="{{ site.name }}" class="logo"></a>
+                    </div>
+                    <div class="col-md-3 col-md-offset-1 col-xs-6">
+                        <div class="input-mobile-wrapper">
+                            <div class="input-group input-group-head">
+                                <input placeholder="Adresa de e-mail" type="email" class="form-control"/>
+                                <span class="input-group-btn">
+                                    <button type="button" class="btn btn-default">Caută</button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5 text-right mob-hide">
+                        <ul class="main-nav">
+                            <li><a href="#">POMOVEAZĂ-TE</a>
+                            </li>
+                            <li><a href="{{ getPermalink('blog') }}">ŞTIRI</a>
+                            </li>
+                            <li class="dropdown-block save-block">
+                                <a href="#" class="dropdown-item icon-inimacasa-01"></a>
+                                <ul class="header-menu-dropdown">
+                                    <li><a href="#" class="dropdown-link">Salvează căutările</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="{{ getPermalink('contact') }}">CONTACT</a>
+                            </li>
+                            <li><a href="#">LOGIN</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-1 mob-hide">
+                        <ul class="header-menu">
+                            <li class="dropdown-block"><a href="#" class="dropdown-item">MENIU</a>
+                                <ul class="header-menu-dropdown">
+                                    <li><a href="#" class="dropdown-link">Acasă</a>
+                                    </li>
+                                    <li><a href="#" class="dropdown-link">De ce case noi</a>
+                                    </li>
+                                    <li><a href="#" class="dropdown-link">Despre noi</a>
+                                    </li>
+                                    <li><a href="#" class="dropdown-link">Servicii</a>
+                                    </li>
+                                    <li><a href="#" class="dropdown-link">Proiecte imobiliare</a>
+                                    </li>
+                                    <li><a href="#" class="dropdown-link dropdown-link-last">Părerea voastră</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 col-xs-2">
+                        <div class="navbar-menu-overlay"></div>
+                        <a href="#" class="mob-menu-icon"><span></span></a>
+                        <div class="mob-sidebar">
+                            <div class="mob-menu-container">
+                                <ul class="menu menu-mob">
+                                    <li><a href="#" class="dropdown-link">POMOVEAZĂ-TE</a>
+                                    </li>
+                                    <li><a href="#" class="dropdown-link">ŞTIRI</a>
+                                    </li>
+                                    <li><a href="#" class="dropdown-link">CONTACT</a>
+                                    </li>
+                                    <li><a href="#" class="dropdown-link">LOGIN</a>
+                                    </li>
+                                    <li><a href="#" class="menu-mob-item">Acasă</a>
+                                    </li>
+                                    <li><a href="#" class="menu-mob-item">De ce case noi</a>
+                                    </li>
+                                    <li><a href="#" class="menu-mob-item">Despre noi</a>
+                                    </li>
+                                    <li><a href="#" class="menu-mob-item">Servicii</a>
+                                    </li>
+                                    <li><a href="#" class="menu-mob-item">Proiecte imobiliare</a>
+                                    </li>
+                                    <li><a href="#" class="menu-mob-item">Părerea voastră</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endblock %}
+</header>
+<div class="main-container">
+    {% block content %}
+        Sorry, no content
+    {% endblock %}
+</div>
+{% block footer %}
+    <footer class="footer">
+        {% include 'footer.twig' %}
+        {#<script type="text/javascript" src="//api.venyoo.ru/wnew.js?wc=venyoo/default/science&widget_id=6135491847782400"></script>#}
+
+        {#<script type="text/javascript" src="//api.venyoo.ru/wnew.js?wc=venyoo/default/science&widget_id=6658528028131328"></script>#}
+        {#vreicasa#}
+        {#<script type="text/javascript" src="//api.venyoo.ru/wnew.js?wc=venyoo/default/science&widget_id=6743738779697152"></script>#}
+        {#<script type="text/javascript" src="//api.venyoo.ru/wnew.js?wc=venyoo/default/science&widget_id=5215696918937600"></script>#}
+
+        {#venyoo.ru#}
+        {#testadmin000@gmail.com#}
+        {#testadmin000@gmail.com#}
+        {#<script type="text/javascript" src="//api.venyoo.ru/wnew.js?wc=venyoo/default/science&widget_id=4927177692545024"></script>#}
+
+        {#<script type="text/javascript" src="//api.venyoo.ru/wnew.js?wc=venyoo/default/science&widget_id=4927177692545024"></script>#}
+
+        {#<script type="text/javascript" src="//api.venyoo.ru/wnew.js?wc=venyoo/default/science&widget_id=6419728782065664"></script>#}
+
+
+    </footer>
+    {{ function('wp_footer') }}
+{% endblock %}
+</body>
+</html>

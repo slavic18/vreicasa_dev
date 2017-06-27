@@ -1,0 +1,39 @@
+{% extends 'base.twig' %}
+{% block content %}
+    <div class="category-container">
+        <div class="section-title pink">{{ __('Stiri', 'project') }}</div>
+    </div>
+    <div class="bg-light-grey">
+        {% if posts is not empty %}
+            <div class="container">
+
+                <div class="row">
+                    {% if popularPosts %}
+                    <div class="col-md-8">
+                        {% endif %}
+                        {% for post in posts %}
+                            {% include 'partials/news-teaser.twig' %}
+                        {% endfor %}
+                        <div class="sort-container centered-pagination">
+                            {% include 'partials/pagination.twig' %}
+                        </div>
+                    </div>
+                    {% if popularPosts is not empty %}
+                        <div class="col-md-4">
+                            <div class="news-sidebar">
+                                <div class="sidebar-title">
+                                    {{ __('Cele mai citite', 'project') }}
+                                </div>
+                                {% for post in popularPosts %}
+                                    {% include 'partials/sidebar-post.twig' %}
+                                {% endfor %}
+                            </div>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        {% else %}
+            {% include 'partials/not-founded.twig' %}
+        {% endif %}
+    </div>
+{% endblock %}
