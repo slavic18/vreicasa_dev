@@ -6,6 +6,37 @@
     width: 100%;
     height: 414px !important;
   }
+  .bg-promote{
+    height: inherit !important;
+    background: none !important;
+  }
+  .promo-description{
+    position: inherit !important;
+    width: inherit !important;
+    top: inherit !important;
+    text-align: inherit!important;
+  }
+  .promote-block-title{
+    .item-1{
+      top: inherit !important;
+    }
+    .item-2{
+      bottom: inherit !important;
+    }
+    .item-3{
+      top: inherit !important;
+      right: inherit !important;
+    }
+    .item-4{
+      bottom: inherit !important;
+      right:inherit !important;
+    }
+  }
+  .card-pachete {
+    width: 191px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+  }
 }
 
 /* Medium Devices, Desktops */
@@ -161,6 +192,12 @@
 @media only screen and (max-width : 480px){
   .contact .main-form-wrapper .go-right .btn-default {
     padding: 6px 25px;
+  }
+  .promo-title-special h3{
+    font-size:30px !important;
+  }
+  .promo-title-special p{
+    font-size: 15px !important;
   }
 }
 
