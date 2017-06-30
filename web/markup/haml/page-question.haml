@@ -1,0 +1,65 @@
+!!! 5
+<!--[if IE 7]>    <html class="no-js ie7 oldie"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie"> <![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js"><!--<![endif]-->
+  %head
+    @@include('./_head.html', {
+      "title": "Vrei casa"
+    })
+  %body
+    .question-page
+      @@include('./_header.html')
+
+        %section.question-wrapper
+          %h3.section-title.dark-violet De ce case și apartamente noi?
+          .container-fluid
+            .row
+              .col-sm-12
+                .question-block-title
+                  %p
+                    In prezent societatea este intr-un progres rapid pe toate planurile, unul dintre acestea bazându-se pe dorința omului de a se stabili într-un loc pe care să îl numească „acasa”. În acest sens investitorii sunt în plin proces de dezvoltate a comunității și construcții noi apar de la cele mai centrale zone pana în zonele limitrofe ale orașelor, devenind o alegere din ce în ce mai populară în rândul cumpărătorilor datorită avantajelor pe care le prezintă.
+          .container-fluid
+            .row
+              %ul.grid
+                %li.show
+                  %a(href="#")
+                    %img.hide-info(src="images/inceput-front.png")
+                    %img.show-info(src="images/inceput-spate.png")
+                %li.show-modern
+                  %a(href="#")
+                    %img.hide-info(src="images/modern-front.png")
+                    %img.show-info(src="images/modern-spate.png")
+                %li.show
+                  %a(href="#")
+                    %img.hide-info(src="images/oferte-front.png")
+                    %img.show-info(src="images/oferte-spate.png")
+                %li.show
+                  %a(href="#")
+                    %img.hide-info(src="images/functional-front.png")
+                    %img.show-info(src="images/functional-spate.png")
+                %li.show.costuri
+                  %a(href="#")
+                    %img.hide-info(src="images/costuri-front.png")
+                    %img.show-info(src="images/costul-spate.png")
+                %li.show
+                  %a(href="#")
+                    %img.hide-info(src="images/constructile-front.png")
+                    %img.show-info(src="images/constructile-spate.png")
+                %li.show.calitatea
+                  %a(href="#")
+                    %img.hide-info(src="images/calitatea-front.png")
+                    %img.show-info(src="images/calitatea-spate.png")
+                %li.show.siguranta
+                  %a(href="#")
+                    %img.hide-info(src="images/siguranta-front.png")
+                    %img.show-info(src="images/siguranta-spate.png")
+                %li.show.invest
+                  %a(href="#")
+                    %img.hide-info(src="images/investitie-front.png")
+                    %img.show-info(src="images/investitie-spate.png")
+                %li.show.poveste
+                  %a(href="#")
+                    %img.hide-info(src="images/poveste-front.png")
+                    %img.show-info(src="images/poveste-spate.png")
+
+        @@include('./_footer.html')
