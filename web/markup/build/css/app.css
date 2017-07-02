@@ -3611,3 +3611,135 @@ ul {
   -webkit-animation: popUp .8s ease-in forwards;
   animation: popUp .8s ease-in forwards;
 }
+
+/* line 1221, ../../scss/app.scss */
+.profile-page .main-header {
+  padding: 10px 0;
+}
+/* line 1224, ../../scss/app.scss */
+.profile-page .dropdown-block {
+  position: relative;
+}
+/* line 1228, ../../scss/app.scss */
+.profile-page .dropdown-item {
+  font-size: 15px;
+  font-family: "work_sanssemibold";
+  text-transform: none;
+  letter-spacing: 1px;
+}
+/* line 1235, ../../scss/app.scss */
+.profile-page .dropdown-block {
+  position: relative;
+}
+/* line 1237, ../../scss/app.scss */
+.profile-page .dropdown-block:after {
+  content: " ";
+  position: absolute;
+  right: -20px;
+  top: 5px;
+  display: block;
+  width: 11px;
+  height: 7px;
+  background: url("../images/arrow.png") no-repeat;
+}
+/* line 1248, ../../scss/app.scss */
+.profile-page .header-menu {
+  float: right;
+  margin-right: 30px;
+}
+/* line 1251, ../../scss/app.scss */
+.profile-page .header-menu .header-menu-dropdown {
+  top: 30px;
+  right: -25px;
+}
+/* line 1255, ../../scss/app.scss */
+.profile-page .header-menu:before {
+  content: '';
+  display: block;
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  left: -40px;
+  top: -8px;
+  background: url("../images/profil-image.png") no-repeat;
+}
+
+/* line 1268, ../../scss/app.scss */
+.profile-section {
+  padding-top: 50px;
+  padding-bottom: 180px;
+  border-top: 1px solid #d4d4d4;
+  background: #f0f0f0;
+}
+
+/* line 1274, ../../scss/app.scss */
+.profile-option {
+  margin-top: 50px;
+}
+/* line 1277, ../../scss/app.scss */
+.profile-option .tabs li {
+  display: inline-block;
+}
+/* line 1280, ../../scss/app.scss */
+.profile-option .tabs a {
+  display: block;
+  padding: 25px 20px;
+  font-family: "work_sansregular";
+  font-size: 19px;
+  color: #3f3e3e;
+  text-decoration: none;
+}
+/* line 1287, ../../scss/app.scss */
+.profile-option .tabs a:hover {
+  color: #c71061;
+  background: #ffffff;
+  border-top: 1px  solid #e0e1e1;
+  border-right: 1px  solid #e0e1e1;
+  border-left: 1px  solid #e0e1e1;
+}
+/* line 1295, ../../scss/app.scss */
+.profile-option .tabs .active {
+  color: #c71061;
+  background: #ffffff;
+  border-top: 1px  solid #e0e1e1;
+  border-right: 1px  solid #e0e1e1;
+  border-left: 1px  solid #e0e1e1;
+}
+/* line 1303, ../../scss/app.scss */
+.profile-option .tabs-content {
+  height: 550px;
+  padding: 95px;
+  margin-top: -1px;
+  background: #fff;
+  border: 1px solid  #b5b5b6;
+  text-align: center;
+  font-size: 19px;
+  font-family: "work_sansregular";
+}
+/* line 1312, ../../scss/app.scss */
+.profile-option .tabs-content h4 {
+  margin-bottom: 50px;
+  font-family: "work_sansmedium";
+}
+/* line 1316, ../../scss/app.scss */
+.profile-option .tabs-content img {
+  margin-bottom: 30px;
+}
+/* line 1319, ../../scss/app.scss */
+.profile-option .tabs-content p {
+  line-height: 25px;
+}
+/* line 1322, ../../scss/app.scss */
+.profile-option .tabs-content .violet-text {
+  color: #db0ed9;
+}
+/* line 1325, ../../scss/app.scss */
+.profile-option .tabs-content .btn {
+  width: 175px;
+  height: 37px;
+  margin-top: 10px;
+  background: #c61060;
+  font-size: 17px;
+  color: #FFF;
+  line-height: 25px;
+}

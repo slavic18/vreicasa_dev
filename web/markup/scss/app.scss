@@ -1217,4 +1217,119 @@ ul {
   -webkit-animation: popUp .8s ease-in forwards;
   animation: popUp .8s ease-in forwards;
 }
+.profile-page{
+  .main-header{
+    padding: 10px 0 ;
+  }
+  .dropdown-block{
+    position: relative;
 
+  }
+  .dropdown-item{
+    font-size:15px;
+    font-family: $workSansSemiBold;
+    text-transform: none;
+    letter-spacing: 1px;
+
+  }
+  .dropdown-block{
+    position: relative;
+    &:after{
+      content: " ";
+      position: absolute;
+      right: -20px;
+      top: 5px;
+      display: block;
+      width: 11px;
+      height: 7px;
+      background: url("../images/arrow.png") no-repeat;
+    }
+  }
+  .header-menu{
+    float: right;
+    margin-right: 30px;
+    .header-menu-dropdown{
+      top: 30px;
+      right: -25px;
+    }
+    &:before{
+      content:'';
+      display: block;
+      width: 32px;
+      height: 32px;
+      position: absolute;
+      left: -40px;
+      top: -8px;
+      background: url("../images/profil-image.png") no-repeat;
+    }
+  }
+}
+
+.profile-section{
+  padding-top: 50px;
+  padding-bottom: 180px;
+  border-top:1px solid #d4d4d4 ;
+  background: #f0f0f0;
+}
+.profile-option{
+  margin-top: 50px;
+  .tabs{
+    li{
+      display: inline-block;
+    }
+    a{
+      display: block;
+      padding: 25px 20px;
+      font-family:$workSans;
+      font-size: 19px;
+      color: #3f3e3e;
+      text-decoration: none;
+      &:hover{
+        color: #c71061;
+        background: #ffffff;
+        border-top: 1px  solid #e0e1e1;
+        border-right: 1px  solid #e0e1e1;
+        border-left: 1px  solid #e0e1e1;
+      }
+    }
+    .active{
+      color: #c71061;
+      background: #ffffff;
+      border-top: 1px  solid #e0e1e1;
+      border-right: 1px  solid #e0e1e1;
+      border-left: 1px  solid #e0e1e1;
+    }
+  }
+ .tabs-content{
+   height: 550px;
+   padding: 95px;
+   margin-top: -1px;
+   background: #fff;
+   border: 1px solid  #b5b5b6;
+   text-align: center;
+   font-size: 19px;
+   font-family:$workSans;
+   h4{
+     margin-bottom: 50px;
+     font-family:$workSansMedium;
+   }
+   img{
+     margin-bottom: 30px;
+   }
+   p{
+     line-height: 25px;
+   }
+   .violet-text{
+     color: #db0ed9;
+   }
+   .btn{
+     width: 175px;
+     height: 37px;
+     margin-top: 10px;
+     background: #c61060;
+     font-size: 17px;
+     color: #FFF;
+     line-height: 25px;
+   }
+ }
+}

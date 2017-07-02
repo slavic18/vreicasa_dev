@@ -1,0 +1,36 @@
+!!! 5
+<!--[if IE 7]>    <html class="no-js ie7 oldie"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie"> <![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js"><!--<![endif]-->
+  %head
+    @@include('./_head.html', {
+      "title": "Vrei casa"
+    })
+  %body
+    .profile-page
+      @@include('./_header-logged.html')
+
+        %section.profile-section
+          .container
+            .row
+              .col-xs-12
+                .profile-option
+                  .tabs
+                    %ul
+                      %li
+                        %a(href="profile-favorite.html") Favorite
+                      %li
+                        %a(href="profile-cautari.html") Cautari recente
+                      %li
+                        %a(href="profile-message.html") Mesaje
+                      %li
+                        %a.active(href="profile-setari.html") Setari
+                  .tabs-content
+                    %img(src="images/message.png")
+                    %p.violet-text
+                      Momentan nu ai nici un mesaj
+                    %p
+                      Orice mesaj trimiti sau primesti va fi vizibil in aceasta pagina
+
+
+        @@include('./_footer.html')
