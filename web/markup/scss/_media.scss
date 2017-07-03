@@ -1,6 +1,41 @@
 @media only screen and (max-width : 1200px) {
 
 }
+@media only screen and (min-width : 1200px) {
+  .costuri{
+    width: 392px;
+    margin-top: 30px;
+    img{
+      margin: 0 auto;
+    }
+  }
+  .calitatea{
+    margin-top: 21px;
+    left: 0px !important;
+  }
+  .siguranta{
+    left: 460px !important;
+    top: 725px !important;
+  }
+  .invest{
+    top: 940px !important;
+    right: 0;
+    text-align: -webkit-right;
+  }
+  .poveste{
+    top: 1075px !important;
+    left: -10px !important;
+  }
+  .show-modern{
+    left: 250px !important;
+  }
+  .grid {
+    max-width: 1201px;
+    margin:auto;
+    list-style: none;
+    padding: 0;
+  }
+}
 @media only screen and (max-width : 1200px) {
   .service-img img {
     width: 100%;
@@ -174,6 +209,7 @@
   }
 
 }
+
 @media only screen and (max-width : 768px) {
   .card-service-wrapper {
     width: 80%;
@@ -188,7 +224,15 @@
     height: auto !important;
   }
 }
-
+@media only screen and (max-width : 668px) {
+  .grid li img {
+    max-width: 100%;
+    margin: auto;
+  }
+  .grid li {
+    width: 100%;
+  }
+}
 @media only screen and (max-width : 480px){
   .contact .main-form-wrapper .go-right .btn-default {
     padding: 6px 25px;

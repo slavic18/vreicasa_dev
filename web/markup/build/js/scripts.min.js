@@ -150,7 +150,14 @@ project.Behavior.chosenSelect = function(context) {
  }
 
 
-
+project.Behavior.masonryAdd = function(context) {
+    $('.grid').masonry({
+        // options
+        itemSelector: 'li',
+        columnWidth: 1,
+        fitWidth: true
+    });
+}
 project.Behavior.removeClassCol = function(context) {
     $(document).ready(function() {
             if ($(window).width() < 480) {
