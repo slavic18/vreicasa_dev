@@ -32,5 +32,8 @@
     "imagemin-pngquant": "^5.0.0",
     "tiny-lr": "0.0.7"
   },
-  "dependencies": {}
+  "dependencies": {
+    "gulp-cached": "^1.1.1",
+    "imagemin-jpegtran": "^5.0.2"
+  }
 }
