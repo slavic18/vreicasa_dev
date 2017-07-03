@@ -155,6 +155,11 @@ project.Behavior.initContactsMap = function (context) {
         map.markers.push(marker);
     }
 }
+project.Behavior.scrollToForm = function(context) {
+    if(window.location && window.location.hash === '#scroll-to-form') {
+        $('html,body').animate({scrollTop: $('.js-scroll-form').offset().top - 200}, 200);
+    }
+}
 
 
 /**

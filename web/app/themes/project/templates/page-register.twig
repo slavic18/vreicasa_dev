@@ -1,0 +1,69 @@
+{% extends 'base.twig' %}
+{% block content %}
+    <div class="post-title">
+        <h3 class="section-title vinous">{{ post.title }}</h3>
+    </div>
+    <div class="register-page-container">
+        <div class="bg-orange">
+            <div class="register-page">
+                {{ fn('project_show_error_messages', 'registration_errors') }}
+
+                <form class="register-page-form container js-scroll-form" method="post" action="#scroll-to-form">
+                    <div class="form-row row">
+                        <div class="col-md-3">
+                            <label>{{ __('Email', 'project') }}</label>
+                        </div>
+                        <div class="col-md-9">
+                            <input type="email" class="form-input" value="{{ form.email }}" required="required" name="registration[email]"/>
+                        </div>
+                    </div>
+                    <div class="form-row row">
+                        <div class="col-md-3">
+                            <label>{{ __('Parola', 'project') }}</label>
+                        </div>
+                        <div class="col-md-9">
+                            <input type="password" class="form-input"  value="{{ form.password }}" required="required" name="registration[password]"/>
+                        </div>
+                    </div>
+                    <div class="form-row row">
+                        <div class="col-md-3">
+                            <label>{{ __('Repetati parola', 'project') }}</label>
+                        </div>
+                        <div class="col-md-9">
+                            <input type="password" class="form-input"  value="{{ form.repeat_password }}"  required="required" name="registration[repeat_password]"/>
+                        </div>
+                    </div>
+                    <div class="form-row row">
+                        <div class="col-md-9 col-md-offset-3">
+                            <label>
+                                <input type="checkbox" name="registration[terms_and_conditions]" {{ form.terms_and_conditions ? 'checked' }}  required="required" value="1"/>
+                                <span>
+                                        {{ __('Declar că am citit și accept Termenii și condițiile Vreicasa. Orice persoana care acceseaza vreicasa.ro/sau care ofera date si/sau informatii cu carcater personal prin intermediul formularelor Declar că am citit și accept Termenii și condițiile Vreicasa. Orice persoana care acceseaza vreicasa.ro/sau care ofera date si/sau informatii cu carcater personal prin intermediul formularelor', 'project') }}
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-row row">
+                        <div class="col-md-9 col-md-offset-3">
+                            <label>
+                                <input type="checkbox" name="registration[subscribe]" {{ form.subscribe ? 'checked' }} value="1">
+                                <span>
+                                    {{ __('Sunt de acord să primesc mesaje cu informașii sau promoții de la Vreicasa.ro', 'project') }}
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-row row">
+                        <div class="col-md-9 col-md-offset-3">
+                            <button class="pink-button">
+                                {{ __('Creaza-ti un cont nou', 'project') }}
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    {% include 'partials/sections/subscribe-form.twig' %}
+
+{% endblock %}

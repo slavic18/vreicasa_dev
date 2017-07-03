@@ -51,7 +51,13 @@
                             </li>
                             <li><a href="{{ getPermalink('contact') }}">CONTACT</a>
                             </li>
-                            <li><a href="#">LOGIN</a>
+
+                            <li>
+                                {% if fn('is_user_logged_in') %}
+                                    <a href="{{ getPermalink('my-account') }}">Profilul meu</a>
+                                {% else %}
+                                    <a href="{{ getPermalink('login') }}">LOGIN</a>
+                                {% endif %}
                             </li>
                         </ul>
                     </div>
