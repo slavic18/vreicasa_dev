@@ -1587,6 +1587,8 @@ body {
   line-height: 24px; }
   .section-title.pink {
     background: #9969b2; }
+  .section-title.violet {
+    background: #623e68; }
 
 .radio-container input {
   visibility: hidden;
@@ -2011,5 +2013,34 @@ ul {
 .service-img img {
   width: 100%;
   height: 387px; }
+
+.promote h3 {
+  padding-top: 24px;
+  padding-bottom: 10px;
+  font-size: 29px;
+  font-family: "work_sansregular";
+  line-height: 22px; }
+
+.promote-block-title {
+  padding-top: 1px;
+  padding-bottom: 15px;
+  padding-left: 5%;
+  padding-right: 5%;
+  text-align: center; }
+  .promote-block-title p {
+    font-family: "work_sansregular";
+    font-size: 14px;
+    line-height: 28px;
+    color: #370757; }
+
+.bg-light-blue {
+  background: #d8fcf5;
+  height: 100px; }
+
+.bg-promote {
+  background: url(../images/Pagina-promoveaza.png) no-repeat;
+  height: 500px;
+  text-align: center;
+  background-position: center; }
 
 /*# sourceMappingURL=app.css.map */

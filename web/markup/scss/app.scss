@@ -195,6 +195,9 @@ body {
   &.pink {
     background: $pink;
   }
+  &.violet{
+    background: $violet;
+  }
 }
 
 .radio-container {
@@ -746,3 +749,225 @@ ul {
     height: 387px;
   }
 }
+.promote{
+  .width{
+    max-width: 901px;
+    padding-bottom: 100px;
+  }
+  h3{
+    padding-top: 24px;
+    padding-bottom: 10px;
+    font-size: 29px;
+    font-family: "work_sansregular";
+    line-height: 22px;
+  }
+}
+.promote-block-title {
+  position: relative;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-left: 5%;
+  margin-right: 5%;
+  text-align: center;
+  p{
+    font-family: $workSans;
+    font-size: 14px;
+    line-height: 28px;
+    color: #370757;
+  }
+  .item-1{
+    top: 25%;
+  }
+  .item-2{
+    bottom: 17%;
+  }
+  .item-3{
+    top: 16%;
+    right: -2%;
+  }
+  .item-4{
+    bottom: 22%;
+    right: -2%;
+  }
+}
+.bg-light-blue{
+  background: $light-blue;
+}
+.bg-promote{
+  background: url(../images/Pagina-promoveaza.png) no-repeat;
+  height: 500px;
+  text-align: center;
+  background-position: center;
+
+}
+.promo-description{
+  position: absolute;
+  width: 255px;
+  text-align: left;
+  h3{
+    padding-bottom: 0px;
+    font-size: 19px;
+    font-family:$workSansbold;
+  }
+  p{
+    font-size: 11px;
+    line-height: 18px;
+  }
+}
+.promo-title-special{
+  padding-bottom: 80px;
+  text-align: center;
+  h3{
+    padding-top: 60px;
+    padding-bottom: 20px;
+    font-family:$robotoBold;
+    font-size: 44px;
+    color: #000;
+  }
+  p{
+    padding-bottom: 10px;
+    font-family:$workSans;
+    font-size: 18px;
+    letter-spacing: -1px;
+    color: #000;
+    opacity:0.6;
+  }
+  hr{
+    border-top: 3px solid #e3e3e3;
+  }
+}
+.card-pachete{
+  height: 405px;
+  cursor: -webkit-grab;
+  box-shadow: 1px 2px 5px 2px rgba(0, 0, 0, 0.2);
+  position: relative;
+  &:hover {
+    transition: all 200ms ease-in;
+    transform: scale(1.15);
+    background: #fff;
+    box-shadow: 0 0 20px 3px rgba(0, 0, 0, 1);
+  }
+  .bronz{
+    background:url("../images/bronz.png") no-repeat;
+    h6{
+      margin-right: 40px;
+    }
+  }
+  .silver{
+    background:url("../images/silver.png") no-repeat;
+  }
+  .gold{
+    background:url("../images/gold.png") no-repeat;
+  }
+  .platinum{
+    background:url("../images/purple.png") no-repeat;
+    .first-title{
+      margin-bottom: 23px;
+    }
+    .price{
+      margin-bottom: 23px;
+      span{
+        font-size: 16px;
+      }
+    }
+  }
+  .link{
+    position: absolute;
+    width: 125px;
+    height: 28px;
+    margin: auto;
+    margin-left: -60px;
+    background: #f5f5f5;
+    left: 50%;
+    bottom: 20px;
+    border-radius: 2px;
+    border-bottom: 1px solid #c5c5c5;
+    text-align: center;
+    a{
+      display: inline-block;
+      margin-bottom: 3px;
+      font-family:$robotoBold;
+      font-size: 9px;
+      color: #7e0e75;
+      text-decoration: none;
+      vertical-align: middle;
+    }
+    &:before{
+      content: '';
+      display: inline-block;
+      width: 23px;
+      height: 18px;
+      margin-top: 3px;
+      margin-right: 3px;
+      background: url("../images/mini-logo.png") no-repeat;
+    }
+
+  }
+}
+.pach-title{
+  width: 150px;
+  margin-left: auto;
+  text-align: right;
+  color: #fff;
+  h3{
+    margin: 15px;
+    margin-bottom: 3px;
+    padding: 0px;
+    font-family: "montserratregular";
+    font-size: 21px;
+  }
+  h6{
+    margin-right: 10px;
+    margin-top: inherit;
+    margin-bottom: inherit;
+    padding: 0px;
+    font-family: "work_sansregular";
+    font-size: 10px;
+  }
+}
+.price{
+  margin: 7px;
+  margin-top: 0px;
+  font-family:$workSans;
+  font-size: 10px;
+  color: #fff;
+  span{
+    font-size:21px;
+    font-family:$montserrat;
+  }
+  p{
+    margin-bottom: 2px;
+    font-family:$montserrat;
+    font-size: 8px;
+  }
+}
+.pach-list{
+  padding: 20px 10px 60px 10px;
+  ul{
+    padding-left: 20px;
+  }
+  li{
+    margin-bottom: 10px;
+    font-family:$workSansbold;
+    font-size: 10px;
+  }
+}
+.pach-message{
+  padding: 100px 40px 100px 45px;
+  text-align: center;
+  font-size: 11px;
+  font-family: $montserratBold;
+  line-height: 15px;
+}
+.promote-page{
+  .contact-info{
+    margin-top: 80px;
+    padding-bottom: 150px;
+    border: none;
+  }
+}
+
+
+
+
+
