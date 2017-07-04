@@ -994,3 +994,40 @@ $dark: #000;
 }
 
 // end register and login page
+
+/* line 1343, ../../scss/app.scss */
+.main-fixed {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  background: #fff;
+  z-index: 9999;
+  //border-bottom: 1px solid #3c3c3c;
+  -moz-transition: all .3s;
+  -o-transition: all .3s;
+  -webkit-transition: all .3s;
+  transition: all .6s;
+  -webkit-box-shadow: 0px 3px 5px 0px rgba(50, 50, 50, 0.25);
+  -moz-box-shadow:    0px 3px 5px 0px rgba(50, 50, 50, 0.25);
+  box-shadow:         0px 3px 5px 0px rgba(50, 50, 50, 0.25);
+}
+
+/* line 1356, ../../scss/app.scss */
+.pdd-body {
+  margin-bottom: 84px;
+}
+.profile-option .tabs-content .estate-item {
+  img {
+    margin-bottom: 0px;
+  }
+  .price {
+    margin: 0px;
+  }
+  .title {
+    margin-bottom: 20px;
+  }
+  .address {
+    text-align: left;
+  }
+  text-align: left;
+}

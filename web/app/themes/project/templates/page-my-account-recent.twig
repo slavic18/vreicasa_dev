@@ -1,0 +1,23 @@
+{% extends 'base.twig' %}
+{% block content %}
+    <section class="profile-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="profile-option">
+                        <div class="tabs">
+                            {% include 'partials/account/menu.twig' with {'active': 'recent'} %}
+                        </div>
+                        <div class="tabs-content">
+                            <h4>Cautari recente</h4>
+                            <img src="{{ theme.link }}/assets/images/favorite.png" />
+                            <p class="violet-text">Momentan nu ai nicio cautare</p>
+                            <a class="btn" href="{{ site.url}}">{{ __('Începe căutarea', 'project') }}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% include 'partials/sections/subscribe-form.twig' %}
+{% endblock %}

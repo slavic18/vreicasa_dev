@@ -10,5 +10,12 @@
 $context = Timber::get_context();
 $post = new TimberPost();
 $context['post'] = $post;
-
-Timber::render( array( 'page-my-account.twig', 'page.twig' ), $context );
+$context['accountMenu'] = getMyAccountMenu();
+if ($_COOKIE['favoritePosts']) {
+    $context['posts'] = Timber::get_posts([
+        'post__in' => explode(',', $_COOKIE['favoritePosts']),
+        'post_type' => ['projects', 'apartments', 'teren', 'commercial_spaces', ''],
+        'posts_per_page' => -1
+    ], 'CustomTimberPost');
+}
+Timber::render(array('page-my-account.twig', 'page.twig'), $context);
