@@ -165,22 +165,24 @@ project.Behavior.removeClassCol = function(context) {
       }
 }
 
+
 project.Behavior.menuFixed = function(context) {
     $(document).ready(function(){
-        var pddBody = $("body");
+        var mrgnHeader = $(".header-top");
         var nav = $(".main-header");
         $(window).scroll(function(){
             if($(this).scrollTop() > 216 ){
-                pddBody.addClass("pdd-body");
+                mrgnHeader.addClass("mrgn-header");
                 nav.addClass("main-fixed");
             }
             else{
-                pddBody.removeClass("pdd-body");
+                mrgnHeader.removeClass("mrgn-header");
                 nav.removeClass("main-fixed");
             }
         });
 
     });
 }
+
 
 
