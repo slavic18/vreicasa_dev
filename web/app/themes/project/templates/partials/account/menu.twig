@@ -1,0 +1,7 @@
+<ul>
+    {% for item in accountMenu %}
+        <li>
+            <a href="{{ item.link }}" class="{{ item.key == active  ? 'active'}}">{{ __(item.title, 'project') }}</a>
+        </li>
+    {% endfor %}
+</ul>

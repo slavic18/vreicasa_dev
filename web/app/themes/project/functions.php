@@ -101,9 +101,11 @@ class Twig_Extension_CustomFunctions extends Twig_Extension
         );
     }
 
-    public function getPermalink($slug) {
+    public function getPermalink($slug)
+    {
         return fruitframe_get_permalink($slug);
     }
+
     public function customTimberPost($id)
     {
         return new CustomTimberPost($id);
@@ -340,4 +342,30 @@ function _t($text)
     return qtranxf_useCurrentLanguageIfNotFoundShowEmpty($text);
 }
 
+function getMyAccountMenu()
+{
+    return [
+        [
+            'key' => 'favorite',
+            'title' => 'Favorite',
+            'link' => fruitframe_get_permalink('my-account'),
+        ],
+        [
+            'key' => 'recent',
+            'title' => 'Cautari recente',
+            'link' => fruitframe_get_permalink('recent-searches'),
+        ],
+        [
+            'key' => 'messages',
+            'title' => 'Mesaje',
+            'link' => fruitframe_get_permalink('messages'),
+        ],
+        [
+            'key' => 'configure',
+            'title' => 'Setari',
+            'link' => fruitframe_get_permalink('configure'),
+
+        ],
+    ];
+}
 //show_admin_bar(false);

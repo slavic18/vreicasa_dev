@@ -1,0 +1,22 @@
+{% extends 'base.twig' %}
+{% block content %}
+    <section class="profile-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="profile-option">
+                        <div class="tabs">
+                            {% include 'partials/account/menu.twig' with {'active': 'messages'} %}
+                        </div>
+                        <div class="tabs-content">
+                            <img src="{{ theme.link }}/assets/images/message.png" />
+                            <p class="violet-text">Momentan nu ai nici un mesaj</p>
+                            <p>Orice mesaj trimiti sau primesti va fi vizibil in aceasta pagina</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% include 'partials/sections/subscribe-form.twig' %}
+{% endblock %}

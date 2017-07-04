@@ -740,26 +740,30 @@
     font-size: 19px;
     color: #3f3e3e;
     text-decoration: none;
+    border-top: 1px  solid transparent;
+    border-right: 1px  solid transparent;
+    border-left: 1px  solid transparent;
+    transition: all ease-in-out 0.3s;
 }
 /* line 1294, ../../scss/app.scss */
 .profile-option .tabs a:hover {
     color: #c71061;
     background: #ffffff;
-    border-top: 1px  solid #e0e1e1;
-    border-right: 1px  solid #e0e1e1;
-    border-left: 1px  solid #e0e1e1;
+    border-top: 1px  solid #b5b5b6;
+    border-right: 1px  solid #b5b5b6;
+    border-left: 1px  solid #b5b5b6;
 }
 /* line 1302, ../../scss/app.scss */
 .profile-option .tabs .active {
     color: #c71061;
     background: #ffffff;
-    border-top: 1px  solid #e0e1e1;
-    border-right: 1px  solid #e0e1e1;
-    border-left: 1px  solid #e0e1e1;
+    border-top: 1px  solid #b5b5b6;
+    border-right: 1px  solid #b5b5b6;
+    border-left: 1px  solid #b5b5b6;
 }
 /* line 1310, ../../scss/app.scss */
 .profile-option .tabs-content {
-    height: 550px;
+    min-height: 550px;
     padding: 95px;
     margin-top: -1px;
     background: #fff;

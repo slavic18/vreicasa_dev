@@ -155,17 +155,16 @@ project.Behavior.initContactsMap = function (context) {
         map.markers.push(marker);
     }
 }
-project.Behavior.scrollToForm = function(context) {
-    if(window.location && window.location.hash === '#scroll-to-form') {
+project.Behavior.scrollToForm = function (context) {
+    if (window.location && window.location.hash === '#scroll-to-form') {
         $('html,body').animate({scrollTop: $('.js-scroll-form').offset().top - 200}, 200);
     }
 }
 
 
-
-project.Behavior.masonryAdd = function(context) {
+project.Behavior.masonryAdd = function (context) {
     var $container = $('.grid', context);
-    if($container.length) {
+    if ($container.length) {
         container.masonry({
             // options
             itemSelector: 'li',
@@ -174,14 +173,28 @@ project.Behavior.masonryAdd = function(context) {
         });
     }
 }
-project.Behavior.removeClassCol = function(context) {
-    $(document).ready(function() {
+project.Behavior.removeClassCol = function (context) {
+    $(document).ready(function () {
         if ($(window).width() < 480) {
             $('.col-xs-6').removeClass('col-xs-6').addClass('col-xs-12');
         }
     });
 }
 
+project.Behavior.menuFixed = function (context) {
+    var $header = $(".header-top", context);
+    var $nav = $(".main-header");
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 216) {
+            $header.addClass("pdd-body");
+            $nav.addClass("main-fixed");
+        }
+        else {
+            $header.removeClass("pdd-body");
+            $nav.removeClass("main-fixed");
+        }
+    });
+}
 
 
 /**

@@ -1,0 +1,23 @@
+{% extends 'base.twig' %}
+{% block content %}
+    <section class="profile-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="profile-option">
+                        <div class="tabs">
+                            {% include 'partials/account/menu.twig' with {'active': 'configure'} %}
+                        </div>
+                        <div class="tabs-content">
+                            <h4>Configurarea profilului tau</h4>
+                            <img src="{{ theme.link }}/assets/images/favorite.png" />
+                            <p>Nu ai niciun anunt favorit in aceasta lista</p>
+                            <p>Cauta printre proprietatile disponibile pe Vreicasa.ro si salveaza pe cele care iti place</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% include 'partials/sections/subscribe-form.twig' %}
+{% endblock %}
