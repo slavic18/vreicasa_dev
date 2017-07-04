@@ -162,6 +162,28 @@ project.Behavior.scrollToForm = function(context) {
 }
 
 
+
+project.Behavior.masonryAdd = function(context) {
+    var $container = $('.grid', context);
+    if($container.length) {
+        container.masonry({
+            // options
+            itemSelector: 'li',
+            columnWidth: 1,
+            fitWidth: true
+        });
+    }
+}
+project.Behavior.removeClassCol = function(context) {
+    $(document).ready(function() {
+        if ($(window).width() < 480) {
+            $('.col-xs-6').removeClass('col-xs-6').addClass('col-xs-12');
+        }
+    });
+}
+
+
+
 /**
  * Run All behaviors on document ready.
  */

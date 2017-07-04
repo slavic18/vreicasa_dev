@@ -160,9 +160,9 @@ project.Behavior.masonryAdd = function(context) {
 }
 project.Behavior.removeClassCol = function(context) {
     $(document).ready(function() {
-            if ($(window).width() < 480) {
-                $('.col-xs-6').removeClass('col-xs-6');
-            }
+        if ($(window).width() < 480) {
+            $('.col-xs-6').removeClass('col-xs-6').addClass('col-xs-12');
+        }
     });
 }
 
