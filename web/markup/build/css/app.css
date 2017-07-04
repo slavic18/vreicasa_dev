@@ -3748,3 +3748,22 @@ ul {
   color: #FFF;
   line-height: 25px;
 }
+
+/* line 1343, ../../scss/app.scss */
+.main-fixed {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  background: #fff;
+  z-index: 9999;
+  border-bottom: 1px solid #3c3c3c;
+  -moz-transition: all .3s;
+  -o-transition: all .3s;
+  -webkit-transition: all .3s;
+  transition: all .6s;
+}
+
+/* line 1356, ../../scss/app.scss */
+.pdd-body {
+  padding-top: 84px;
+}
