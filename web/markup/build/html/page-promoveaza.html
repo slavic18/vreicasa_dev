@@ -68,7 +68,7 @@
                                     <li>REACTUALIZARE AUTOMATĂ</li>
                                 </ul>
                             </div>
-                            <div class="link"><a href="#">CONTACTEAZĂ-NE</a>
+                            <div class="link"><a href="#" class="ç">CONTACTEAZĂ-NE</a>
                             </div>
                         </div>
                     </div>
@@ -95,7 +95,7 @@
                                     <li>REACTUALIZARE AUTOMATĂ</li>
                                 </ul>
                             </div>
-                            <div class="link"><a href="#">CONTACTEAZĂ-NE</a>
+                            <div class="link"><a href="#" class="toggle-contact-modal">CONTACTEAZĂ-NE</a>
                             </div>
                         </div>
                     </div>
@@ -123,7 +123,7 @@
                                     <li>REACULATIZARE AUTOMATĂ</li>
                                 </ul>
                             </div>
-                            <div class="link"><a href="#">CONTACTEAZĂ-NE</a>
+                            <div class="link"><a href="#" class="toggle-contact-modal">CONTACTEAZĂ-NE</a>
                             </div>
                         </div>
                     </div>
@@ -139,7 +139,7 @@
                             <div class="pach-message">
                                 <p>DACA NU AI TIMP SA TE OCUPI DE VÂNZARE, O FACEM NOI PENTRU TINE!</p>
                             </div>
-                            <div class="link"><a href="#">CONTACTEAZĂ-NE</a>
+                            <div class="link"><a href="#" class="toggle-contact-modal">CONTACTEAZĂ-NE</a>
                             </div>
                         </div>
                     </div>
@@ -181,5 +181,32 @@
                     </div>
                 </div>
             </div>
-        </section>@@include('./_footer.html')</div>
+        </section>
+        <div class="izi-modal" id="contact-form-modal">
+            <div class="main-form-wrapper">
+                <h3>Salut!</h3>
+                <p>Cu ce te putem ajuta?</p>
+                <form class="main-form go-right">
+                    <div class="form-group">
+                        <input name="name" type="text" placeholder="Nume" class="form-control" id="name" />
+                        <label name="name" class="form-label">Nume</label>
+                    </div>
+                    <div class="form-group">
+                        <input name="email" type="email" placeholder="E-mail" class="form-control" id="email" />
+                        <label for="email" class="form-label">E-mail</label>
+                    </div>
+                    <div class="form-group">
+                        <input name="phone" type="phone" placeholder="Număr telefon" class="form-control" id="phone" />
+                        <label for="phone" class="form-label">Telefon</label>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="phone" rows="3" placeholder="As dori mai multe detalii referitoare la.." class="form-control" id="message"></textarea>
+                        <label for="message" class="form-label">Mesaj</label>
+                    </div>
+                    <div class="form-group text-center">
+                        <button class="send-button">Trimite</button>
+                    </div>
+                </form>
+            </div>
+        </div>@@include('./_footer.html')</div>
 </body>

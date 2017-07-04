@@ -3324,8 +3324,25 @@ ul {
   padding-bottom: 150px;
   border: none;
 }
-
+/* line 971, ../../scss/app.scss */
+.promote-page .main-form-wrapper {
+  padding: 20px;
+}
 /* line 973, ../../scss/app.scss */
+.promote-page .main-form-wrapper h3 {
+  text-align: center;
+  font-size: 27px;
+  color: #c71061;
+}
+/* line 978, ../../scss/app.scss */
+.promote-page .main-form-wrapper p {
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 17px;
+  color: #999;
+}
+
+/* line 987, ../../scss/app.scss */
 .question-page .section-title {
   padding-top: 17px;
   padding-bottom: 13px;
@@ -3335,12 +3352,12 @@ ul {
   letter-spacing: -1px;
 }
 
-/* line 982, ../../scss/app.scss */
+/* line 996, ../../scss/app.scss */
 .question-wrapper {
   background: #f0f0f0;
 }
 
-/* line 985, ../../scss/app.scss */
+/* line 999, ../../scss/app.scss */
 .question-block-title {
   max-width: 1190px;
   margin: auto;
@@ -3353,40 +3370,40 @@ ul {
   border: 7px solid #a52f4a;
   letter-spacing: -1px;
 }
-/* line 996, ../../scss/app.scss */
+/* line 1010, ../../scss/app.scss */
 .question-block-title p {
   padding: 35px;
   padding-bottom: 20px;
 }
 
-/* line 1003, ../../scss/app.scss */
+/* line 1017, ../../scss/app.scss */
 .grid {
   margin: auto;
   margin-bottom: 100px;
   list-style: none;
   padding: 0;
 }
-/* line 1010, ../../scss/app.scss */
+/* line 1024, ../../scss/app.scss */
 .grid a:hover .hide-info {
   transition: all 0.7s ease;
   display: none;
 }
-/* line 1014, ../../scss/app.scss */
+/* line 1028, ../../scss/app.scss */
 .grid a:hover .show-info {
   transition: all 0.7s ease;
   display: block;
 }
-/* line 1019, ../../scss/app.scss */
+/* line 1033, ../../scss/app.scss */
 .grid a .hide-info {
   transition: all 0.7s ease;
 }
-/* line 1023, ../../scss/app.scss */
+/* line 1037, ../../scss/app.scss */
 .grid .show-info {
   transition: all 0.7s ease;
   display: none;
 }
 
-/* line 1029, ../../scss/app.scss */
+/* line 1043, ../../scss/app.scss */
 .grid li {
   display: block;
   float: left;
@@ -3394,14 +3411,14 @@ ul {
   opacity: 1;
 }
 
-/* line 1036, ../../scss/app.scss */
+/* line 1050, ../../scss/app.scss */
 .grid li.shown,
 .no-js .grid li,
 .no-cssanimations .grid li {
   opacity: 1;
 }
 
-/* line 1042, ../../scss/app.scss */
+/* line 1056, ../../scss/app.scss */
 .grid li a,
 .grid li img {
   outline: none;
@@ -3411,7 +3428,7 @@ ul {
 }
 
 /* Effect 1: opacity */
-/* line 1051, ../../scss/app.scss */
+/* line 1065, ../../scss/app.scss */
 .grid.effect-1 li.animate {
   -webkit-animation: fadeIn 0.65s ease forwards;
   animation: fadeIn 0.65s ease forwards;
@@ -3428,7 +3445,7 @@ ul {
   }
 }
 /* Effect 2: Move Up */
-/* line 1067, ../../scss/app.scss */
+/* line 1081, ../../scss/app.scss */
 .grid.effect-2 li.animate {
   -webkit-transform: translateY(200px);
   transform: translateY(200px);
@@ -3450,7 +3467,7 @@ ul {
   }
 }
 /* Effect 3: Scale up */
-/* line 1085, ../../scss/app.scss */
+/* line 1099, ../../scss/app.scss */
 .grid.effect-3 li.animate {
   -webkit-transform: scale(0.6);
   transform: scale(0.6);
@@ -3472,13 +3489,13 @@ ul {
   }
 }
 /* Effect 4: fall perspective */
-/* line 1103, ../../scss/app.scss */
+/* line 1117, ../../scss/app.scss */
 .grid.effect-4 {
   -webkit-perspective: 1300px;
   perspective: 1300px;
 }
 
-/* line 1108, ../../scss/app.scss */
+/* line 1122, ../../scss/app.scss */
 .grid.effect-4 li.animate {
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
@@ -3502,13 +3519,13 @@ ul {
   }
 }
 /* Effect 5: fly (based on http://lab.hakim.se/scroll-effects/ by @hakimel) */
-/* line 1128, ../../scss/app.scss */
+/* line 1142, ../../scss/app.scss */
 .grid.effect-5 {
   -webkit-perspective: 1300px;
   perspective: 1300px;
 }
 
-/* line 1133, ../../scss/app.scss */
+/* line 1147, ../../scss/app.scss */
 .grid.effect-5 li.animate {
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
@@ -3534,13 +3551,13 @@ ul {
   }
 }
 /* Effect 6: flip (based on http://lab.hakim.se/scroll-effects/ by @hakimel) */
-/* line 1155, ../../scss/app.scss */
+/* line 1169, ../../scss/app.scss */
 .grid.effect-6 {
   -webkit-perspective: 1300px;
   perspective: 1300px;
 }
 
-/* line 1160, ../../scss/app.scss */
+/* line 1174, ../../scss/app.scss */
 .grid.effect-6 li.animate {
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
@@ -3566,13 +3583,13 @@ ul {
   }
 }
 /* Effect 7: helix (based on http://lab.hakim.se/scroll-effects/ by @hakimel) */
-/* line 1182, ../../scss/app.scss */
+/* line 1196, ../../scss/app.scss */
 .grid.effect-7 {
   -webkit-perspective: 1300px;
   perspective: 1300px;
 }
 
-/* line 1187, ../../scss/app.scss */
+/* line 1201, ../../scss/app.scss */
 .grid.effect-7 li.animate {
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
@@ -3596,13 +3613,13 @@ ul {
   }
 }
 /* Effect 8:  */
-/* line 1207, ../../scss/app.scss */
+/* line 1221, ../../scss/app.scss */
 .grid.effect-8 {
   -webkit-perspective: 1300px;
   perspective: 1300px;
 }
 
-/* line 1212, ../../scss/app.scss */
+/* line 1226, ../../scss/app.scss */
 .grid.effect-8 li.animate {
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
@@ -3612,26 +3629,26 @@ ul {
   animation: popUp .8s ease-in forwards;
 }
 
-/* line 1221, ../../scss/app.scss */
+/* line 1235, ../../scss/app.scss */
 .profile-page .main-header {
   padding: 10px 0;
 }
-/* line 1224, ../../scss/app.scss */
+/* line 1238, ../../scss/app.scss */
 .profile-page .dropdown-block {
   position: relative;
 }
-/* line 1228, ../../scss/app.scss */
+/* line 1242, ../../scss/app.scss */
 .profile-page .dropdown-item {
   font-size: 15px;
   font-family: "work_sanssemibold";
   text-transform: none;
   letter-spacing: 1px;
 }
-/* line 1235, ../../scss/app.scss */
+/* line 1249, ../../scss/app.scss */
 .profile-page .dropdown-block {
   position: relative;
 }
-/* line 1237, ../../scss/app.scss */
+/* line 1251, ../../scss/app.scss */
 .profile-page .dropdown-block:after {
   content: " ";
   position: absolute;
@@ -3642,17 +3659,17 @@ ul {
   height: 7px;
   background: url("../images/arrow.png") no-repeat;
 }
-/* line 1248, ../../scss/app.scss */
+/* line 1262, ../../scss/app.scss */
 .profile-page .header-menu {
   float: right;
   margin-right: 30px;
 }
-/* line 1251, ../../scss/app.scss */
+/* line 1265, ../../scss/app.scss */
 .profile-page .header-menu .header-menu-dropdown {
   top: 30px;
   right: -25px;
 }
-/* line 1255, ../../scss/app.scss */
+/* line 1269, ../../scss/app.scss */
 .profile-page .header-menu:before {
   content: '';
   display: block;
@@ -3664,7 +3681,7 @@ ul {
   background: url("../images/profil-image.png") no-repeat;
 }
 
-/* line 1268, ../../scss/app.scss */
+/* line 1282, ../../scss/app.scss */
 .profile-section {
   padding-top: 50px;
   padding-bottom: 180px;
@@ -3672,20 +3689,20 @@ ul {
   background: #f0f0f0;
 }
 
-/* line 1274, ../../scss/app.scss */
+/* line 1288, ../../scss/app.scss */
 .profile-option {
   margin-top: 50px;
 }
-/* line 1277, ../../scss/app.scss */
+/* line 1291, ../../scss/app.scss */
 .profile-option .tabs li {
   display: inline-block;
   margin-left: -5px;
 }
-/* line 1280, ../../scss/app.scss */
+/* line 1294, ../../scss/app.scss */
 .profile-option .tabs li:first-child {
   margin-left: 0px;
 }
-/* line 1287, ../../scss/app.scss */
+/* line 1301, ../../scss/app.scss */
 .profile-option .tabs a {
   display: block;
   padding: 25px 20px;
@@ -3694,7 +3711,7 @@ ul {
   color: #3f3e3e;
   text-decoration: none;
 }
-/* line 1294, ../../scss/app.scss */
+/* line 1308, ../../scss/app.scss */
 .profile-option .tabs a:hover {
   color: #c71061;
   background: #ffffff;
@@ -3702,7 +3719,7 @@ ul {
   border-right: 1px  solid #e0e1e1;
   border-left: 1px  solid #e0e1e1;
 }
-/* line 1302, ../../scss/app.scss */
+/* line 1316, ../../scss/app.scss */
 .profile-option .tabs .active {
   color: #c71061;
   background: #ffffff;
@@ -3710,7 +3727,7 @@ ul {
   border-right: 1px  solid #e0e1e1;
   border-left: 1px  solid #e0e1e1;
 }
-/* line 1310, ../../scss/app.scss */
+/* line 1324, ../../scss/app.scss */
 .profile-option .tabs-content {
   height: 550px;
   padding: 95px;
@@ -3721,24 +3738,24 @@ ul {
   font-size: 19px;
   font-family: "work_sansregular";
 }
-/* line 1319, ../../scss/app.scss */
+/* line 1333, ../../scss/app.scss */
 .profile-option .tabs-content h4 {
   margin-bottom: 50px;
   font-family: "work_sansmedium";
 }
-/* line 1323, ../../scss/app.scss */
+/* line 1337, ../../scss/app.scss */
 .profile-option .tabs-content img {
   margin-bottom: 30px;
 }
-/* line 1326, ../../scss/app.scss */
+/* line 1340, ../../scss/app.scss */
 .profile-option .tabs-content p {
   line-height: 25px;
 }
-/* line 1329, ../../scss/app.scss */
+/* line 1343, ../../scss/app.scss */
 .profile-option .tabs-content .violet-text {
   color: #db0ed9;
 }
-/* line 1332, ../../scss/app.scss */
+/* line 1346, ../../scss/app.scss */
 .profile-option .tabs-content .btn {
   width: 175px;
   height: 37px;
@@ -3749,7 +3766,7 @@ ul {
   line-height: 25px;
 }
 
-/* line 1343, ../../scss/app.scss */
+/* line 1357, ../../scss/app.scss */
 .main-fixed {
   position: fixed;
   top: 0px;
@@ -3763,7 +3780,12 @@ ul {
   transition: all .6s;
 }
 
-/* line 1356, ../../scss/app.scss */
+/* line 1370, ../../scss/app.scss */
 .mrgn-header {
   margin-top: 84px;
+}
+
+/* line 1373, ../../scss/app.scss */
+.iziModal {
+  top: 50px !important;
 }
