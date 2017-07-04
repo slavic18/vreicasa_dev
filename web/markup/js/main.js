@@ -165,6 +165,7 @@ project.Behavior.removeClassCol = function(context) {
       }
 }
 
+
 project.Behavior.menuFixed = function(context) {
     $(document).ready(function(){
         var mrgnHeader = $(".header-top");
