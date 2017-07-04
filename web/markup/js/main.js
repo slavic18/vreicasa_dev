@@ -158,11 +158,28 @@ project.Behavior.masonryAdd = function(context) {
         fitWidth: true
     });
 }
+
 project.Behavior.removeClassCol = function(context) {
-    $(document).ready(function() {
-        if ($(window).width() < 480) {
-            $('.col-xs-6').removeClass('col-xs-6').addClass('col-xs-12');
-        }
+      if ($(window).width() < 480) {
+          $('.col-xs-6').removeClass('col-xs-6').addClass('col-xs-12');
+      }
+}
+
+project.Behavior.menuFixed = function(context) {
+    $(document).ready(function(){
+        var pddBody = $("body");
+        var nav = $(".main-header");
+        $(window).scroll(function(){
+            if($(this).scrollTop() > 216 ){
+                pddBody.addClass("pdd-body");
+                nav.addClass("main-fixed");
+            }
+            else{
+                pddBody.removeClass("pdd-body");
+                nav.removeClass("main-fixed");
+            }
+        });
+
     });
 }
 
