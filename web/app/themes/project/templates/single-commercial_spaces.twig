@@ -1,0 +1,360 @@
+{% extends 'base.twig' %}
+{% block content %}
+    <section class="details">
+        <h3 class="section-title pink">{{ __('Detalii spațiu comercial', 'project') }}</h3>
+        {% include 'partials/single-post/gallery.twig' %}
+    </section>
+    <section class="contact-row">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="contact-about">
+                        <h4>{{ post.title }}</h4>
+                        {% if post.address is not empty %}
+                            <p>{{ post.address }}</p>
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="price">
+                        <span>€ {{ post.price }}</span>
+                    </div>
+                    {% if post.phone_number is not empty %}
+                        <div class="contact-phone">
+                            <a href="tel:{{ post.phone_number }}">{{ post.phone_number }}</a>
+                        </div>
+                    {% endif %}
+                </div>
+                <div class="col-md-4 add-favorit-wrapper tc">
+                    <a href="#" class="add-favorit js-add-to-favorites {{  post.isFavoritePost() ? 'active'  }}" data-post_id="{{ post.id }}">{{ __('Adaugă la favorite', 'project') }}</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="info">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="left-block">
+                        <div class="info-content">
+                            <h3 class="block-headline">{{ __('Informaţii', 'project') }}</h3>
+                        </div>
+                        <div class="info-descriotion">
+                            <div class="contaier">
+                                <div class="row">
+                                    <div class="col-sm-6">
+
+                                        {% if post.rooms is not empty %}
+                                            <div class="info-item clearfix">
+                                                <div class="info-item-icon">
+                                                    <i class="icon-calendar"></i>
+                                                </div>
+                                                <div class="info-item-content">
+                                                    <h5>{{ __('Compartimentare', 'project') }}</h5>
+                                                    <p>{{ post.rooms }}</p>
+                                                </div>
+                                            </div>
+                                        {% endif %}
+
+                                        {% if post.property_type is not empty %}
+                                            <div class="info-item clearfix">
+                                                <div class="info-item-icon">
+                                                    <i class="icon-calendar"></i>
+                                                </div>
+                                                <div class="info-item-content">
+                                                    <h5>{{ __('Tip spațiu', 'project') }}</h5>
+                                                    <p>{{ post.property_type }}</p>
+                                                </div>
+                                            </div>
+                                        {% endif %}
+
+                                        {% if post.floor is not empty %}
+                                            <div class="info-item clearfix">
+                                                <div class="info-item-icon">
+                                                    <i class="icon-calendar"></i>
+                                                </div>
+                                                <div class="info-item-content">
+                                                    <h5>{{ __('Etaj', 'project') }}</h5>
+                                                    <p>{{ post.floor }}</p>
+                                                </div>
+                                            </div>
+                                        {% endif %}
+                                    </div>
+                                    <div class="col-sm-6">
+
+
+                                        {% if post.configuratie is not empty %}
+                                            <div class="info-item clearfix">
+                                                <div class="info-item-icon">
+                                                    <i class="fa fa-line-chart"></i>
+                                                </div>
+                                                <div class="info-item-content">
+                                                    <h5>{{ __('Configuraţie', 'project') }}</h5>
+                                                    <p>{{ post.configuratie }} $</p>
+                                                </div>
+                                            </div>
+                                        {% endif %}
+
+                                        {% if post.price is not empty %}
+                                            <div class="info-item clearfix">
+                                                <div class="info-item-icon">
+                                                    <i class="fa fa-line-chart"></i>
+                                                </div>
+                                                <div class="info-item-content">
+                                                    <h5>{{ __('Pret', 'project') }}</h5>
+                                                    <p>{{ post.price }} €</p>
+                                                </div>
+                                            </div>
+                                        {% endif %}
+
+                                        {% if post.price_m2 is not empty %}
+                                            <div class="info-item clearfix">
+                                                <div class="info-item-icon">
+                                                    <i class="fa fa-line-chart"></i>
+                                                </div>
+                                                <div class="info-item-content">
+                                                    <h5>{{ __('Pret/mp', 'project') }}</h5>
+                                                    <p>{{ post.price_m2 }} $</p>
+                                                </div>
+                                            </div>
+                                        {% endif %}
+
+                                        {% if post.area is not empty %}
+                                            <div class="info-item clearfix">
+                                                <div class="info-item-icon">
+                                                    <i class="icon-mp"></i>
+                                                </div>
+                                                <div class="info-item-content">
+                                                    <h5>{{ __('Suprafață utilă', 'project') }}</h5>
+                                                    <p>{{ post.area }} mp</p>
+                                                </div>
+                                            </div>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {% if post.content is not empty %}
+                            <div class="info-item-row info-descriotion">
+                                <div class="info-content">
+                                    <p class="info-facilities">{{ post.content }}</p>
+                                </div>
+                            </div>
+                        {% endif %}
+                        <div class="info-descriotion">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <h3 class="block-headline">{{ __('Facilităţi în proiect', 'project') }}</h3>
+                                    {% if post.rampa is not empty %}
+                                        <div class="info-item info-item-single clearfix">
+                                            <div class="info-item-icon">
+                                                <i class="fa fa-fire"></i>
+                                            </div>
+                                            <div class="info-item-content">
+                                                <h5>{{ __('Rampa', 'project') }}</h5>
+                                            </div>
+                                        </div>
+                                    {% endif %}
+                                    {% if post.depozit is not empty %}
+                                        <div class="info-item info-item-single clearfix">
+                                            <div class="info-item-icon">
+                                                <i class="fa fa-fire"></i>
+                                            </div>
+                                            <div class="info-item-content">
+                                                <h5>{{ __('Spațiu depozitare', 'project') }}</h5>
+                                            </div>
+                                        </div>
+                                    {% endif %}
+
+
+                                    {% if post.grup_sanitar is not empty %}
+                                        <div class="info-item info-item-single clearfix">
+                                            <div class="info-item-icon">
+                                                <i class="fa fa-fire"></i>
+                                            </div>
+                                            <div class="info-item-content">
+                                                <h5>{{ __('Grup sanitar', 'project') }}</h5>
+                                            </div>
+                                        </div>
+                                    {% endif %}
+
+                                    {% if post.terasa_curte is not empty %}
+                                        <div class="info-item info-item-single clearfix">
+                                            <div class="info-item-icon">
+                                                <i class="fa fa-fire"></i>
+                                            </div>
+                                            <div class="info-item-content">
+                                                <h5>{{ __('Terasă/Curte interioară', 'project') }}</h5>
+                                            </div>
+                                        </div>
+                                    {% endif %}
+
+                                    {% if post.parcare is not empty %}
+                                        <div class="info-item info-item-single clearfix">
+                                            <div class="info-item-icon">
+                                                <i class="fa fa-fire"></i>
+                                            </div>
+                                            <div class="info-item-content">
+                                                <h5>{{ __('Parcare', 'project') }}</h5>
+                                            </div>
+                                        </div>
+                                    {% endif %}
+                                </div>
+                                <div class="col-sm-6">
+                                    <h3 class="block-headline">{{ __('Siguranță', 'project') }}</h3>
+
+                                    {% if post.monitorizare_video is not empty %}
+                                        <div class="info-item info-item-single clearfix">
+                                            <div class="info-item-icon">
+                                                <i class="fa fa-fire"></i>
+                                            </div>
+                                            <div class="info-item-content">
+                                                <h5>{{ __('Monitorizare video', 'project') }}</h5>
+                                            </div>
+                                        </div>
+                                    {% endif %}
+                                    {% if post.sistem_de_alarmă is not empty %}
+                                        <div class="info-item info-item-single clearfix">
+                                            <div class="info-item-icon">
+                                                <i class="fa fa-fire"></i>
+                                            </div>
+                                            <div class="info-item-content">
+                                                <h5>{{ __('Sistem de alarmă', 'project') }}</h5>
+                                            </div>
+                                        </div>
+                                    {% endif %}
+                                    {% if post.detectoare_de_incendiu is not empty %}
+                                        <div class="info-item info-item-single clearfix">
+                                            <div class="info-item-icon">
+                                                <i class="fa fa-fire"></i>
+                                            </div>
+                                            <div class="info-item-content">
+                                                <h5>{{ __('Detectoare de incendiu', 'project') }}</h5>
+                                            </div>
+                                        </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="left-block">
+                        <div class="info-descriotion">
+                            <div class="contaier">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <h3 class="block-headline">{{ __('Împrejurimi', 'project') }}</h3>
+                                    </div>
+                                    <div class="col-sm-12">
+                                        {% if post.sanatate is not empty %}
+                                            <div class="info-item info-item-single clearfix">
+                                                <div class="info-item-icon"><i class="icon-spital"></i>
+                                                </div>
+                                                <div class="info-item-content">
+                                                    <h5>Sănătate:
+                                                        {% for field in post.sanatate %}
+                                                            {{ field }}{{ loop.last is empty ? ',' }}
+                                                        {% endfor %}
+                                                    </h5>
+                                                </div>
+                                            </div>
+                                        {% endif %}
+                                        {% if post.timp_liber is not empty %}
+                                            <div class="info-item info-item-single clearfix">
+                                                <div class="info-item-icon">
+                                                    <i class="icon-pom"></i>
+                                                </div>
+                                                <div class="info-item-content">
+                                                    <h5>Timp liber:
+                                                        {% for field in post.timp_liber %}
+                                                            {{ field }}{{ loop.last is empty ? ',' }}
+                                                        {% endfor %}
+                                                    </h5>
+                                                </div>
+                                            </div>
+                                        {% endif %}
+
+
+                                        {% if post.banci is not empty %}
+                                            <div class="info-item info-item-single clearfix">
+                                                <div class="info-item-icon"><i class="icon-banca"></i>
+                                                </div>
+                                                <div class="info-item-content">
+                                                    <h5>{% for field in post.banci %}
+                                                            {{ field|capitalize }}{{ loop.last is empty ? ',' }}
+                                                        {% endfor %}
+                                                    </h5>
+                                                </div>
+                                            </div>
+                                        {% endif %}
+                                        {% if post.educatie is not empty %}
+                                            <div class="info-item info-item-single clearfix">
+                                                <div class="info-item-icon"><i class="icon-carte"></i>
+                                                </div>
+                                                <div class="info-item-content">
+                                                    <h5>{% for field in post.educatie %}
+                                                            {{ field|capitalize }}{{ loop.last is empty ? ',' }}
+                                                        {% endfor %}
+                                                    </h5>
+                                                </div>
+                                            </div>
+                                        {% endif %}
+
+                                        {% if post.statii_autobuz is not empty %}
+                                            <div class="info-item info-item-single clearfix">
+                                                <div class="info-item-icon"><i class="icon-autobuz"></i>
+                                                </div>
+                                                <div class="info-item-content">
+                                                    <h5>Staţii autobuz: {{ post.statii_autobuz }}</h5>
+                                                </div>
+                                            </div>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% if post.map_location is not empty %}
+                        <div class="left-block">
+                            <div class="container container-fluid">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="map-wrapper">
+                                            <h3 class="block-headline">{{ __('Localizare', 'project') }}</h3>
+                                            {% if post.map_location.address is not empty %}
+                                                <p>{{ post.map_location.address }}</p>
+                                            {% endif %}
+                                            <div class="map-container">
+                                                <div class="js-init-map" data-lat="{{ post.map_location.lat }}"
+                                                     data-lng="{{ post.map_location.lng }}">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endif %}
+                </div>
+                <div class="col-md-4">
+                    {% include 'partials/single-post/contact-form.twig' %}
+                </div>
+            </div>
+        </div>
+        {% if relatedPosts is not empty %}
+            <div class="container">
+                <h3 class="section-title pink">{{ __('Terenuri similare', 'project') }}</h3>
+            </div>
+            <div class="estate-list mt-35">
+                <div class="container">
+                    <div class="row">
+                        {% for post in relatedPosts %}
+                            {% include 'partials/related-item-teaser.twig' %}
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+    </section>
+    {% include 'partials/sections/subscribe-form.twig' %}
+{% endblock %}

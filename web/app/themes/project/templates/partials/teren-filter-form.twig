@@ -1,0 +1,122 @@
+<form action="{{ actualLink }}" id="estate-filter-form">
+    <div class="row">
+        <div class="col-sm-8">
+            <ul class="filter-list">
+                <li>
+                    <span>{{ __('Filtre', 'project') }}</span>
+                </li>
+                <li>
+                    <div class="input-container">
+                        <input type="text" class="js-autocomplete-address" placeholder="Localitate, zonă"
+                               name="form[address]" value="{{ getFormNumberValue('form[address]') }}"/>
+                    </div>
+                </li>
+                <li class="with-sub-menu"><span>{{ __('Preț', 'project') }}</span>
+                    <div class="sub-menu price-submenu js-price-submenu">
+                        <div class="switch-currency-container">
+                            <div class="currency">
+                                {% include 'partials/forms/radio.twig' with {name: 'form[currency]', value: 'lei', title: __('Lei', 'project') } %}
+                                {% include 'partials/forms/radio.twig' with {name: 'form[currency]', value: 'euro', title: __('Euro', 'project') } %}
+                            </div>
+                        </div>
+                        <div class="min-max">
+                            {% include 'partials/forms/number.twig' with {name: 'form[min_price]', placeholder: 'Min', min: '0' } %}
+                            <div class="delimiter">&#45;</div>
+                            {% include 'partials/forms/number.twig' with {name: 'form[max_price]', placeholder: 'Max', min: '0' } %}
+                        </div>
+                        <div class="range">
+                            {% include 'partials/forms/radio.twig' with {name: 'form[range]', value: '0,20000', title: 'max 20.000 €' } %}
+                            {% include 'partials/forms/radio.twig' with {name: 'form[range]', value: '20000,40000',title: '20.000 - 40.000 €' } %}
+                            {% include 'partials/forms/radio.twig' with {name: 'form[range]', value: '40000,60000',title: '40.000 - 60.000 €' } %}
+                            {% include 'partials/forms/radio.twig' with {name: 'form[range]', value: '60000,80000]',title: '60.000 - 80.000 €' } %}
+                            {% include 'partials/forms/radio.twig' with {name: 'form[range]', value: '80000,100000',title: '80.000 - 100.000 €' } %}
+                            {% include 'partials/forms/radio.twig' with {name: 'form[range]', value: '10000,150000',title: '100.000 - 150.000 €' } %}
+                            {% include 'partials/forms/radio.twig' with {name: 'form[range]', value: '150000,300000',title: '150.000 - 300.000 €' } %}
+                        </div>
+                    </div>
+                </li>
+                <li class="with-sub-menu">
+                    <span>{{ __('Tipul  proprietății', 'project') }}</span>
+                    <div class="sub-menu">
+                        {% include 'partials/forms/checkbox.twig' with {name: 'form[type][intravilan]', title: 'intravilan', value: 'intravilan' } %}
+                        {% include 'partials/forms/checkbox.twig' with {name: 'form[type][Etravilan]', title: 'Etravilan', value: 'Etravilan' } %}
+                        {% include 'partials/forms/checkbox.twig' with {name: 'form[type][Agricol]', title: 'Agricol', value: 'Agricol' } %}
+                        {% include 'partials/forms/checkbox.twig' with {name: 'form[type][Industrial]', title: 'Industrial', value: 'Industrial' } %}
+                        {% include 'partials/forms/checkbox.twig' with {name: 'form[type][Comercial]', title: 'Comercial', value: 'Comercial' } %}
+                    </div>
+                </li>
+                <li class="with-sub-menu">
+                    <span>{{ __('Suprafață', 'project') }}</span>
+                    <div class="sub-menu price-submenu">
+                        <div class="min-max">
+                            {% include 'partials/forms/number.twig' with {name: 'form[min_area]', placeholder: 'Min', min: '0' } %}
+                            <div class="delimiter"></div>
+                            {% include 'partials/forms/number.twig' with {name: 'form[max_area]', placeholder: 'Max', min: '0' } %}
+                        </div>
+                    </div>
+                </li>
+                <li class="with-sub-menu">
+                    <span>{{ __('Front stradal', 'project') }}</span>
+                    <div class="sub-menu">
+                        {% include 'partials/forms/checkbox.twig' with {name: 'form[front_stradal][1-10]', value: '1-10', title: '1-10m' } %}
+                        {% include 'partials/forms/checkbox.twig' with {name: 'form[front_stradal][11-30]', value: '11-30', title: '11-30m' } %}
+                        {% include 'partials/forms/checkbox.twig' with {name: 'form[front_stradal][31-100m]', value: '31-100', title: '31-100m' } %}
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="col-sm-4">
+            <div class="ta-c">
+                <ul class="filter-list">
+                    <li class="with-sub-menu filter-group-container">
+                        <span class="js-open-more-filters">{{ __('Mai multe', 'project') }}</span>
+                        <div class="sub-menu col-2">
+                            <ul class="filter-group-list">
+                                <li class="filter-group js-equal-height">
+                                    <div class="title">{{ __('Recomandat pentru', 'project') }}</div>
+                                    <div class="content">
+                                        {% include 'partials/forms/checkbox.twig' with {name: 'form[recomandat_pentru][Ansamblu rezidențial]',  value: 'Ansamblu rezidențial', title: 'Ansamblu rezidențial', } %}
+                                        {% include 'partials/forms/checkbox.twig' with {name: 'form[recomandat_pentru][Spațiu comercial]',  value: 'Spațiu comercial', title: 'Spațiu comercial', } %}
+                                        {% include 'partials/forms/checkbox.twig' with {name: 'form[recomandat_pentru][Casă]',  value: 'Casă', title: 'Casă', } %}
+                                        {% include 'partials/forms/checkbox.twig' with {name: 'form[recomandat_pentru][Depozit]',  value: 'Depozit', title: 'Depozit', } %}
+                                        {% include 'partials/forms/checkbox.twig' with {name: 'form[recomandat_pentru][Hotel/Pensiune]',  value: 'Hotel/Pensiune', title: 'Hotel/Pensiune', } %}
+                                    </div>
+                                </li>
+                                <li class="filter-group js-equal-height">
+                                    <div class="title">{{ __('Utilități/Facilități', 'project') }}</div>
+                                    <div class="content">
+                                        {% include 'partials/forms/checkbox.twig' with {name: 'form[gaze]',  value: '1', title: 'Gaze', } %}
+                                        {% include 'partials/forms/checkbox.twig' with {name: 'form[canalizare]',  value: '1', title: 'Canalizare', } %}
+                                        {% include 'partials/forms/checkbox.twig' with {name: 'form[electricitate]',  value: '1', title: 'Electricitate', } %}
+                                        {% include 'partials/forms/checkbox.twig' with {name: 'form[apă_curentă]',  value: '1', title: 'Apă', } %}
+                                        {% include 'partials/forms/checkbox.twig' with {name: 'form[asfaltat]',  value: '1', title: 'Asfaltat', } %}
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <button class="submit-form js-submit-form" type="submit">{{ __('Cauta', 'project') }}</button>
+                        <button class="reset-search-form">
+                            <i class="fa fa-close"></i>
+                            <span class="hidden">
+                                {{ __('Resetare căutare', 'project') }}
+                            </span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="hidden">
+        {#order by fields#}
+        {% include 'partials/forms/radio.twig' with {name: 'form[orderby]', value: 'price-desc' } %}
+        {% include 'partials/forms/radio.twig' with {name: 'form[orderby]', value: 'price-asc' } %}
+        {% include 'partials/forms/radio.twig' with {name: 'form[orderby]', value: 'date-desc' } %}
+        {% include 'partials/forms/radio.twig' with {name: 'form[orderby]', value: 'date-asc' } %}
+        {#posts per page fields#}
+        {% include 'partials/forms/radio.twig' with {name: 'form[perPage]', value: '24' } %}
+        {% include 'partials/forms/radio.twig' with {name: 'form[perPage]', value: '48' } %}
+        {% include 'partials/forms/radio.twig' with {name: 'form[perPage]', value: '72' } %}
+    </div>
+</form>

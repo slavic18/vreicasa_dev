@@ -234,6 +234,11 @@ class StarterSite extends TimberSite
             'promote-yourself',
             'services',
             'projects',
+            'restore-password',
+            'termeni-si-conditii',
+            'register',
+            'login',
+            'my-account',
         ];
 
         if (!empty($pages) && is_array($pages) && count($pages)) {

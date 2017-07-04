@@ -1,0 +1,72 @@
+{% extends 'base.twig' %}
+{% block content %}
+    <div class="post-title">
+        <h3 class="section-title vinous">{{ post.title }}</h3>
+    </div>
+
+    <div class="container-fluid login-page-container">
+        <div class="row">
+            <div class="col-md-7">
+                <div class="bg-orange">
+                    {{ fn('project_show_error_messages', 'login_errors') }}
+                    <form class="register-page-form js-scroll-form" method="post"
+                          action="#scroll-to-form">
+                        <div class="form-row row">
+                            <div class="col-md-2">
+                                <label>{{ __('Email', 'project') }}</label>
+                            </div>
+                            <div class="col-md-10">
+                                <input type="email" class="form-input" value="{{ form.email }}" required="required"
+                                       name="login[email]"/>
+                            </div>
+                        </div>
+                        <div class="form-row row">
+                            <div class="col-md-2">
+                                <label>{{ __('Parola', 'project') }}</label>
+                            </div>
+                            <div class="col-md-10">
+                                <input type="password" class="form-input" value="{{ form.password }}"
+                                       required="required"
+                                       name="login[password]"/>
+                            </div>
+                        </div>
+                        <div class="form-row row">
+                            <div class="col-md-10 col-md-offset-2">
+                                <label>
+                                    <input type="checkbox"
+                                           name="login[remember]" {{ form.remember ? 'checked' }}
+                                            value="1"/>
+                                    <span>
+                                        {{ __('Tine-mă minte', 'project') }}
+                                    </span>
+                                </label>
+                                <a href="{{ getPermalink('restore-password') }}" class="float-right">Am uitat parola
+                                </a>
+                            </div>
+                        </div>
+                        <div class="form-row row">
+                            <div class="col-md-10 col-md-offset-2">
+                                <button class="pink-button">
+                                    {{ __('Intră în cont', 'project') }}
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="go-to-register-container">
+                    <div class="go-to">
+                        <p>{{ __('Încă nu ai cont', 'project') }} <span class="Adds-fat-content">vreicasă</span>?</p>
+                    </div>
+                    <div class="col-md-10 col-md-offset-1">
+                        <a href="{{ getPermalink("register") }}" class="pink-button">
+                        {{ __('Creaza-ti un cont nou', 'project') }}
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% include 'partials/sections/subscribe-form.twig' %}
+{% endblock %}

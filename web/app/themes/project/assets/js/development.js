@@ -155,6 +155,33 @@ project.Behavior.initContactsMap = function (context) {
         map.markers.push(marker);
     }
 }
+project.Behavior.scrollToForm = function(context) {
+    if(window.location && window.location.hash === '#scroll-to-form') {
+        $('html,body').animate({scrollTop: $('.js-scroll-form').offset().top - 200}, 200);
+    }
+}
+
+
+
+project.Behavior.masonryAdd = function(context) {
+    var $container = $('.grid', context);
+    if($container.length) {
+        container.masonry({
+            // options
+            itemSelector: 'li',
+            columnWidth: 1,
+            fitWidth: true
+        });
+    }
+}
+project.Behavior.removeClassCol = function(context) {
+    $(document).ready(function() {
+        if ($(window).width() < 480) {
+            $('.col-xs-6').removeClass('col-xs-6').addClass('col-xs-12');
+        }
+    });
+}
+
 
 
 /**

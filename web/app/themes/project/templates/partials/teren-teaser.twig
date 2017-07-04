@@ -1,0 +1,67 @@
+<div class="col-md-4">
+    <div class="estate-item">
+        {% if post.thumbnail is not empty %}
+            <div class="img-container">
+                <a href="{{ post.link }}">
+                    <img src="{{ post.thumbnail.src }}"/>
+                </a>
+            </div>
+        {% endif %}
+        <div class="description ">
+            <h3 class="title">
+                <a href="{{ post.link }}">{{ post.title }}</a>
+                {% if post.price %}
+                    <span class="price">€ {{ post.price }}</span>
+                {% endif %}
+            </h3>
+            {% if post.address %}
+                <div class="address">
+                    {{ post.address }}
+                </div>
+            {% endif %}
+            <div class="meta">
+                <table class="atributtes">
+                    <tbody>
+                    {% if post.price is not empty %}
+                        <tr>
+                            <td class="label">{{ __('Pret', 'project') }}</td>
+                            <td class="value">{{ post.price }}</td>
+                        </tr>
+                    {% endif %}
+                    {% if post.price_m2 is not empty %}
+                        <tr>
+                            <td class="label">{{ __('Pret/mp', 'project') }}</td>
+                            <td class="value">{{ post.price_m2 }}</td>
+                        </tr>
+                    {% endif %}
+                    {% if post.area is not empty %}
+                        <tr>
+                            <td class="label">{{ __('Suprafaţă', 'project') }}</td>
+                            <td class="value">{{ post.area }} mp</td>
+                        </tr>
+                    {% endif %}
+                    {% if post.type is not empty %}
+                        <tr>
+                            <td class="label">{{ __('Tipul proprietatii', 'project') }}</td>
+                            <td class="value">{{ post.type }}</td>
+                        </tr>
+                    {% endif %}
+                    {% if post.front_stradal is not empty %}
+                        <tr>
+                            <td class="label">{{ __('Front stradal', 'project') }}</td>
+                            <td class="value">{{ post.front_stradal }} m</td>
+                        </tr>
+                    {% endif %}
+                    </tbody>
+                </table>
+            </div>
+            <div class="footer">
+                <a href="{{ post.link }}" class="details">{{ __('Detalii teren', 'project') }}</a>
+                <a class="favorite js-add-to-favorites   {{  post.isFavoritePost() ? 'active'  }}"  data-post_id="{{ post.id }}">
+                    <i class="icon-inimacasa-01"></i>
+                    {{ __('Adaugă la favorite' ,'project') }}
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

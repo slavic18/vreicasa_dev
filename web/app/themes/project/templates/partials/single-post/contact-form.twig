@@ -1,0 +1,45 @@
+<div class="right-block">
+    <div class="main-form-wrapper">
+        <h3 class="block-headline">{{ __('Pentru mai multe informații') }}:</h3>
+        {% if fn('project_show_error_messages', 'successfully_send_contact_email') is empty %}
+            <form class="main-form go-right" method="post">
+                <input type="hidden" name="form_type" value="contact_form">
+                <input type="hidden" name="form[post_id]" value="{{ post.id }}">
+                <div class="form-group">
+                    <input name="form[name]" type="text" class="form-control" id="name" required/>
+                    <label for="name" class="form-label">{{ __('Nume', 'project') }}</label>
+                </div>
+                <div class="form-group">
+                    <input name="form[email]" type="email" class="form-control"
+                           id="email" required/>
+                    <label for="email" class="form-label">{{ __('E-mail', 'project') }}</label>
+                </div>
+                <div class="form-group">
+                    <input name="form[phone]" type="tel" class="form-control" id="phone" required/>
+                    <label for="phone" class="form-label">{{ __('Telefon', 'project') }}</label>
+                </div>
+                <div class="form-group">
+                                        <textarea name="form[details]" rows="3"
+                                                  placeholder="As dori mai multe detalii referitoare la.."
+                                                  class="form-control" id="message">
+                                        </textarea>
+                    <label for="message" class="form-label">{{ __('Mesaj', 'project') }}</label>
+                </div>
+                <div class="form-group text-center">
+                    <button class="send-button">{{ __('Trimite', 'project') }}</button>
+                </div>
+            </form>
+        {% else %}
+            <div class="successfully-sended-form">
+                {{ __('Thank you!', 'project') }}
+            </div>
+        {% endif %}
+    </div>
+
+    <div class="share-block">
+        <h3 class="block-headline">{{ __('Share', 'project') }}</h3>
+        <a href="#" class="social-button fb">facebook</a>
+        <a href="#" class="social-button tw">twitter</a>
+        <a href="#" class="social-button gmail">gmail</a>
+    </div>
+</div>
