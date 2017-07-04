@@ -1,0 +1,26 @@
+{% extends 'base.twig' %}
+{% block content %}
+    <div class="category-container">
+        <div class="section-title pink">{{ __('Terenuri', 'project') }}</div>
+        <div class="filters-container container-fluid">
+            {% include 'partials/teren-filter-form.twig' %}
+        </div>
+    </div>
+    <div class="gray-bg">
+        {% include 'partials/order-list.twig' %}
+        {% if posts is not empty %}
+            <div class="estate-list">
+                <div class="container">
+                    <div class="row">
+                        {% for post in posts %}
+                            {% include 'partials/teren-teaser.twig' %}
+                        {% endfor %}
+                    </div>
+                </div>
+                {% include 'partials/sort-container.twig' %}
+            </div>
+        {% else %}
+            {% include 'partials/not-founded.twig' %}
+        {% endif %}
+    </div>
+{% endblock %}

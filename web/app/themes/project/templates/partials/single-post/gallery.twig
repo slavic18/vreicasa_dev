@@ -1,0 +1,47 @@
+<div class="container">
+    <div class="row">
+        <div class="image-preview-wrapper">
+            <div class="col-md-8">
+                {% if post.thumbnail is not empty %}
+                    <div class="image-preview image-preview-first">
+                        <img src="{{ post.thumbnail.src|resize(600, 405) }}"/>
+                    </div>
+                {% endif %}
+            </div>
+            {% if post.images_gallery is not empty %}
+                <div class="col-md-4 p-no">
+                    {% for field in post.get_field('images_gallery') %}
+                        {% if loop.index <= 2 %}
+                            <div class="col-md-12 ">
+                                <div class="image-preview {{ loop.index == 2  ? 'more-image-wrapper' }}">
+                                    <img src="{{ field.image|resize(350, 230) }}"/>
+                                    {% if loop.index == 2 %}
+                                        {% set remainingImages =  loop.length - 2 %}
+                                        <a href="#" class="more-image">
+                                            {{ remainingImages }} {{ __('imagini', 'project') }}
+                                        </a>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            {% endif %}
+        </div>
+    </div>
+    {% if post.images_gallery is not empty %}
+        <div class="image-hide-block">
+            <div class="row mb-35">
+                {% for field in post.get_field('images_gallery') %}
+                    {% if loop.index > 2 %}
+                        <div class="col-md-4">
+                            <div class="image-preview">
+                                <img src="{{ field.image|resize(360, 250) }}"/>
+                            </div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    {% endif %}
+</div>
