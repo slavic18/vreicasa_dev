@@ -65,6 +65,7 @@
     "wpackagist-plugin/acf-qtranslate": "~1.7",
     "wpackagist-plugin/wp-seo-qtranslate-x": "~1.1",
     "wpackagist-plugin/timber-library": "~1.1",
+    "wpackagist-plugin/profilepress": "~0.0.7",
     "wpackagist-plugin/favicon-by-realfavicongenerator": "~1.3"
   },
   "require-dev": {

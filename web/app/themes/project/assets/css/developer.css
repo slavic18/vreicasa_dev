@@ -637,4 +637,22 @@
   .profile-option .tabs-content .estate-item .address {
     text-align: left; }
 
+/* line 195, ../../scss/app.scss */
+.section-title.pink {
+  background: #9969b2; }
+
+/* line 198, ../../scss/app.scss */
+.section-title.violet {
+  background: #623e68; }
+
+/* line 201, ../../scss/app.scss */
+.section-title.dark-violet {
+  background: #892c58; }
+
+.grid .masonry-field-item img {
+  max-width: 100%; }
+
+.banners-container {
+  padding-bottom: 50px; }
+
 /*# sourceMappingURL=developer.css.map */

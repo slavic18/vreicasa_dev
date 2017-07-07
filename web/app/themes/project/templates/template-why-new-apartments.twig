@@ -1,0 +1,33 @@
+{% extends 'base.twig' %}
+{% block content %}
+    <section class="question-wrapper">
+        <div class="section-title dark-violet">{{ post.title }}</div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h3></h3>
+                    <div class="question-block-title">
+                        {{ post.content }}
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% if post.banners is not empty %}
+            <div class="container-fluid banners-container">
+                <div class="row">
+                    <ul class="grid">
+                        {% for field in post.get_field('banners') %}
+                            <li class="show masonry-field-item">
+                                <a href="{{ field.link }}">
+                                    <img src="{{ field.front_image }}" class="hide-info"/>
+                                    <img src="{{ field.front_image_copy }}" class="show-info"/>
+                                </a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        {% endif %}
+    </section>
+    {% include 'partials/sections/subscribe-form.twig' %}
+{% endblock %}

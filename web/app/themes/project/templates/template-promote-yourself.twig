@@ -1,0 +1,100 @@
+{% extends 'base.twig' %}
+{% block content %}
+    <section class="promote">
+        <div class="section-title violet">{{ post.title }}</div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12 bg-light-blue">
+                    {{ post.content }}
+                </div>
+            </div>
+        </div>
+        {% if post.price_packets is not empty %}
+            <div class="container width">
+                <div class="row">
+                    <div class="promo-title-special">
+                        {% if post.price_title is not empty %}
+                            <h3>{{ post.price_title }}</h3>
+                        {% endif %}
+                        {% if post.price_subtitle is not empty %}
+                            <p>{{ post.price_subtitle }}</p>
+                        {% endif %}
+                        <hr/>
+                    </div>
+                </div>
+                <div class="row">
+                    {% for field in post.get_field('price_packets') %}
+                        <div class="col-sm-3 col-xs-6">
+                            <div class="card-pachete">
+                                <div class="img-container {{ field.type }}">
+                                    <div class="pach-title">
+                                        <h3 class="first-title">{{ field.title }}</h3>
+                                        <h6 class="second-title">{{ field.subtitle }}</h6>
+                                    </div>
+                                    <div class="price">
+                                        {{ field.price }}
+                                    </div>
+                                </div>
+                                <div class="{{ field.type == 'platinum' ? 'pach-message' : 'pach-list'  }}">
+                                    {{ field.advantages }}
+                                </div>
+                                <div class="link">
+                                    <a href="#">{{ __('CONTACTEAZĂ-NE', 'project') }}</a>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        {% endif %}
+
+        <div class="contact-info">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                        {% if post.map_location is not empty %}
+                            <div class="map-container" data-lat="{{ post.map_location.lat }}" data-lng="{{ post.map_location.lng }}">
+                            </div>
+                        {% endif %}
+                    </div>
+                    <div class="col-md-4">
+                        {% if post.phone is not empty %}
+                            <div class="contact-details">
+                                <div class="phone">
+                                    <h5>{{ __('Telefon', 'project') }}</h5>
+                                    <p>{{ post.phone }}</p>
+                                </div>
+                            </div>
+                        {% endif %}
+                        {% if post.email is not empty %}
+                            <div class="contact-details">
+                                <div class="mail">
+                                    <h5>Mail</h5>
+                                    <p>{{ post.email }}</p>
+                                </div>
+                            </div>
+                        {% endif %}
+                        {% if post.skype is not empty %}
+                            <div class="contact-details">
+                                <div class="skype">
+                                    <h5>Skype</h5>
+                                    <p>{{ post.skype }}</p>
+                                </div>
+                            </div>
+                        {% endif %}
+                        {% if post.facebook is not empty %}
+                            <div class="contact-details">
+                                <div class="facebook">
+                                    <h5>Facebook</h5>
+                                    <p>{{ post.facebook }}</p>
+                                </div>
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% include 'partials/sections/subscribe-form.twig' %}
+
+{% endblock %}

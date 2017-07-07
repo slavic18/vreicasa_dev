@@ -241,6 +241,7 @@ class StarterSite extends TimberSite
             'register',
             'login',
             'my-account',
+
         ];
 
         if (!empty($pages) && is_array($pages) && count($pages)) {
