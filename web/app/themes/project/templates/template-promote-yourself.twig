@@ -58,38 +58,7 @@
                         {% endif %}
                     </div>
                     <div class="col-md-4">
-                        {% if post.phone is not empty %}
-                            <div class="contact-details">
-                                <div class="phone">
-                                    <h5>{{ __('Telefon', 'project') }}</h5>
-                                    <p>{{ post.phone }}</p>
-                                </div>
-                            </div>
-                        {% endif %}
-                        {% if post.email is not empty %}
-                            <div class="contact-details">
-                                <div class="mail">
-                                    <h5>Mail</h5>
-                                    <p>{{ post.email }}</p>
-                                </div>
-                            </div>
-                        {% endif %}
-                        {% if post.skype is not empty %}
-                            <div class="contact-details">
-                                <div class="skype">
-                                    <h5>Skype</h5>
-                                    <p>{{ post.skype }}</p>
-                                </div>
-                            </div>
-                        {% endif %}
-                        {% if post.facebook is not empty %}
-                            <div class="contact-details">
-                                <div class="facebook">
-                                    <h5>Facebook</h5>
-                                    <p>{{ post.facebook }}</p>
-                                </div>
-                            </div>
-                        {% endif %}
+                        {% include 'partials/contact-info.twig' %}
                     </div>
                 </div>
             </div>

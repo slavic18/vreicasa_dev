@@ -1,0 +1,32 @@
+{% if options.phone is not empty %}
+    <div class="contact-details">
+        <div class="phone">
+            <h5>{{ __('Telefon', 'project') }}</h5>
+            <p>{{ options.phone }}</p>
+        </div>
+    </div>
+{% endif %}
+{% if options.email is not empty %}
+    <div class="contact-details">
+        <div class="mail">
+            <h5>Mail</h5>
+            <p>{{ options.email }}</p>
+        </div>
+    </div>
+{% endif %}
+{% if options.skype is not empty %}
+    <div class="contact-details">
+        <div class="skype">
+            <h5>Skype</h5>
+            <p>{{ options.skype }}</p>
+        </div>
+    </div>
+{% endif %}
+{% if options.facebook is not empty %}
+    <div class="contact-details">
+        <div class="facebook">
+            <h5>Facebook</h5>
+            <p>{{ options.facebook }}</p>
+        </div>
+    </div>
+{% endif %}

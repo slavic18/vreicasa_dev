@@ -655,4 +655,10 @@
 .banners-container {
   padding-bottom: 50px; }
 
+.bg-gray {
+  background: #f9f9f9; }
+
+.page-template-template-services .service > .section-title {
+  margin-bottom: 0px; }
+
 /*# sourceMappingURL=developer.css.map */

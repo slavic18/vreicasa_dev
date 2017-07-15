@@ -1,19 +1,24 @@
 {
-    "key": "group_5941ae0fb30e2",
-    "title": "Contacts additional fields",
+    "key": "group_5969f099cba72",
+    "title": "Services page: fields",
     "fields": [
         {
             "sub_fields": [
                 {
-                    "default_value": "",
-                    "maxlength": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "key": "field_5941b008759ef",
-                    "label": "Name",
-                    "name": "name",
-                    "type": "text",
+                    "return_format": "url",
+                    "preview_size": "thumbnail",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "key": "field_5969f0aaaf447",
+                    "label": "Icon",
+                    "name": "icon",
+                    "type": "image",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -29,10 +34,29 @@
                     "placeholder": "",
                     "prepend": "",
                     "append": "",
-                    "key": "field_5941b011759f0",
-                    "label": "Post",
-                    "name": "post",
+                    "key": "field_5969f0bcaf448",
+                    "label": "Title",
+                    "name": "title",
                     "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    }
+                },
+                {
+                    "default_value": "",
+                    "new_lines": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "rows": "",
+                    "key": "field_5969f0c1af449",
+                    "label": "Description",
+                    "name": "description",
+                    "type": "textarea",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -53,29 +77,10 @@
                     "max_height": "",
                     "max_size": "",
                     "mime_types": "",
-                    "key": "field_5941b018759f1",
-                    "label": "Image",
+                    "key": "field_5969f0e2af44a",
+                    "label": "Thumbnail",
                     "name": "image",
                     "type": "image",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    }
-                },
-                {
-                    "default_value": "",
-                    "new_lines": "",
-                    "maxlength": "",
-                    "placeholder": "",
-                    "rows": "",
-                    "key": "field_5941b023759f2",
-                    "label": "Description",
-                    "name": "description",
-                    "type": "textarea",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -88,47 +93,13 @@
             ],
             "min": 0,
             "max": 0,
-            "layout": "table",
-            "button_label": "",
+            "layout": "row",
+            "button_label": "Add service",
             "collapsed": "",
-            "key": "field_5941afd9759ee",
-            "label": "Echipa",
-            "name": "partners",
+            "key": "field_5969f09faf446",
+            "label": "Services",
+            "name": "services",
             "type": "repeater",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            }
-        },
-        {
-            "placement": "left",
-            "endpoint": 0,
-            "key": "field_5941b1ad4687a",
-            "label": "Contacte",
-            "name": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            }
-        },
-        {
-            "height": "",
-            "center_lat": "45.0667914",
-            "center_lng": "24.206336",
-            "zoom": "",
-            "key": "field_5941b315afd74",
-            "label": "Locul pe harta",
-            "name": "map_location",
-            "type": "google_map",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -144,7 +115,7 @@
             {
                 "param": "page_template",
                 "operator": "==",
-                "value": "template-contacts-page.php"
+                "value": "template-services.php"
             }
         ]
     ],
@@ -156,5 +127,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1500116992
+    "modified": 1500115304
 }

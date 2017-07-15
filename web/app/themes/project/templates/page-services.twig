@@ -1,0 +1,90 @@
+{% extends 'base.twig' %}
+{% block content %}
+
+    <section class="service">
+        <h3 class="section-title orange">{{ post.title }}</h3>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12 bg-gray">
+                    <div class="service-block-title">
+                        {{ post.content }}
+                        <hr/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% if post.services is not empty %}
+            <div class="container-fluid service-post">
+                {% for field in post.get_field('services') %}
+                    <div class="row border-gray {{ loop.index%2 != 1 ? 'bg-gray' }}">
+                        {% if loop.index%2 == 1 %}
+                            <div class="col-sm-7">
+                                <div class="service-item">
+                                    {% if field.icon %}
+                                        <div class="icon-container">
+                                            <img src="{{ field.icon }}"/>
+                                        </div>
+                                    {% endif %}
+                                    <h4>{{ field.title }}</h4>
+                                    <hr/>
+                                    <div class="gray-letter">
+                                        <p>
+                                            {{ field.description }}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            {% if field.image %}
+                                <div class="col-sm-5">
+                                    <div class="service-img">
+                                        <img src="{{ field.image }}" class="img-responsive"/>
+                                    </div>
+                                </div>
+                            {% endif %}
+                        {% else %}
+                            {% if field.image %}
+                                <div class="col-sm-5">
+                                    <div class="service-img">
+                                        <img src="{{ field.image }}" class="img-responsive"/>
+                                    </div>
+                                </div>
+                            {% endif %}
+                            <div class="col-sm-7">
+                                <div class="service-item">
+                                    {% if field.icon %}
+                                        <div class="icon-container">
+                                            <img src="{{ field.icon }}"/>
+                                        </div>
+                                    {% endif %}
+                                    <h4>{{ field.title }}</h4>
+                                    <hr/>
+                                    <div class="gray-letter">
+                                        <p>
+                                            {{ field.description }}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endif %}
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+        <div class="contact-description">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-5">
+                        {% include 'partials/contact-form.twig' %}
+                    </div>
+                    <div class="col-md-4 col-md-offset-2">
+                        <div class="contact-info">
+                            {% include 'partials/contact-info.twig' %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {% include 'partials/sections/subscribe-form.twig' %}
+{% endblock %}
