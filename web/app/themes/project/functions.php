@@ -188,6 +188,7 @@ class StarterSite extends TimberSite
         wp_enqueue_style('owl-carousel-theme', $assetsUri . '/css/libs/owl.theme.default.css', array(), $version);
         wp_enqueue_style('chosen', $assetsUri . '/css/libs/chosen.css', array(), $version);
         wp_enqueue_style('fonts', $assetsUri . '/css/fonts.css', array(), $version);
+        wp_enqueue_style('izimodal1', $assetsUri . '/css/libs/iziModal.min.css', array(), $version);
         wp_enqueue_style('app', $assetsUri . '/css/app.css', array(), $version);
         wp_enqueue_style('developer', $assetsUri . '/css/developer.css', array(), $version);
 
@@ -202,6 +203,7 @@ class StarterSite extends TimberSite
         wp_enqueue_script('matchHeight', $assetsUri . '/js/libs/jquery.matchHeight.js', array('jquery'), $version, true);
 //		wp_enqueue_script('bootstrap', $assetsUri . '/js/libs/bootstrap.min.js', array('jquery'), $version, true);
         wp_enqueue_script('owl', $assetsUri . '/js/libs/owl.carousel.min.js', array('jquery'), $version, true);
+        wp_enqueue_script('izimodal', $assetsUri . '/js/libs/iziModal.min.js', array('jquery'), $version);
         wp_enqueue_script('chosen', $assetsUri . '/js/libs/chosen.jquery.min.js', array('jquery'), $version, true);
         wp_enqueue_script('main', $assetsUri . '/js/scripts.min.js', array('jquery'), $version, true);
         wp_enqueue_script('development', $assetsUri . '/js/development.js', array('jquery'), $version, true);

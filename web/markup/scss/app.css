@@ -2268,6 +2268,17 @@ ul {
   margin-top: 80px;
   padding-bottom: 150px;
   border: none; }
+.promote-page .main-form-wrapper {
+  padding: 20px; }
+  .promote-page .main-form-wrapper h3 {
+    text-align: center;
+    font-size: 27px;
+    color: #c71061; }
+  .promote-page .main-form-wrapper p {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 17px;
+    color: #999; }
 
 .question-page .section-title {
   padding-top: 17px;
@@ -2587,5 +2598,8 @@ ul {
 
 .mrgn-header {
   margin-top: 84px; }
+
+.iziModal {
+  top: 50px !important; }
 
 /*# sourceMappingURL=app.css.map */

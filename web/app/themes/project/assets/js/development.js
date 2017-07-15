@@ -196,6 +196,19 @@ project.Behavior.menuFixed = function (context) {
     });
 }
 
+project.Behavior.openModalWin = function (context) {
+    var $modal = $('#contact-form-modal', context);
+    if ($modal.length) {
+        $modal.iziModal({});
+        $('.card-pachete').on('click', function (e) {
+            e.preventDefault();
+            $('#contact-form-modal').iziModal('open');
+        })
+    }
+}
+
+
+
 
 /**
  * Run All behaviors on document ready.

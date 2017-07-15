@@ -39,7 +39,7 @@
                                     {{ field.advantages }}
                                 </div>
                                 <div class="link">
-                                    <a href="#">{{ __('CONTACTEAZĂ-NE', 'project') }}</a>
+                                    <a href="#" class="toggle-contact-modal">{{ __('CONTACTEAZĂ-NE', 'project') }}</a>
                                 </div>
                             </div>
                         </div>
@@ -65,5 +65,7 @@
         </div>
     </section>
     {% include 'partials/sections/subscribe-form.twig' %}
-
+    <div class="izi-modal" id="contact-form-modal">
+        {% include 'partials/contact-form.twig' %}
+    </div>
 {% endblock %}
