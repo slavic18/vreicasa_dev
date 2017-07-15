@@ -1,4 +1,3 @@
-
 /* Main scripts file. */
 
 window.project = {
@@ -69,9 +68,9 @@ function getWindowWidth() {
     }
     return windowWidth;
 }
-project.Behavior.setEqualHeightBlocks = function(context) {
+project.Behavior.setEqualHeightBlocks = function (context) {
     var $el = $('.js-equal-height', context);
-    if($el.length) {
+    if ($el.length) {
         $el.matchHeight({
             byRow: true,
             property: 'height',
@@ -108,7 +107,7 @@ project.Behavior.showImage = function (context) {
 /**
  * Mob menu
  */
-project.Behavior.mobMenu = function(context) {
+project.Behavior.mobMenu = function (context) {
     var $mobMenuLink = $('.mob-menu-icon', context),
         $navbarMenuOverlay = $('.navbar-menu-overlay', context),
         $mobSidebar = $('.mob-sidebar'),
@@ -128,29 +127,29 @@ project.Behavior.mobMenu = function(context) {
 /**
  * Chosen select
  */
-project.Behavior.chosenSelect = function(context) {
-     var $select = $('select', context);
-     var $selectItem = $();
-     if ($select.length) {
-         for (var i = 0, len = $select.length; i < len; i++) {
-             $item = $select.eq(i);
-             if ($item.hasClass('multiple')) {
-                 // chosen multiple
-             } else if ($item.hasClass('custom')) {
-                 // custom chosen
-             } else {
-                 // basic chosen no search
-                 $item.chosen({
-                     disable_search: true,
-                     width: '100%'
-                 })
-             }
-         }
-     }
- }
+project.Behavior.chosenSelect = function (context) {
+    var $select = $('select', context);
+    var $selectItem = $();
+    if ($select.length) {
+        for (var i = 0, len = $select.length; i < len; i++) {
+            $item = $select.eq(i);
+            if ($item.hasClass('multiple')) {
+                // chosen multiple
+            } else if ($item.hasClass('custom')) {
+                // custom chosen
+            } else {
+                // basic chosen no search
+                $item.chosen({
+                    disable_search: true,
+                    width: '100%'
+                })
+            }
+        }
+    }
+}
 
 
-project.Behavior.masonryAdd = function(context) {
+project.Behavior.masonryAdd = function (context) {
     $('.grid').masonry({
         // options
         itemSelector: 'li',
@@ -159,23 +158,23 @@ project.Behavior.masonryAdd = function(context) {
     });
 }
 
-project.Behavior.removeClassCol = function(context) {
-      if ($(window).width() < 480) {
-          $('.col-xs-6').removeClass('col-xs-6').addClass('col-xs-12');
-      }
+project.Behavior.removeClassCol = function (context) {
+    if ($(window).width() < 480) {
+        $('.col-xs-6').removeClass('col-xs-6').addClass('col-xs-12');
+    }
 }
 
 
-project.Behavior.menuFixed = function(context) {
-    $(document).ready(function(){
+project.Behavior.menuFixed = function (context) {
+    $(document).ready(function () {
         var mrgnHeader = $(".header-top");
         var nav = $(".main-header");
-        $(window).scroll(function(){
-            if($(this).scrollTop() > 216 ){
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 216) {
                 mrgnHeader.addClass("mrgn-header");
                 nav.addClass("main-fixed");
             }
-            else{
+            else {
                 mrgnHeader.removeClass("mrgn-header");
                 nav.removeClass("main-fixed");
             }
@@ -184,5 +183,19 @@ project.Behavior.menuFixed = function(context) {
     });
 }
 
+project.Behavior.initIzimodal = function (context) {
+    $("#modal").iziModal();
+}
+
+project.Behavior.openModalWin = function (context) {
+    var $modal = $('#contact-form-modal', context);
+    if ($modal.length) {
+        $modal.iziModal({});
+        $('.toggle-contact-modal').on('click', function (e) {
+            e.preventDefault();
+            $('#contact-form-modal').iziModal('open');
+        })
+    }
+}
 
 
