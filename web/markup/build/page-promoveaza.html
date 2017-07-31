@@ -79,7 +79,7 @@
                                 </li>
                                 <li><a href="#" class="dropdown-link">Proiecte imobiliare</a>
                                 </li>
-                                <li><a href="#" class="dropdown-link dropdown-link-last">Părerea voastră</a>
+                                <li><a href="#" class="dropdown-link dropdown-link-last show-modal-form">Părerea voastră</a>
                                 </li>
                             </ul>
                         </li>
@@ -111,6 +111,152 @@
                                 <li><a href="#" class="menu-mob-item">Părerea voastră</a>
                                 </li>
                             </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="izi-modal" id="modal-form-window">
+        <div class="main-form-wrapper">
+            <div class="item">
+                <div class="first-form">
+                    <div class="title">
+                        <p>Spuneţi-ne despre experienţa cu noi</p>
+                        <p>Părerea voastră ne va ajuta să fim mai buni</p>
+                        <p>Ai recomanda Vrei casă.ro prietenilor tăi?</p>
+                    </div>
+                    <div class="modal-form">
+                        <div data-attr="1" class="radio-container">
+                            <input type="radio" class="radio" id="radio-1" />
+                            <label for="radio-1" class="bg-color-1"></label><span>1</span>
+                        </div>
+                        <div data-attr="2" class="radio-container">
+                            <input type="radio" class="radio" id="radio-2" />
+                            <label for="radio-2" class="bg-color-2"></label><span>2</span>
+                        </div>
+                        <div data-attr="3" class="radio-container">
+                            <input type="radio" class="radio" id="radio-3" />
+                            <label for="radio-3" class="bg-color-3"></label><span>3</span>
+                        </div>
+                        <div data-attr="4" class="radio-container">
+                            <input type="radio" class="radio" id="radio-4" />
+                            <label for="radio-4" class="bg-color-4"></label><span>4</span>
+                        </div>
+                        <div data-attr="5" class="radio-container">
+                            <input type="radio" class="radio" id="radio-5" />
+                            <label for="radio-5" class="bg-color-5"></label><span>5</span>
+                        </div>
+                    </div>
+                    <div class="result-rating">
+                        <div data-attr="1" class="result">
+                            <div class="img-container">
+                                <img src="images/smile-5.png" />
+                            </div>
+                            <div class="gray-letter">
+                                <p>În nici un caz</p>
+                            </div>
+                        </div>
+                        <div data-attr="2" class="result">
+                            <div class="img-container">
+                                <img src="images/smile-4.png" />
+                            </div>
+                            <div class="gray-letter">
+                                <p>Nu încă</p>
+                            </div>
+                        </div>
+                        <div data-attr="3" class="result">
+                            <div class="img-container">
+                                <img src="images/smile-3.png" />
+                            </div>
+                            <div class="gray-letter">
+                                <p>Da, o să recomand</p>
+                            </div>
+                        </div>
+                        <div data-attr="4" class="result">
+                            <div class="img-container">
+                                <img src="images/smile-2.png" />
+                            </div>
+                            <div class="gray-letter">
+                                <p>În fine</p>
+                            </div>
+                        </div>
+                        <div data-attr="5" class="result">
+                            <div class="img-container">
+                                <img src="images/smile.png" />
+                            </div>
+                            <div class="gray-letter">
+                                <p>Deja am recomandat</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="second-form">
+                    <div class="title">
+                        <p>Cum ai aflat de Vrei casa.ro</p>
+                    </div>
+                    <div class="modal-form">
+                        <div class="radio-container">
+                            <input type="radio" class="radio" id="radio-6" onclick="radioClick(this);" />
+                            <label for="radio-6"></label><span>Pe internet</span>
+                        </div>
+                        <div class="radio-container">
+                            <input type="radio" class="radio" id="radio-7" onclick="radioClick(this);" />
+                            <label for="radio-7"></label><span>Reviste, pliante</span>
+                        </div>
+                        <div class="radio-container">
+                            <input type="radio" class="radio" id="radio-8" onclick="radioClick(this);" />
+                            <label for="radio-8"></label><span>Banere, postere</span>
+                        </div>
+                        <div class="radio-container">
+                            <input type="radio" class="radio" id="radio-9" onclick="radioClick(this);" />
+                            <label for="radio-9"></label><span>De la prieteni sa familie</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="third-form">
+                    <div class="title">
+                        <p>Folosirea Vrei casă.ro este:</p>
+                    </div>
+                    <div class="modal-form">
+                        <div class="radio-container">
+                            <input type="radio" class="radio orange-col" id="radio-10" onclick="radioClick(this);" />
+                            <label for="radio-10"></label><span>Greu</span>
+                        </div>
+                        <div class="radio-container">
+                            <input type="radio" class="radio violet-col" id="radio-11" onclick="radioClick(this);" />
+                            <label for="radio-11"></label><span class="pos-left">În regulă</span>
+                        </div>
+                        <div class="radio-container">
+                            <input type="radio" class="radio pink-col" id="radio-12" onclick="radioClick(this);" />
+                            <label for="radio-12"></label><span>Uşor</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="last-form">
+                    <div class="title">
+                        <p>Aveţi sfaturi pentru noi?</p>
+                    </div>
+                    <div class="modal-form">
+                        <div class="radio-container">
+                            <input type="radio" class="radio" id="radio-13" onclick="radioClick(this);" />
+                            <label for="radio-13"></label><span>Pozele pot fi mai bune</span>
+                        </div>
+                        <div class="radio-container">
+                            <input type="radio" class="radio" id="radio-14" onclick="radioClick(this);" />
+                            <label for="radio-14"></label><span>Necesita mai multe informaţii referitoare la amplasament</span>
+                        </div>
+                        <div class="radio-container">
+                            <input type="radio" class="radio" id="radio-15" onclick="radioClick(this);" />
+                            <label for="radio-15"></label><span>Postaţi mai multe oferte</span>
+                        </div>
+                        <div class="radio-container">
+                            <input type="radio" class="radio" id="radio-16" onclick="radioClick(this);" />
+                            <label for="radio-16"></label><span>Rectificaţi informaţiile greşite</span>
+                        </div>
+                        <div class="btn-container">
+                            <button type="button" class="alt">Alt sfat</button>
+                            <button type="submit" class="btn-subm">Trimite</button>
                         </div>
                     </div>
                 </div>
