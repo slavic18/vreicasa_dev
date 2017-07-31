@@ -243,7 +243,12 @@ class StarterSite extends TimberSite
             'register',
             'login',
             'my-account',
-            'services'
+            'services',
+            'ghidul-cumparatorului',
+            'confidentialitate',
+            'design-de-interior',
+            'arhitectura',
+            'cadastru'
 
         ];
 
@@ -279,9 +284,10 @@ class StarterSite extends TimberSite
     function register_menus()
     {
         register_nav_menus(array(
-            'header_top_menu' => 'Меню в шапке',
-            'footer_menu' => 'Меню в подвале (о компании)',
-            'footer_second_menu' => 'Меню в подвале (Как мы работаем)',
+            'header_top_menu' => 'Meniu in partea top',
+            'footer_menu_about' => 'Meniu in partea de jos (Despre noi)',
+            'footer_second_menu' => 'Meniu in partea de jos (Termeni de folosire)',
+            'footer_third_menu' => 'Meniu in partea de jos (Servicii)',
         ));
     }
 
@@ -305,8 +311,9 @@ class StarterSite extends TimberSite
     function add_to_context($context)
     {
         $context['header_menu'] = new TimberMenu('header_top_menu');
-        $context['footer_menu'] = new TimberMenu('footer_menu');
+        $context['footer_menu_about'] = new TimberMenu('footer_menu_about');
         $context['footer_second_menu'] = new TimberMenu('footer_second_menu');
+        $context['footer_third_menu'] = new TimberMenu('footer_third_menu');
 
         $context['options'] = get_fields('option');
 
@@ -348,22 +355,25 @@ function _t($text)
 
 function getMyAccountMenu()
 {
+    if(!is_user_logged_in()) {
+        wp_redirect(home_url());
+    }
     return [
         [
             'key' => 'favorite',
             'title' => 'Favorite',
             'link' => fruitframe_get_permalink('my-account'),
         ],
-        [
-            'key' => 'recent',
-            'title' => 'Cautari recente',
-            'link' => fruitframe_get_permalink('recent-searches'),
-        ],
-        [
-            'key' => 'messages',
-            'title' => 'Mesaje',
-            'link' => fruitframe_get_permalink('messages'),
-        ],
+//        [
+//            'key' => 'recent',
+//            'title' => 'Cautari recente',
+//            'link' => fruitframe_get_permalink('recent-searches'),
+//        ],
+//        [
+//            'key' => 'messages',
+//            'title' => 'Mesaje',
+//            'link' => fruitframe_get_permalink('messages'),
+//        ],
         [
             'key' => 'configure',
             'title' => 'Setari',

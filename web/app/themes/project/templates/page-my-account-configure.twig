@@ -9,10 +9,34 @@
                             {% include 'partials/account/menu.twig' with {'active': 'configure'} %}
                         </div>
                         <div class="tabs-content">
-                            <h4>Configurarea profilului tau</h4>
-                            <img src="{{ theme.link }}/assets/images/favorite.png" />
-                            <p>Nu ai niciun anunt favorit in aceasta lista</p>
-                            <p>Cauta printre proprietatile disponibile pe Vreicasa.ro si salveaza pe cele care iti place</p>
+                            <h4>{{ __('Configurarea profilului tau', 'project') }}</h4>
+                            <form class="form edit-password-form" method="post" id="edit-password-form">
+                                <input type="hidden" name="form_type" value="edit_user_main_data">
+                                {{ fn('project_show_error_messages', 'edit_main_user_data') }}
+                                <div class="success-form">
+                                    {{ fn('project_show_error_messages', 'login_success') }}
+                                </div>
+                                <div class="input-container">
+                                    <label>{{ __('Email', 'project') }}:</label>
+                                    <input type="email" class="form-control" required="required" name="form[email]"
+                                           value="{{ userEmail }}">
+                                </div>
+                                <div class="input-container">
+                                    <label>{{ __('Parola', 'project') }}:</label>
+                                    <input type="password" class="form-control" name="form[pass]"
+                                           value="{{ formData.pass }}">
+                                </div>
+                                <div class="input-container">
+                                    <label>{{ __('Repeta parola', 'project') }}:</label>
+                                    <input type="password" class="form-control" name="form[repeat_pass]"
+                                           value="{{ formData.repeat_pass }}">
+                                </div>
+                                <div class="input-container">
+                                    <button type="submit" class="pink-button">
+                                        {{ __('Salveza', 'project') }}
+                                    </button>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>

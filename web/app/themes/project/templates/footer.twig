@@ -8,36 +8,47 @@
             </div>
             <div class="col-md-2 col-xs-6 footer-info">
                 <div class="footer-headline">
-                    <h5>URMĂREŞTE-NE</h5>
+                    <h5>{{ __('URMĂREŞTE-NE', 'project') }}</h5>
                 </div>
-                <div class="footer-content"><a href="#">Facebook</a><a href="#">Pinterest</a><a href="#">Linkedin</a><a
-                            href="#">Youtube</a>
-                </div>
-            </div>
-            <div class="col-md-2 col-xs-6 footer-info">
-                <div class="footer-headline">
-                    <h5>DESPRE NOI</h5>
-                </div>
-                <div class="footer-content"><a href="#">Ştiri</a><a href="#">De ce case noi?</a><a href="#">Ghidul
-                        cumpărătorului</a>
+                <div class="footer-content">
+                    {% if options.social_networks is not empty %}
+                        {% for field in options.social_networks %}
+                            <a href="{{ field.link }}">{{ field.type }}</a>
+                        {% endfor %}
+                    {% endif %}
                 </div>
             </div>
-            <div class="col-md-2 col-xs-6 footer-info">
-                <div class="footer-headline">
-                    <h5>TERMENI DE FOLOSIRE</h5>
+            {% if footer_menu_about is not empty %}
+                <div class="col-md-2 col-xs-6 footer-info">
+                    <div class="footer-headline">
+                        <h5>{{ __('DESPRE NOI', 'project') }}</h5>
+                    </div>
+                    <div class="footer-content">
+                        {% include 'partials/menu_items_footer.twig' with {'menu': footer_menu_about} %}
+                    </div>
                 </div>
-                <div class="footer-content"><a href="#">Confidenţialitate</a><a href="#">Contactaţi-ne</a><a
-                            href="#">Contactaţi-ne</a>
+            {% endif %}
+            {% if footer_second_menu is not empty %}
+                <div class="col-md-2 col-xs-6 footer-info">
+                    <div class="footer-headline">
+                        <h5>{{ __('TERMENI DE FOLOSIRE', 'project') }}</h5>
+                    </div>
+                    <div class="footer-content">
+                        {% include 'partials/menu_items_footer.twig' with {'menu': footer_second_menu} %}
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-2 col-xs-6 footer-info">
-                <div class="footer-headline">
-                    <h5>TERMENI DE FOLOSIRE</h5>
+            {% endif %}
+            {% if footer_third_menu is not empty %}
+                <div class="col-md-2 col-xs-6 footer-info">
+                    <div class="footer-headline">
+                        <h5>{{ __('Servicii', 'project') }}</h5>
+                    </div>
+                    <div class="footer-content">
+                        {% include 'partials/menu_items_footer.twig' with {'menu': footer_third_menu} %}
+                    </div>
                 </div>
-                <div class="footer-content"><a href="#">Design de interior</a><a href="#">Arhitectură</a><a
-                            href="#">Cadastru</a>
-                </div>
-            </div>
+            {% endif %}
+
         </div>
     </div>
 </div>
@@ -46,7 +57,8 @@
         <div class="row">
             <div class="com-sm-12">
                 <p>Pentru informaţii detaliate despre celelalte programe cofinanţate de Uniunea Europeană,
-                    vă invităm să vizitaţi <a href="#">www.fonduri-ue.ro</a> Conţinutul acestui material nu
+                    vă invităm să vizitaţi <a href="www.fonduri-ue.ro">www.fonduri-ue.ro</a> Conţinutul acestui material
+                    nu
                     reprezintă în mod obligatoriu poziţia oficială a Uniunii
                     Europene sau a Guvernului României</p>
             </div>

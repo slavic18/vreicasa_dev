@@ -38,44 +38,46 @@
                     </div>
                     <div class="col-md-5 text-right mob-hide">
                         <ul class="main-nav">
-                            <li><a href="{{ getPermalink('promote-yourself') }}">POMOVEAZĂ-TE</a>
+                            <li><a href="{{ getPermalink('promote-yourself') }}">{{ __('POMOVEAZĂ-TE', 'project') }}</a>
                             </li>
-                            <li><a href="{{ getPermalink('blog') }}">ŞTIRI</a>
+                            <li><a href="{{ getPermalink('blog') }}">{{ __('ŞTIRI', 'project') }}</a>
                             </li>
-                            <li class="dropdown-block save-block">
-                                <a href="#" class="dropdown-item icon-inimacasa-01"></a>
-                                <ul class="header-menu-dropdown">
-                                    <li><a href="#" class="dropdown-link">Salvează căutările</a>
-                                    </li>
-                                </ul>
+                            {% if fn('is_user_logged_in') %}
+                                <li class="dropdown-block save-block">
+                                    <a href="{{ getPermalink('my-account') }}"
+                                       class="dropdown-item icon-inimacasa-01"></a>
+                                    <ul class="header-menu-dropdown">
+                                        <li><a href="{{ getPermalink('my-account') }}" class="dropdown-link">
+                                                {{ __('Salvează căutările', 'project') }}
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            {% endif %}
+                            <li>
+                                <a href="{{ getPermalink('contacts') }}">{{ __('CONTACT', 'project') }}</a>
                             </li>
-                            <li><a href="{{ getPermalink('contacts') }}">CONTACT</a>
-                            </li>
-
                             <li>
                                 {% if fn('is_user_logged_in') %}
-                                    <a href="{{ getPermalink('my-account') }}">Profilul meu</a>
+                                    <a href="{{ getPermalink('my-account') }}">{{ __('Profilul meu', 'project') }}</a>
                                 {% else %}
-                                    <a href="{{ getPermalink('login') }}">LOGIN</a>
+                                    <a href="{{ getPermalink('login') }}">{{ __('LOGIN', 'project') }}</a>
                                 {% endif %}
                             </li>
                         </ul>
                     </div>
                     <div class="col-md-1 mob-hide">
                         <ul class="header-menu">
-                            <li class="dropdown-block"><a href="#" class="dropdown-item">MENIU</a>
+                            <li class="dropdown-block">
+                                <a href="#" class="dropdown-item">{{ __('MENIU', 'project') }}</a>
                                 <ul class="header-menu-dropdown">
-                                    <li><a href="#" class="dropdown-link">Acasă</a>
+                                    <li>
+                                        <a href="{{ site.url }}" class="dropdown-link">{{ __('Acasă', 'project') }}</a>
                                     </li>
-                                    <li><a href="#" class="dropdown-link">De ce case noi</a>
-                                    </li>
-                                    <li><a href="#" class="dropdown-link">Despre noi</a>
-                                    </li>
-                                    <li><a href="#" class="dropdown-link">Servicii</a>
-                                    </li>
-                                    <li><a href="#" class="dropdown-link">Proiecte imobiliare</a>
-                                    </li>
-                                    <li><a href="#" class="dropdown-link dropdown-link-last">Părerea voastră</a>
+                                    {% if header_menu is not empty %}
+                                        {% include 'partials/header_menu_items.twig' with {'menu': header_menu} %}
+                                    {% endif %}
+                                    <li><a href="#" class="dropdown-link dropdown-link-last">{{ __('Părerea voastră', 'project') }}</a>
                                     </li>
                                 </ul>
                             </li>
@@ -87,26 +89,27 @@
                         <div class="mob-sidebar">
                             <div class="mob-menu-container">
                                 <ul class="menu menu-mob">
-                                    <li><a href="#" class="dropdown-link">POMOVEAZĂ-TE</a>
+
+                                    <li>
+                                        <a href="{{ getPermalink('promote-yourself') }}" class="dropdown-link">{{ __('POMOVEAZĂ-TE', 'project') }}</a>
                                     </li>
-                                    <li><a href="#" class="dropdown-link">ŞTIRI</a>
+                                    <li>
+                                        <a href="{{ getPermalink('blog') }}" class="dropdown-link">{{ __('ŞTIRI', 'project') }}</a>
                                     </li>
-                                    <li><a href="#" class="dropdown-link">CONTACT</a>
+                                    <li>
+                                        <a href="{{ getPermalink('contacts') }}" class="dropdown-link">{{ __('CONTACT', 'project') }}</a>
                                     </li>
-                                    <li><a href="#" class="dropdown-link">LOGIN</a>
+                                    <li>
+                                        {% if fn('is_user_logged_in') %}
+                                            <a href="{{ getPermalink('my-account') }}">{{ __('Profilul meu', 'project') }}</a>
+                                        {% else %}
+                                            <a href="{{ getPermalink('login') }}">{{ __('LOGIN', 'project') }}</a>
+                                        {% endif %}
                                     </li>
-                                    <li><a href="#" class="menu-mob-item">Acasă</a>
+                                    <li>
+                                        <a href="{{ site.url }}" class="dropdown-link">{{ __('Acasă', 'project') }}</a>
                                     </li>
-                                    <li><a href="#" class="menu-mob-item">De ce case noi</a>
-                                    </li>
-                                    <li><a href="#" class="menu-mob-item">Despre noi</a>
-                                    </li>
-                                    <li><a href="#" class="menu-mob-item">Servicii</a>
-                                    </li>
-                                    <li><a href="#" class="menu-mob-item">Proiecte imobiliare</a>
-                                    </li>
-                                    <li><a href="#" class="menu-mob-item">Părerea voastră</a>
-                                    </li>
+                                    {% include 'partials/header_menu_items.twig' with {'menu': header_menu} %}
                                 </ul>
                             </div>
                         </div>
@@ -124,23 +127,13 @@
 {% block footer %}
     <footer class="footer">
         {% include 'footer.twig' %}
-        {#<script type="text/javascript" src="//api.venyoo.ru/wnew.js?wc=venyoo/default/science&widget_id=6135491847782400"></script>#}
-
-        {#<script type="text/javascript" src="//api.venyoo.ru/wnew.js?wc=venyoo/default/science&widget_id=6658528028131328"></script>#}
-        {#vreicasa#}
-        {#<script type="text/javascript" src="//api.venyoo.ru/wnew.js?wc=venyoo/default/science&widget_id=6743738779697152"></script>#}
-        {#<script type="text/javascript" src="//api.venyoo.ru/wnew.js?wc=venyoo/default/science&widget_id=5215696918937600"></script>#}
-
-        {#venyoo.ru#}
-        {#testadmin000@gmail.com#}
-        {#testadmin000@gmail.com#}
-        {#<script type="text/javascript" src="//api.venyoo.ru/wnew.js?wc=venyoo/default/science&widget_id=4927177692545024"></script>#}
-
-        {#<script type="text/javascript" src="//api.venyoo.ru/wnew.js?wc=venyoo/default/science&widget_id=4927177692545024"></script>#}
-
-        {#<script type="text/javascript" src="//api.venyoo.ru/wnew.js?wc=venyoo/default/science&widget_id=6419728782065664"></script>#}
-
     </footer>
+    {#<script type="text/javascript" src="//api.venyoo.ru/wnew.js?wc=venyoo/default/science&widget_id=6265487828451328"></script>#}
+    {#<script type="text/javascript" src="//api.venyoo.ru/wnew.js?wc=venyoo/default/science&widget_id=5880090212433920"></script>#}
+    {#<script type="text/javascript" src="//api.venyoo.ru/wnew.js?wc=venyoo/default/science&widget_id=4916949957738496"></script>#}
+    {#<script type="text/javascript" src="//api.venyoo.ru/wnew.js?wc=venyoo/default/science&widget_id=6265487828451328"></script>#}
+    <script type="text/javascript" src="//1854-new-mobile-widget-skin-leadia-dot-leadiapromo.appspot.com//wnew.js?wc=venyoo/default/science&widget_id=6055073522909184"></script>
+
     {{ function('wp_footer') }}
 {% endblock %}
 </body>

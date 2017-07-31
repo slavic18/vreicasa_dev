@@ -669,10 +669,46 @@
   font-size: 27px;
   color: #c71061; }
 
-.promote-page .main-form-wrapper p {
+.page-template-template-promote-yourself .main-form-wrapper p {
   margin-bottom: 20px;
   text-align: center;
   font-size: 17px;
   color: #999; }
+
+@media (max-width: 768px) {
+  .profile-option .tabs-content {
+    padding: 20px; }
+
+  .profile-option .tabs a {
+    padding: 10px 7px;
+    font-size: 14px; }
+
+  .estate-item .footer .favorite {
+    float: none;
+    display: block;
+    padding: 7px 10px;
+    margin-bottom: 0px; } }
+.edit-password-form {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left; }
+  .edit-password-form .input-container {
+    margin-bottom: 20px; }
+
+.error-block.alert:empty {
+  display: none; }
+
+.success-form .alert-danger {
+  background-image: -webkit-linear-gradient(top, #dff0d8 0, #c8e5bc 100%);
+  background-image: -o-linear-gradient(top, #dff0d8 0, #c8e5bc 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#dff0d8), to(#c8e5bc));
+  background-image: linear-gradient(to bottom, #dff0d8 0, #c8e5bc 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffdff0d8', endColorstr='#ffc8e5bc', GradientType=0);
+  background-repeat: repeat-x;
+  border-color: #b2dba1;
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+  color: #3c763d; }
 
 /*# sourceMappingURL=developer.css.map */

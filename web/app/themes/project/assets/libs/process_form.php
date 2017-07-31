@@ -163,7 +163,7 @@ function loginByFormData()
 
                         wp_set_current_user($user->ID, $user->user_login);
                         do_action('wp_login', $user->user_login);
-                        project_errors()->add('login_success', __('Ati intrat cu success', 'volta'));
+                        project_errors()->add('login_success', __('Ati intrat cu success', 'project'));
 
                         wp_redirect(home_url());
                         exit;
@@ -176,3 +176,61 @@ function loginByFormData()
 }
 
 add_action('init', 'loginByFormData', 1);
+
+
+
+function updateMainUserData()
+{
+    if (isset($_SERVER['REQUEST_METHOD']) && ($_SERVER['REQUEST_METHOD'] == 'POST' && !empty($_POST['form_type']) && $_POST['form_type'] == 'edit_user_main_data')) {
+        try {
+            $form = $_POST['form'];
+            $currentUserId = get_current_user_id();
+            foreach ($form as $key => $val) {
+                $form[$key] = sanitize_text_field($val);
+            }
+
+            // start validation
+            if (isset($form['email'])) {
+                if (!is_email($form['email'])) {
+                    throw new Exception('Write valid email');
+                }
+                $emailExist = email_exists($form['email']);
+                if ($emailExist !== false && $emailExist !== $currentUserId) {
+                    throw new Exception('This email is already used by another user');
+                }
+            }
+
+            // end validation
+            $userdata = [
+                'ID' => $currentUserId,
+                'user_login' => $form['email'],
+                'user_email' => $form['email']
+            ];
+
+
+            if (isset($form['pass']) && !empty($form['pass'])) {
+                if (!isset($form['repeat_pass']) || empty($form['repeat_pass'])) {
+                    throw new Exception('Repeat your pass');
+                }
+                if ($form['pass'] !== $form['repeat_pass']) {
+                    throw new Exception ('Passwords must be equal');
+                }
+                if (strlen($form['pass']) < 6) {
+                    throw new Exception ('Passwords must have minimum 6 characters');
+                }
+                $userdata['user_pass'] = $form['pass'];
+            }
+
+
+            wp_update_user($userdata);
+            update_user_meta($currentUserId, 'updated_date', date('d.m.Y'));
+            project_errors()->add('login_success', __('Profile successfully updated', 'project'));
+
+
+        } catch (Exception $e) {
+            project_errors()->add('edit_main_user_data', __($e->getMessage(), 'project'));
+        }
+    }
+}
+
+add_action('init', 'updateMainUserData', 1);
