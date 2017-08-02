@@ -161,11 +161,42 @@ project.Behavior.scrollToForm = function (context) {
     }
 }
 
+project.Behavior.masonryAddCls = function (context) {
+    var $container = $('.grid > li:nth-child(5)', context),
+        $container1 = $('.grid > li:nth-child(7)', context),
+        $container2 = $('.grid > li:nth-child(8)', context),
+        $container3 = $('.grid > li:nth-child(9)', context),
+        $container4 = $('.grid > li:nth-child(10)', context);
+    if ($container.length) {
+        $container.addClass('costuri');
+        $container1.addClass('calitatea');
+        $container2.addClass('siguranta');
+        $container3.addClass('invest');
+        $container4.addClass('poveste');
+    }
+}
 
+project.Behavior.addClassBox = function (context) {
+    var $boxCont = $('.register-page-form > div:nth-child(3)', context);
+    $boxCont.addClass('login-checkbox');
+}
+project.Behavior.appendBlock = function (context) {
+    var $appndBlock = $('.bg-gray > .col-sm-7', context),
+        $theAppndBlock = $('.bg-gray > .col-sm-5', context);
+    if($(window).width() < 768){
+        $appndBlock.append($theAppndBlock);
+    }
+    $(window).resize(function() {
+        var width = $(document).width();
+        if (width < 768) {
+            $appndBlock.append($theAppndBlock);
+        }
+    });
+}
 project.Behavior.masonryAdd = function (context) {
     var $container = $('.grid', context);
     if ($container.length) {
-        container.masonry({
+        $container.masonry({
             // options
             itemSelector: 'li',
             columnWidth: 1,
@@ -203,6 +234,80 @@ project.Behavior.openModalWin = function (context) {
             $('#contact-form-modal').iziModal('open');
         })
     }
+}
+project.Behavior.openModaForm = function (context) {
+    var $modalForm = $('#modal-form-window', context);
+    if ($modalForm.length) {
+        $modalForm.iziModal({});
+        $('.show-modal-form').on('click', function (e) {
+            e.preventDefault();
+            $('#modal-form-window').iziModal('open');
+            $('#modal-form-window').css({
+                'visibility' : 'visible'
+            });
+        });
+    }
+}
+
+project.Behavior.tabRating = function (context) {
+    var $radio = $('.radio-container', context);
+    $radio.on('click', function(e){
+        var data = $(this).data('attr'),
+            $el = $('.result[data-attr="'+data+'"]');
+        if($el.length) {
+            $el.addClass('result-vis');
+            $el.prevAll().removeClass('result-vis');
+            $el.nextAll().removeClass('result-vis');
+        }
+    });
+}
+project.Behavior.formSlider = function (context) {
+    $(".js-research-carousel").owlCarousel({
+        navigation : true,
+        slideSpeed : 300,
+        paginationSpeed : 400,
+        singleItem: true,
+        pagination: false,
+        rewindSpeed: 500
+    });
+}
+
+project.Behavior.showfiltersSub = function (context) {
+    var $formToggleBtn = $('.js-open-more-filters', context),
+        $subMenuShow = $('.filters-container .ta-c .filter-list .filter-group-container .sub-menu', context);
+    var $withSub = $('.with-sub-menu' , context),
+        $subMenus = $('.sub-menu', context);
+    if($withSub.length){
+        $withSub.on('click', function () {
+            $(this).toggleClass('show-sub-menus');
+        });
+    }
+    if($formToggleBtn.length){
+        $formToggleBtn.on('click', function(){
+            $subMenuShow.toggle();
+        });
+    }
+}
+project.Behavior.modalSliderForm = function (context) {
+    $('.show-modal-form').on('click', function (e) {
+        setTimeout(function(){
+            $('.form-slick').slick({
+                infinite: true,
+                speed: 300,
+                slidesToShow: 1,
+                adaptiveHeight: true
+            });
+            var $btnNext = $('.slick-next', context),
+                $btnPrev = $('.slick-prev', context);
+            if($btnNext.length){
+                $btnNext.on('click', function () {
+                    $btnPrev.css({
+                        "visibility" : "visible"
+                    });
+                });
+            }
+        }, 10);
+    });
 }
 
 

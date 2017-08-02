@@ -182,6 +182,8 @@ class StarterSite extends TimberSite
 
         //styles
         wp_enqueue_style('jquery-ui', '//code.jquery.com/ui/1.12.0/themes/smoothness/jquery-ui.css', array(), $version);
+        wp_enqueue_style('slick-theme', '//cdn.jsdelivr.net/gh/kenwheeler/slick@1.7.1/slick/slick-theme.css', array(), $version);
+        wp_enqueue_style('slick-css', '//cdn.jsdelivr.net/gh/kenwheeler/slick@1.7.1/slick/slick.css', array(), $version);
         wp_enqueue_style('bootstrap', $assetsUri . '/css/libs/bootstrap.min.css', array(), $version);
         wp_enqueue_style('bootstrap-theme', $assetsUri . '/css/libs/bootstrap-theme.min.css', array(), $version);
         wp_enqueue_style('owl-carousel', $assetsUri . '/css/libs/owl.carousel.min.css', array(), $version);
@@ -195,6 +197,7 @@ class StarterSite extends TimberSite
         //scripts
         wp_deregister_script('jquery');
         wp_enqueue_script('jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js', array(), $version, true);
+        wp_enqueue_script('slick', '//cdn.jsdelivr.net/gh/kenwheeler/slick@1.7.1/slick/slick.min.js"', array(), $version, true);
         wp_enqueue_script('validate', '//ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/jquery.validate.min.js', array('jquery'), $version, true);
         wp_enqueue_script('maps', '//maps.googleapis.com/maps/api/js?key=AIzaSyBROsqLrIBnocNauBUwS0jF_0Nl3e9-3XA', array('jquery'), $version, true);
 
@@ -204,6 +207,7 @@ class StarterSite extends TimberSite
 //		wp_enqueue_script('bootstrap', $assetsUri . '/js/libs/bootstrap.min.js', array('jquery'), $version, true);
         wp_enqueue_script('owl', $assetsUri . '/js/libs/owl.carousel.min.js', array('jquery'), $version, true);
         wp_enqueue_script('izimodal', $assetsUri . '/js/libs/iziModal.min.js', array('jquery'), $version);
+        wp_enqueue_script('masonry', $assetsUri . '/js/libs/masonry.pkgd.min.js', array('jquery'), $version);
         wp_enqueue_script('chosen', $assetsUri . '/js/libs/chosen.jquery.min.js', array('jquery'), $version, true);
         wp_enqueue_script('main', $assetsUri . '/js/scripts.min.js', array('jquery'), $version, true);
         wp_enqueue_script('development', $assetsUri . '/js/development.js', array('jquery'), $version, true);
