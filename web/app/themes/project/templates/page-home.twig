@@ -43,6 +43,8 @@
                                             {% include 'partials/forms/checkbox.twig' with {name: 'form[property_type][casa]',  value: 'casa', title: 'Casă', } %}
                                             {% include 'partials/forms/checkbox.twig' with {name: 'form[property_type][duplex]',  value: 'duplex', title: 'Duplex', } %}
                                             {% include 'partials/forms/checkbox.twig' with {name: 'form[property_type][penthouse]',  value: 'penthouse', title: 'Penthouse', } %}
+                                            {% include 'partials/forms/checkbox.twig' with {name: 'form[property_type][teren]',  value: 'teren', title: 'Teren', } %}
+                                            {% include 'partials/forms/checkbox.twig' with {name: 'form[property_type][spatii]',  value: 'spatii', title: 'Spatii-comerciale', } %}
                                         </div>
                                     </li>
                                     <li class="with-sub-menu sub-menu-mobile">
@@ -119,7 +121,40 @@
                                             {% if post.thumbnail is not empty %}
                                                 <img src="{{ post.thumbnail.src|resize(265, 265) }}"/>
                                             {% endif %}
-                                            <div class="card-descroption" style="background: {{ random(['#bd5011', '#8f164b', '#400d4a'])  }}">
+                                            <div class="card-descroption" style="background: {{ random(['#8f164b'])  }}">
+                                                <p>{{ post.title }}</p>
+                                                <a href="{{ post.link }}">{{ __('Detalii', 'project') }}</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="card-project">
+                                            {% if post.thumbnail is not empty %}
+                                                <img src="{{ post.thumbnail.src|resize(265, 265) }}"/>
+                                            {% endif %}
+                                            <div class="card-descroption" style="background: {{ random(['#bd5011'])  }}">
+                                                <p>{{ post.title }}</p>
+                                                <a href="{{ post.link }}">{{ __('Detalii', 'project') }}</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="card-project">
+                                            {% if post.thumbnail is not empty %}
+                                                <img src="{{ post.thumbnail.src|resize(265, 265) }}"/>
+                                            {% endif %}
+                                            <div class="card-descroption" style="background: {{ random(['#400d4a'])  }}">
+                                                <p>{{ post.title }}</p>
+                                                <a href="{{ post.link }}">{{ __('Detalii', 'project') }}</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="card-project">
+                                            {% if post.thumbnail is not empty %}
+                                                <img src="{{ post.thumbnail.src|resize(265, 265) }}"/>
+                                            {% endif %}
+                                            <div class="card-descroption" style="background: {{ random(['#400d4a', '#bd5011', '#8f164b'])  }}">
                                                 <p>{{ post.title }}</p>
                                                 <a href="{{ post.link }}">{{ __('Detalii', 'project') }}</a>
                                             </div>
@@ -148,8 +183,8 @@
     {% endif %}
     <section class="service">
         <h3 class="section-title red">{{ __('De ce vreicasă.ro?', 'project') }}</h3>
-        {% include 'partials/card-service-list.twig' with {
-        fields: options.services
+        {% include 'partials/card-service-blog-list.twig' with {
+        fields: options.advantages
         } %}
     </section>
     {% include 'partials/sections/subscribe-form.twig' %}

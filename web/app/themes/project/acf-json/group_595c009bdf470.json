@@ -198,9 +198,9 @@
         },
         {
             "height": "",
-            "center_lat": "",
-            "center_lng": "",
-            "zoom": "",
+            "center_lat": "51.508742",
+            "center_lng": "-0.120850",
+            "zoom": 5,
             "key": "field_595c07e99d15e",
             "label": "Map location",
             "name": "map_location",
@@ -232,5 +232,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1500116999
+    "modified": 1501834872
 }

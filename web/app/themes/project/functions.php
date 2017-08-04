@@ -186,6 +186,7 @@ class StarterSite extends TimberSite
         wp_enqueue_style('slick-css', '//cdn.jsdelivr.net/gh/kenwheeler/slick@1.7.1/slick/slick.css', array(), $version);
         wp_enqueue_style('bootstrap', $assetsUri . '/css/libs/bootstrap.min.css', array(), $version);
         wp_enqueue_style('bootstrap-theme', $assetsUri . '/css/libs/bootstrap-theme.min.css', array(), $version);
+        wp_enqueue_style('lightbox-css', $assetsUri . '/css/lightbox.css', array(), $version);
         wp_enqueue_style('owl-carousel', $assetsUri . '/css/libs/owl.carousel.min.css', array(), $version);
         wp_enqueue_style('owl-carousel-theme', $assetsUri . '/css/libs/owl.theme.default.css', array(), $version);
         wp_enqueue_style('chosen', $assetsUri . '/css/libs/chosen.css', array(), $version);
@@ -202,6 +203,7 @@ class StarterSite extends TimberSite
         wp_enqueue_script('maps', '//maps.googleapis.com/maps/api/js?key=AIzaSyBROsqLrIBnocNauBUwS0jF_0Nl3e9-3XA', array('jquery'), $version, true);
 
         wp_enqueue_script('imagesloaded', $assetsUri . '/js/libs/imagesloaded.js', array('jquery'), $version, true);
+        wp_enqueue_script('lightbox-js', $assetsUri . '/js/libs/lightbox.js', array('jquery'), $version, true);
         wp_enqueue_script('jqueryUi', '//code.jquery.com/ui/1.12.0/jquery-ui.min.js', array('jquery'), $version, true);
         wp_enqueue_script('matchHeight', $assetsUri . '/js/libs/jquery.matchHeight.js', array('jquery'), $version, true);
 //		wp_enqueue_script('bootstrap', $assetsUri . '/js/libs/bootstrap.min.js', array('jquery'), $version, true);

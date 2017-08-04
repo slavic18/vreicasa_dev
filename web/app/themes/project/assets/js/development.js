@@ -160,7 +160,6 @@ project.Behavior.scrollToForm = function (context) {
         $('html,body').animate({scrollTop: $('.js-scroll-form').offset().top - 200}, 200);
     }
 }
-
 project.Behavior.masonryAddCls = function (context) {
     var $container = $('.grid > li:nth-child(5)', context),
         $container1 = $('.grid > li:nth-child(7)', context),
@@ -176,6 +175,12 @@ project.Behavior.masonryAddCls = function (context) {
     }
 }
 
+project.Behavior.addLightBox = function (context) {
+    lightbox.option({
+        'resizeDuration': 400,
+        'wrapAround': true
+    });
+}
 project.Behavior.addClassBox = function (context) {
     var $boxCont = $('.register-page-form > div:nth-child(3)', context);
     $boxCont.addClass('login-checkbox');
@@ -270,6 +275,15 @@ project.Behavior.formSlider = function (context) {
         pagination: false,
         rewindSpeed: 500
     });
+}
+
+project.Behavior.resetFormAp = function(context){
+    var $resetFiltr = $('.reset-search-form', context);
+    if($resetFiltr.length){
+        $resetFiltr.on('click', function(){
+            $("*[tag='tag']").val("").attr("checked", false);
+        });
+    }
 }
 
 project.Behavior.showfiltersSub = function (context) {

@@ -115,7 +115,8 @@ project.Behavior.mobMenu = function (context) {
         $toggleMenuItems = $mobMenuLink.add($navbarMenuOverlay).add('.menu.menu-mob li a');
 
     if ($toggleMenuItems.length) {
-        $toggleMenuItems.on('click', function () {
+        $toggleMenuItems.on('click', function (e) {
+            event.preventDefault();
             $mobSidebar.toggleClass('mob-sidebar-opened');
             $mobMenuLink.toggleClass('mob-menu-icon-opened');
             $body.toggleClass('pos-fixed');
@@ -227,13 +228,25 @@ project.Behavior.formSlider = function (context) {
         rewindSpeed: 500
     });
 }
-project.Behavior.radioCheck = function (context) {
-   var $radioWrapp = $('.radio-container > label', context);
-   if($radioWrapp.length){
-       $radioWrapp.on('click', function (){
-           $('input', context).prop( "checked", false );
-           $(this).prop( "checked", true );
-       });
-   }
-}
 
+project.Behavior.modalSliderForm = function (context) {
+    $('.show-modal-form').on('click', function (e) {
+        setTimeout(function(){
+            $('.form-slick').slick({
+                infinite: true,
+                speed: 300,
+                slidesToShow: 1,
+                adaptiveHeight: true
+            });
+            var $btnNext = $('.slick-next', context),
+                $btnPrev = $('.slick-prev', context);
+            if($btnNext.length){
+                $btnNext.on('click', function () {
+                    $btnPrev.css({
+                        "visibility" : "visible"
+                    });
+                });
+            }
+        }, 10);
+    });
+}

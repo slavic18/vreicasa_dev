@@ -71,9 +71,6 @@
                             <li class="dropdown-block">
                                 <a href="#" class="dropdown-item">{{ __('MENIU', 'project') }}</a>
                                 <ul class="header-menu-dropdown">
-                                    <li>
-                                        <a href="{{ site.url }}" class="dropdown-link">{{ __('Acasă', 'project') }}</a>
-                                    </li>
                                     {% if header_menu is not empty %}
                                         {% include 'partials/header_menu_items.twig' with {'menu': header_menu} %}
                                     {% endif %}

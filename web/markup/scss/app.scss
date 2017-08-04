@@ -844,6 +844,7 @@ ul {
   cursor: -webkit-grab;
   box-shadow: 1px 2px 5px 2px rgba(0, 0, 0, 0.2);
   position: relative;
+  transition: all 200ms ease-in;
   &:hover {
     transition: all 200ms ease-in;
     transform: scale(1.15);
@@ -1379,7 +1380,6 @@ ul {
   text-align: center;
   .main-form-wrapper{
     .first-form{
-      display: none;
       height: 500px;
       background: url("../images/bg-form-1.png") no-repeat;
       background-size: 100%;
@@ -1536,7 +1536,6 @@ ul {
       }
     }
     .second-form{
-      display: none;
       height: 500px;
       background: url("../images/bg-form-2.png") no-repeat;
       background-size: 200%;
@@ -1557,7 +1556,7 @@ ul {
       }
       .radio-container{
         position: relative;
-        width: 200px;
+        width: 330px;
         margin: 0 auto;
         margin-bottom: 10px;
         text-align: left;
@@ -1649,7 +1648,6 @@ ul {
       }
     }
     .third-form{
-      display: none;
       height: 500px;
       background: url("../images/bg-form-2.png") no-repeat;
       background-size: 200%;
@@ -1913,14 +1911,60 @@ ul {
       }
     }
   }
-  .owl-carousel{
-    width: 100%;
-  }
-  .owl-item{}
 }
 .result-vis{
   display: block !important;
 }
-
-
+.slick-slider{
+  overflow: hidden;
+}
+.slick-arrow{
+  width: 124px;
+  height: 128px;
+}
+.slick-prev{
+  left: -52px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  visibility: hidden;
+  &:before{
+    right: 25px;
+    background: url(..//images/sageata-left.png) no-repeat;
+    background-size: 28px;
+  }
+}
+.slick-next{
+  right: -52px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  transition: .6s ease a;
+  &:before{
+    left: 35px;
+    background: url(..//images/sageata-right.png) no-repeat;
+    background-size: 28px;
+  }
+}
+.slick-prev, .slick-next{
+  top: 65%;
+  background: #f4dd7f;
+  z-index: 9999;
+  &:before{
+    content: "";
+    position: absolute;
+    top: 35px;
+    width: 35px;
+    height: 66px;
+  }
+}
+.slick-prev:hover, .slick-prev:focus, .slick-next:hover, .slick-next:focus{
+  background: #e2cd76;
+}
+.card-service{
+  transition: all 200ms ease-in;
+}
+.mob-sidebar.mob-sidebar-opened{
+  display: block;
+}
 
