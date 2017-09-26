@@ -88,13 +88,16 @@
                                 <ul class="menu menu-mob">
 
                                     <li>
-                                        <a href="{{ getPermalink('promote-yourself') }}" class="dropdown-link">{{ __('POMOVEAZĂ-TE', 'project') }}</a>
+                                        <a href="{{ getPermalink('promote-yourself') }}"
+                                           class="dropdown-link">{{ __('POMOVEAZĂ-TE', 'project') }}</a>
                                     </li>
                                     <li>
-                                        <a href="{{ getPermalink('blog') }}" class="dropdown-link">{{ __('ŞTIRI', 'project') }}</a>
+                                        <a href="{{ getPermalink('blog') }}"
+                                           class="dropdown-link">{{ __('ŞTIRI', 'project') }}</a>
                                     </li>
                                     <li>
-                                        <a href="{{ getPermalink('contacts') }}" class="dropdown-link">{{ __('CONTACT', 'project') }}</a>
+                                        <a href="{{ getPermalink('contacts') }}"
+                                           class="dropdown-link">{{ __('CONTACT', 'project') }}</a>
                                     </li>
                                     <li>
                                         {% if fn('is_user_logged_in') %}
@@ -271,11 +274,6 @@
     <footer class="footer">
         {% include 'footer.twig' %}
     </footer>
-    {#<script type="text/javascript" src="//api.venyoo.ru/wnew.js?wc=venyoo/default/science&widget_id=6265487828451328"></script>#}
-    {#<script type="text/javascript" src="//api.venyoo.ru/wnew.js?wc=venyoo/default/science&widget_id=5880090212433920"></script>#}
-    {#<script type="text/javascript" src="//api.venyoo.ru/wnew.js?wc=venyoo/default/science&widget_id=4916949957738496"></script>#}
-    {#<script type="text/javascript" src="//api.venyoo.ru/wnew.js?wc=venyoo/default/science&widget_id=6265487828451328"></script>#}
-    <script type="text/javascript" src="//1854-new-mobile-widget-skin-leadia-dot-leadiapromo.appspot.com//wnew.js?wc=venyoo/default/science&widget_id=6055073522909184"></script>
     {{ function('wp_footer') }}
 {% endblock %}
 </body>
