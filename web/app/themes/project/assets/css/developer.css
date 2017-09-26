@@ -711,4 +711,13 @@
   border-color: #d6e9c6;
   color: #3c763d; }
 
+.main-nav li a,
+.header-menu-dropdown .dropdown-link,
+.header-menu .dropdown-item {
+  font-family: "work_sansmedium"; }
+
+.main-nav li a.icon-inimacasa-01 {
+  font-weight: bold;
+  font-size: 16px; }
+
 /*# sourceMappingURL=developer.css.map */
