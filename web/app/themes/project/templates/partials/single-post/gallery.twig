@@ -4,7 +4,9 @@
             <div class="col-md-8">
                 {% if post.thumbnail is not empty %}
                     <div class="image-preview image-preview-first">
+                        <a href="{{ post.thumbnail.src|resize(800, 605) }}" data-lightbox="image-6">
                         <img src="{{ post.thumbnail.src|resize(600, 405) }}"/>
+                        </a>
                     </div>
                 {% endif %}
             </div>
@@ -14,10 +16,12 @@
                         {% if loop.index <= 2 %}
                             <div class="col-md-12 ">
                                 <div class="image-preview {{ loop.index == 2  ? 'more-image-wrapper' }}">
+                                    <a href="{{ field.image|resize(350, 230) }}" data-lightbox="image-6">
                                     <img src="{{ field.image|resize(350, 230) }}"/>
+                                    </a>
                                     {% if loop.index == 2 %}
                                         {% set remainingImages =  loop.length - 2 %}
-                                        <a href="#" class="more-image">
+                                        <a href="{{ field.image }}" class="more-image" data-lightbox="image-6">
                                             {{ remainingImages }} {{ __('imagini', 'project') }}
                                         </a>
                                     {% endif %}
@@ -36,7 +40,9 @@
                     {% if loop.index > 2 %}
                         <div class="col-md-4">
                             <div class="image-preview">
+                                <a href="{{ field.image|resize(360, 250) }}" data-lightbox="image-4">
                                 <img src="{{ field.image|resize(360, 250) }}"/>
+                                </a>
                             </div>
                         </div>
                     {% endif %}

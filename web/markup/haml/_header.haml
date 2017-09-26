@@ -52,7 +52,7 @@
                 %li
                   %a.dropdown-link(href="#") Proiecte imobiliare
                 %li
-                  %a.dropdown-link.dropdown-link-last(href="#") Părerea voastră
+                  %a.dropdown-link.dropdown-link-last.show-modal-form(href="#") Părerea voastră
         .col-md-6.col-xs-2
           .navbar-menu-overlay
           %a.mob-menu-icon(href="#")
@@ -81,7 +81,117 @@
                 %li
                   %a.menu-mob-item(href="#") Părerea voastră
 
-
-
-
-
+  #modal-form-window.izi-modal
+    .main-form-wrapper
+      .form-slick
+        .first-form
+          .title
+            %p Spuneţi-ne despre experienţa cu noi
+            %p Părerea voastră ne va ajuta să fim mai buni
+            %p Ai recomanda Vrei casă.ro prietenilor tăi?
+          .modal-form
+            .radio-container(data-attr="1")
+              %input(type="radio" class="radio" id="radio-1" name="radio-btn-1" value="1")
+              %label.bg-color-1(for="radio-1")
+              %span 1
+            .radio-container(data-attr="2")
+              %input(type="radio" class="radio" id="radio-2" name="radio-btn-1" value="2")
+              %label.bg-color-2(for="radio-2")
+              %span 2
+            .radio-container(data-attr="3")
+              %input(type="radio" class="radio" id="radio-3" name="radio-btn-1" value="3")
+              %label.bg-color-3(for="radio-3")
+              %span 3
+            .radio-container(data-attr="4")
+              %input(type="radio" class="radio" id="radio-4" name="radio-btn-1" value="4")
+              %label.bg-color-4(for="radio-4")
+              %span 4
+            .radio-container(data-attr="5")
+              %input(type="radio" class="radio" id="radio-5" name="radio-btn-1" value="5")
+              %label.bg-color-5(for="radio-5")
+              %span 5
+          .result-rating
+            .result(data-attr="1")
+              .img-container
+                %img(src="images/smile-5.png")
+              .gray-letter
+                %p În nici un caz
+            .result(data-attr="2")
+              .img-container
+                %img(src="images/smile-4.png")
+              .gray-letter
+                %p Nu încă
+            .result(data-attr="3")
+              .img-container
+                %img(src="images/smile-3.png")
+              .gray-letter
+                %p Da, o să recomand
+            .result(data-attr="4")
+              .img-container
+                %img(src="images/smile-2.png")
+              .gray-letter
+                %p În fine
+            .result(data-attr="5")
+              .img-container
+                %img(src="images/smile.png")
+              .gray-letter
+                %p Deja am recomandat
+        .second-form
+          .title
+            %p Cum ai aflat de Vrei casa.ro
+          .modal-form
+            .radio-container
+              %input(type="radio" class="radio" id="radio-6" name="radio-btn-2" value="6")
+              %label(for="radio-6")
+              %span Pe internet
+            .radio-container
+              %input(type="radio" class="radio" id="radio-7" name="radio-btn-2" value="7")
+              %label(for="radio-7")
+              %span Reviste, pliante
+            .radio-container
+              %input(type="radio" class="radio" id="radio-8" name="radio-btn-2" value="8")
+              %label(for="radio-8")
+              %span Banere, postere
+            .radio-container
+              %input(type="radio" class="radio" id="radio-9" name="radio-btn-2" value="4")
+              %label(for="radio-9")
+              %span De la prieteni sa familie
+        .third-form
+          .title
+            %p Folosirea Vrei casă.ro este:
+          .modal-form
+            .radio-container
+              %input(type="radio" class="radio orange-col" id="radio-10" name="radio-btn-3" value="9")
+              %label(for="radio-10")
+              %span Greu
+            .radio-container
+              %input(type="radio" class="radio violet-col" id="radio-11" name="radio-btn-3" value="10")
+              %label(for="radio-11")
+              %span.pos-left În regulă
+            .radio-container
+              %input(type="radio" class="radio pink-col" id="radio-12" name="radio-btn-3" value="11")
+              %label(for="radio-12")
+              %span Uşor
+        .last-form
+          .title
+            %p Aveţi sfaturi pentru noi?
+          .modal-form
+            .radio-container
+              %input(type="radio" class="radio" id="radio-13" name="radio-btn-4" value="12")
+              %label(for="radio-13")
+              %span Pozele pot fi mai bune
+            .radio-container
+              %input(type="radio" class="radio" id="radio-14" name="radio-btn-4" value="13")
+              %label(for="radio-14")
+              %span Necesita mai multe informaţii referitoare la amplasament
+            .radio-container
+              %input(type="radio" class="radio" id="radio-15" name="radio-btn-4" value="14")
+              %label(for="radio-15")
+              %span Postaţi mai multe oferte
+            .radio-container
+              %input(type="radio" class="radio" id="radio-16" name="radio-btn-4" value="15")
+              %label(for="radio-16")
+              %span Rectificaţi informaţiile greşite
+            .btn-container
+              %button.alt(type="button") Alt sfat
+              %button.btn-subm(type="submit") Trimite

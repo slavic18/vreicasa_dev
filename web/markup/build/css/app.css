@@ -1767,6 +1767,7 @@
   top: 0;
   left: 0;
   display: none;
+  background: rgba(0, 0, 0, 0.68);
   z-index: 5;
 }
 
@@ -3174,47 +3175,48 @@ ul {
   cursor: -webkit-grab;
   box-shadow: 1px 2px 5px 2px rgba(0, 0, 0, 0.2);
   position: relative;
+  transition: all 200ms ease-in;
 }
-/* line 847, ../../scss/app.scss */
+/* line 848, ../../scss/app.scss */
 .card-pachete:hover {
   transition: all 200ms ease-in;
   transform: scale(1.15);
   background: #fff;
   box-shadow: 0 0 20px 3px black;
 }
-/* line 853, ../../scss/app.scss */
+/* line 854, ../../scss/app.scss */
 .card-pachete .bronz {
   background: url("../images/bronz.png") no-repeat;
 }
-/* line 855, ../../scss/app.scss */
+/* line 856, ../../scss/app.scss */
 .card-pachete .bronz h6 {
   margin-right: 40px;
 }
-/* line 859, ../../scss/app.scss */
+/* line 860, ../../scss/app.scss */
 .card-pachete .silver {
   background: url("../images/silver.png") no-repeat;
 }
-/* line 862, ../../scss/app.scss */
+/* line 863, ../../scss/app.scss */
 .card-pachete .gold {
   background: url("../images/gold.png") no-repeat;
 }
-/* line 865, ../../scss/app.scss */
+/* line 866, ../../scss/app.scss */
 .card-pachete .platinum {
   background: url("../images/purple.png") no-repeat;
 }
-/* line 867, ../../scss/app.scss */
+/* line 868, ../../scss/app.scss */
 .card-pachete .platinum .first-title {
   margin-bottom: 23px;
 }
-/* line 870, ../../scss/app.scss */
+/* line 871, ../../scss/app.scss */
 .card-pachete .platinum .price {
   margin-bottom: 23px;
 }
-/* line 872, ../../scss/app.scss */
+/* line 873, ../../scss/app.scss */
 .card-pachete .platinum .price span {
   font-size: 16px;
 }
-/* line 877, ../../scss/app.scss */
+/* line 878, ../../scss/app.scss */
 .card-pachete .link {
   position: absolute;
   width: 125px;
@@ -3228,7 +3230,7 @@ ul {
   border-bottom: 1px solid #c5c5c5;
   text-align: center;
 }
-/* line 889, ../../scss/app.scss */
+/* line 890, ../../scss/app.scss */
 .card-pachete .link a {
   display: inline-block;
   margin-bottom: 3px;
@@ -3238,7 +3240,7 @@ ul {
   text-decoration: none;
   vertical-align: middle;
 }
-/* line 898, ../../scss/app.scss */
+/* line 899, ../../scss/app.scss */
 .card-pachete .link:before {
   content: '';
   display: inline-block;
@@ -3249,14 +3251,14 @@ ul {
   background: url("../images/mini-logo.png") no-repeat;
 }
 
-/* line 910, ../../scss/app.scss */
+/* line 911, ../../scss/app.scss */
 .pach-title {
   width: 150px;
   margin-left: auto;
   text-align: right;
   color: #fff;
 }
-/* line 915, ../../scss/app.scss */
+/* line 916, ../../scss/app.scss */
 .pach-title h3 {
   margin: 15px;
   margin-bottom: 3px;
@@ -3264,7 +3266,7 @@ ul {
   font-family: "montserratregular";
   font-size: 21px;
 }
-/* line 922, ../../scss/app.scss */
+/* line 923, ../../scss/app.scss */
 .pach-title h6 {
   margin-right: 10px;
   margin-top: inherit;
@@ -3274,7 +3276,7 @@ ul {
   font-size: 10px;
 }
 
-/* line 931, ../../scss/app.scss */
+/* line 932, ../../scss/app.scss */
 .price {
   margin: 7px;
   margin-top: 0px;
@@ -3282,34 +3284,34 @@ ul {
   font-size: 10px;
   color: #fff;
 }
-/* line 937, ../../scss/app.scss */
+/* line 938, ../../scss/app.scss */
 .price span {
   font-size: 21px;
   font-family: "montserratregular";
 }
-/* line 941, ../../scss/app.scss */
+/* line 942, ../../scss/app.scss */
 .price p {
   margin-bottom: 2px;
   font-family: "montserratregular";
   font-size: 8px;
 }
 
-/* line 947, ../../scss/app.scss */
+/* line 948, ../../scss/app.scss */
 .pach-list {
   padding: 20px 10px 60px 10px;
 }
-/* line 949, ../../scss/app.scss */
+/* line 950, ../../scss/app.scss */
 .pach-list ul {
   padding-left: 20px;
 }
-/* line 952, ../../scss/app.scss */
+/* line 953, ../../scss/app.scss */
 .pach-list li {
   margin-bottom: 10px;
   font-family: "work_sansbold";
   font-size: 10px;
 }
 
-/* line 958, ../../scss/app.scss */
+/* line 959, ../../scss/app.scss */
 .pach-message {
   padding: 100px 40px 100px 45px;
   text-align: center;
@@ -3318,23 +3320,23 @@ ul {
   line-height: 15px;
 }
 
-/* line 966, ../../scss/app.scss */
+/* line 967, ../../scss/app.scss */
 .promote-page .contact-info {
   margin-top: 80px;
   padding-bottom: 150px;
   border: none;
 }
-/* line 971, ../../scss/app.scss */
+/* line 972, ../../scss/app.scss */
 .promote-page .main-form-wrapper {
   padding: 20px;
 }
-/* line 973, ../../scss/app.scss */
+/* line 974, ../../scss/app.scss */
 .promote-page .main-form-wrapper h3 {
   text-align: center;
   font-size: 27px;
   color: #c71061;
 }
-/* line 978, ../../scss/app.scss */
+/* line 979, ../../scss/app.scss */
 .promote-page .main-form-wrapper p {
   margin-bottom: 20px;
   text-align: center;
@@ -3342,7 +3344,7 @@ ul {
   color: #999;
 }
 
-/* line 987, ../../scss/app.scss */
+/* line 988, ../../scss/app.scss */
 .question-page .section-title {
   padding-top: 17px;
   padding-bottom: 13px;
@@ -3352,12 +3354,12 @@ ul {
   letter-spacing: -1px;
 }
 
-/* line 996, ../../scss/app.scss */
+/* line 997, ../../scss/app.scss */
 .question-wrapper {
   background: #f0f0f0;
 }
 
-/* line 999, ../../scss/app.scss */
+/* line 1000, ../../scss/app.scss */
 .question-block-title {
   max-width: 1190px;
   margin: auto;
@@ -3370,40 +3372,40 @@ ul {
   border: 7px solid #a52f4a;
   letter-spacing: -1px;
 }
-/* line 1010, ../../scss/app.scss */
+/* line 1011, ../../scss/app.scss */
 .question-block-title p {
   padding: 35px;
   padding-bottom: 20px;
 }
 
-/* line 1017, ../../scss/app.scss */
+/* line 1018, ../../scss/app.scss */
 .grid {
   margin: auto;
   margin-bottom: 100px;
   list-style: none;
   padding: 0;
 }
-/* line 1024, ../../scss/app.scss */
+/* line 1025, ../../scss/app.scss */
 .grid a:hover .hide-info {
   transition: all 0.7s ease;
   display: none;
 }
-/* line 1028, ../../scss/app.scss */
+/* line 1029, ../../scss/app.scss */
 .grid a:hover .show-info {
   transition: all 0.7s ease;
   display: block;
 }
-/* line 1033, ../../scss/app.scss */
+/* line 1034, ../../scss/app.scss */
 .grid a .hide-info {
   transition: all 0.7s ease;
 }
-/* line 1037, ../../scss/app.scss */
+/* line 1038, ../../scss/app.scss */
 .grid .show-info {
   transition: all 0.7s ease;
   display: none;
 }
 
-/* line 1043, ../../scss/app.scss */
+/* line 1044, ../../scss/app.scss */
 .grid li {
   display: block;
   float: left;
@@ -3411,14 +3413,14 @@ ul {
   opacity: 1;
 }
 
-/* line 1050, ../../scss/app.scss */
+/* line 1051, ../../scss/app.scss */
 .grid li.shown,
 .no-js .grid li,
 .no-cssanimations .grid li {
   opacity: 1;
 }
 
-/* line 1056, ../../scss/app.scss */
+/* line 1057, ../../scss/app.scss */
 .grid li a,
 .grid li img {
   outline: none;
@@ -3428,7 +3430,7 @@ ul {
 }
 
 /* Effect 1: opacity */
-/* line 1065, ../../scss/app.scss */
+/* line 1066, ../../scss/app.scss */
 .grid.effect-1 li.animate {
   -webkit-animation: fadeIn 0.65s ease forwards;
   animation: fadeIn 0.65s ease forwards;
@@ -3445,7 +3447,7 @@ ul {
   }
 }
 /* Effect 2: Move Up */
-/* line 1081, ../../scss/app.scss */
+/* line 1082, ../../scss/app.scss */
 .grid.effect-2 li.animate {
   -webkit-transform: translateY(200px);
   transform: translateY(200px);
@@ -3467,7 +3469,7 @@ ul {
   }
 }
 /* Effect 3: Scale up */
-/* line 1099, ../../scss/app.scss */
+/* line 1100, ../../scss/app.scss */
 .grid.effect-3 li.animate {
   -webkit-transform: scale(0.6);
   transform: scale(0.6);
@@ -3489,13 +3491,13 @@ ul {
   }
 }
 /* Effect 4: fall perspective */
-/* line 1117, ../../scss/app.scss */
+/* line 1118, ../../scss/app.scss */
 .grid.effect-4 {
   -webkit-perspective: 1300px;
   perspective: 1300px;
 }
 
-/* line 1122, ../../scss/app.scss */
+/* line 1123, ../../scss/app.scss */
 .grid.effect-4 li.animate {
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
@@ -3519,13 +3521,13 @@ ul {
   }
 }
 /* Effect 5: fly (based on http://lab.hakim.se/scroll-effects/ by @hakimel) */
-/* line 1142, ../../scss/app.scss */
+/* line 1143, ../../scss/app.scss */
 .grid.effect-5 {
   -webkit-perspective: 1300px;
   perspective: 1300px;
 }
 
-/* line 1147, ../../scss/app.scss */
+/* line 1148, ../../scss/app.scss */
 .grid.effect-5 li.animate {
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
@@ -3551,13 +3553,13 @@ ul {
   }
 }
 /* Effect 6: flip (based on http://lab.hakim.se/scroll-effects/ by @hakimel) */
-/* line 1169, ../../scss/app.scss */
+/* line 1170, ../../scss/app.scss */
 .grid.effect-6 {
   -webkit-perspective: 1300px;
   perspective: 1300px;
 }
 
-/* line 1174, ../../scss/app.scss */
+/* line 1175, ../../scss/app.scss */
 .grid.effect-6 li.animate {
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
@@ -3583,13 +3585,13 @@ ul {
   }
 }
 /* Effect 7: helix (based on http://lab.hakim.se/scroll-effects/ by @hakimel) */
-/* line 1196, ../../scss/app.scss */
+/* line 1197, ../../scss/app.scss */
 .grid.effect-7 {
   -webkit-perspective: 1300px;
   perspective: 1300px;
 }
 
-/* line 1201, ../../scss/app.scss */
+/* line 1202, ../../scss/app.scss */
 .grid.effect-7 li.animate {
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
@@ -3613,13 +3615,13 @@ ul {
   }
 }
 /* Effect 8:  */
-/* line 1221, ../../scss/app.scss */
+/* line 1222, ../../scss/app.scss */
 .grid.effect-8 {
   -webkit-perspective: 1300px;
   perspective: 1300px;
 }
 
-/* line 1226, ../../scss/app.scss */
+/* line 1227, ../../scss/app.scss */
 .grid.effect-8 li.animate {
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
@@ -3629,26 +3631,26 @@ ul {
   animation: popUp .8s ease-in forwards;
 }
 
-/* line 1235, ../../scss/app.scss */
+/* line 1236, ../../scss/app.scss */
 .profile-page .main-header {
   padding: 10px 0;
 }
-/* line 1238, ../../scss/app.scss */
+/* line 1239, ../../scss/app.scss */
 .profile-page .dropdown-block {
   position: relative;
 }
-/* line 1242, ../../scss/app.scss */
+/* line 1243, ../../scss/app.scss */
 .profile-page .dropdown-item {
   font-size: 15px;
   font-family: "work_sanssemibold";
   text-transform: none;
   letter-spacing: 1px;
 }
-/* line 1249, ../../scss/app.scss */
+/* line 1250, ../../scss/app.scss */
 .profile-page .dropdown-block {
   position: relative;
 }
-/* line 1251, ../../scss/app.scss */
+/* line 1252, ../../scss/app.scss */
 .profile-page .dropdown-block:after {
   content: " ";
   position: absolute;
@@ -3659,17 +3661,17 @@ ul {
   height: 7px;
   background: url("../images/arrow.png") no-repeat;
 }
-/* line 1262, ../../scss/app.scss */
+/* line 1263, ../../scss/app.scss */
 .profile-page .header-menu {
   float: right;
   margin-right: 30px;
 }
-/* line 1265, ../../scss/app.scss */
+/* line 1266, ../../scss/app.scss */
 .profile-page .header-menu .header-menu-dropdown {
   top: 30px;
   right: -25px;
 }
-/* line 1269, ../../scss/app.scss */
+/* line 1270, ../../scss/app.scss */
 .profile-page .header-menu:before {
   content: '';
   display: block;
@@ -3681,7 +3683,7 @@ ul {
   background: url("../images/profil-image.png") no-repeat;
 }
 
-/* line 1282, ../../scss/app.scss */
+/* line 1283, ../../scss/app.scss */
 .profile-section {
   padding-top: 50px;
   padding-bottom: 180px;
@@ -3689,20 +3691,20 @@ ul {
   background: #f0f0f0;
 }
 
-/* line 1288, ../../scss/app.scss */
+/* line 1289, ../../scss/app.scss */
 .profile-option {
   margin-top: 50px;
 }
-/* line 1291, ../../scss/app.scss */
+/* line 1292, ../../scss/app.scss */
 .profile-option .tabs li {
   display: inline-block;
   margin-left: -5px;
 }
-/* line 1294, ../../scss/app.scss */
+/* line 1295, ../../scss/app.scss */
 .profile-option .tabs li:first-child {
   margin-left: 0px;
 }
-/* line 1301, ../../scss/app.scss */
+/* line 1302, ../../scss/app.scss */
 .profile-option .tabs a {
   display: block;
   padding: 25px 20px;
@@ -3711,7 +3713,7 @@ ul {
   color: #3f3e3e;
   text-decoration: none;
 }
-/* line 1308, ../../scss/app.scss */
+/* line 1309, ../../scss/app.scss */
 .profile-option .tabs a:hover {
   color: #c71061;
   background: #ffffff;
@@ -3719,7 +3721,7 @@ ul {
   border-right: 1px  solid #e0e1e1;
   border-left: 1px  solid #e0e1e1;
 }
-/* line 1316, ../../scss/app.scss */
+/* line 1317, ../../scss/app.scss */
 .profile-option .tabs .active {
   color: #c71061;
   background: #ffffff;
@@ -3727,7 +3729,7 @@ ul {
   border-right: 1px  solid #e0e1e1;
   border-left: 1px  solid #e0e1e1;
 }
-/* line 1324, ../../scss/app.scss */
+/* line 1325, ../../scss/app.scss */
 .profile-option .tabs-content {
   height: 550px;
   padding: 95px;
@@ -3738,24 +3740,24 @@ ul {
   font-size: 19px;
   font-family: "work_sansregular";
 }
-/* line 1333, ../../scss/app.scss */
+/* line 1334, ../../scss/app.scss */
 .profile-option .tabs-content h4 {
   margin-bottom: 50px;
   font-family: "work_sansmedium";
 }
-/* line 1337, ../../scss/app.scss */
+/* line 1338, ../../scss/app.scss */
 .profile-option .tabs-content img {
   margin-bottom: 30px;
 }
-/* line 1340, ../../scss/app.scss */
+/* line 1341, ../../scss/app.scss */
 .profile-option .tabs-content p {
   line-height: 25px;
 }
-/* line 1343, ../../scss/app.scss */
+/* line 1344, ../../scss/app.scss */
 .profile-option .tabs-content .violet-text {
   color: #db0ed9;
 }
-/* line 1346, ../../scss/app.scss */
+/* line 1347, ../../scss/app.scss */
 .profile-option .tabs-content .btn {
   width: 175px;
   height: 37px;
@@ -3766,26 +3768,716 @@ ul {
   line-height: 25px;
 }
 
-/* line 1357, ../../scss/app.scss */
+/* line 1358, ../../scss/app.scss */
 .main-fixed {
   position: fixed;
   top: 0px;
   width: 100%;
   background: #fff;
   z-index: 9999;
-  border-bottom: 1px solid #3c3c3c;
+  border-bottom: 1px solid #737070;
   -moz-transition: all .3s;
   -o-transition: all .3s;
   -webkit-transition: all .3s;
   transition: all .6s;
 }
 
-/* line 1370, ../../scss/app.scss */
+/* line 1371, ../../scss/app.scss */
 .mrgn-header {
   margin-top: 84px;
 }
 
-/* line 1373, ../../scss/app.scss */
+/* line 1374, ../../scss/app.scss */
 .iziModal {
   top: 50px !important;
+}
+
+/* line 1377, ../../scss/app.scss */
+#modal-form-window {
+  max-width: 900px !important;
+  height: 500px !important;
+  text-align: center;
+}
+/* line 1382, ../../scss/app.scss */
+#modal-form-window .main-form-wrapper .first-form {
+  height: 500px;
+  background: url("../images/bg-form-1.png") no-repeat;
+  background-size: 100%;
+  background-position-y: 232px;
+}
+/* line 1387, ../../scss/app.scss */
+#modal-form-window .main-form-wrapper .first-form .modal-form {
+  margin-top: -50px;
+}
+/* line 1390, ../../scss/app.scss */
+#modal-form-window .main-form-wrapper .first-form .title {
+  background: #f2d2e2;
+  padding: 72px;
+}
+/* line 1394, ../../scss/app.scss */
+#modal-form-window .main-form-wrapper .first-form .title p {
+  margin-bottom: 0px;
+  font-size: 25px;
+  font-family: "work_sansregular";
+  color: #000;
+}
+/* line 1400, ../../scss/app.scss */
+#modal-form-window .main-form-wrapper .first-form .radio-container {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  margin-left: -5px;
+}
+/* line 1406, ../../scss/app.scss */
+#modal-form-window .main-form-wrapper .first-form .radio-container span {
+  font-size: 30px;
+  font-family: "work_sansregular";
+  color: #fff;
+  position: absolute;
+  top: 35px;
+  right: 40px;
+}
+/* line 1414, ../../scss/app.scss */
+#modal-form-window .main-form-wrapper .first-form .radio-container .radio {
+  vertical-align: top;
+  width: 17px;
+  height: 17px;
+  margin: 0 3px 0 0;
+}
+/* line 1420, ../../scss/app.scss */
+#modal-form-window .main-form-wrapper .first-form .radio-container .radio + label {
+  cursor: pointer;
+}
+/* line 1423, ../../scss/app.scss */
+#modal-form-window .main-form-wrapper .first-form .radio-container .radio:not(checked) {
+  position: absolute;
+  opacity: 0;
+}
+/* line 1427, ../../scss/app.scss */
+#modal-form-window .main-form-wrapper .first-form .radio-container .radio:not(checked) + label {
+  position: relative;
+  padding: 0 0 0 35px;
+}
+/* line 1431, ../../scss/app.scss */
+#modal-form-window .main-form-wrapper .first-form .radio-container .radio:not(checked) + .bg-color-1:before {
+  background: #5d256b;
+}
+/* line 1434, ../../scss/app.scss */
+#modal-form-window .main-form-wrapper .first-form .radio-container .radio:not(checked) + .bg-color-2:before {
+  background: #f06699;
+}
+/* line 1437, ../../scss/app.scss */
+#modal-form-window .main-form-wrapper .first-form .radio-container .radio:not(checked) + .bg-color-3:before {
+  background: #e9bb61;
+}
+/* line 1440, ../../scss/app.scss */
+#modal-form-window .main-form-wrapper .first-form .radio-container .radio:not(checked) + .bg-color-4:before {
+  background: #c371ae;
+}
+/* line 1443, ../../scss/app.scss */
+#modal-form-window .main-form-wrapper .first-form .radio-container .radio:not(checked) + .bg-color-5:before {
+  background: #bd1d7c;
+}
+/* line 1446, ../../scss/app.scss */
+#modal-form-window .main-form-wrapper .first-form .radio-container .radio:not(checked) + label:before {
+  content: '';
+  position: absolute;
+  top: -13px;
+  left: -27px;
+  width: 100px;
+  height: 100px;
+  background: #e9bb61;
+}
+/* line 1455, ../../scss/app.scss */
+#modal-form-window .main-form-wrapper .first-form .radio-container .radio:not(checked) + label:after {
+  content: '';
+  position: absolute;
+  top: -13px;
+  left: -27px;
+  width: 100px;
+  height: 100px;
+  background: rgba(150, 38, 42, 0.36);
+  opacity: 0;
+  transition: all .2s;
+}
+/* line 1466, ../../scss/app.scss */
+#modal-form-window .main-form-wrapper .first-form .radio-container .radio:checked + label:after {
+  opacity: 1;
+}
+/* line 1469, ../../scss/app.scss */
+#modal-form-window .main-form-wrapper .first-form .radio-container .radio:focus + label:before {
+  box-shadow: 0 0 0 3px rgba(255, 255, 0, 0.5);
+}
+/* line 1474, ../../scss/app.scss */
+#modal-form-window .main-form-wrapper .first-form form input {
+  width: 100%;
+  border: 0;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  padding: 8px 12px;
+  outline: 0;
+  resize: none;
+}
+/* line 1485, ../../scss/app.scss */
+#modal-form-window .main-form-wrapper .first-form .form-control {
+  display: block;
+  width: 100%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+/* line 1503, ../../scss/app.scss */
+#modal-form-window .main-form-wrapper .first-form .result-rating {
+  width: 300px;
+  margin: 0 auto;
+  padding-top: 30px;
+}
+/* line 1508, ../../scss/app.scss */
+#modal-form-window .main-form-wrapper .first-form .result-rating .img-container img {
+  width: 90px;
+  margin: 0 auto;
+}
+/* line 1513, ../../scss/app.scss */
+#modal-form-window .main-form-wrapper .first-form .result-rating .gray-letter {
+  margin-top: 10px;
+}
+/* line 1515, ../../scss/app.scss */
+#modal-form-window .main-form-wrapper .first-form .result-rating .gray-letter p {
+  font-size: 25px;
+  font-family: "work_sansregular";
+  color: #fff;
+}
+/* line 1521, ../../scss/app.scss */
+#modal-form-window .main-form-wrapper .first-form .result-rating .result {
+  display: none;
+}
+/* line 1524, ../../scss/app.scss */
+#modal-form-window .main-form-wrapper .first-form .result-rating .result-2 {
+  display: none;
+}
+/* line 1527, ../../scss/app.scss */
+#modal-form-window .main-form-wrapper .first-form .result-rating .result-3 {
+  display: none;
+}
+/* line 1530, ../../scss/app.scss */
+#modal-form-window .main-form-wrapper .first-form .result-rating .result-4 {
+  display: none;
+}
+/* line 1533, ../../scss/app.scss */
+#modal-form-window .main-form-wrapper .first-form .result-rating .result-5 {
+  display: none;
+}
+/* line 1538, ../../scss/app.scss */
+#modal-form-window .main-form-wrapper .second-form {
+  height: 500px;
+  background: url("../images/bg-form-2.png") no-repeat;
+  background-size: 200%;
+  background-position-y: 232px;
+}
+/* line 1543, ../../scss/app.scss */
+#modal-form-window .main-form-wrapper .second-form .modal-form {
+  margin-top: 50px;
+  margin-left: 50px;
+}
+/* line 1547, ../../scss/app.scss */
+#modal-form-window .main-form-wrapper .second-form .title {
+  background: #531979;
+  padding: 101px;
+}
+/* line 1551, ../../scss/app.scss */
+#modal-form-window .main-form-wrapper .second-form .title p {
+  margin-bottom: 0px;
+  font-size: 25px;
+  font-family: "work_sansregular";
+  color: #fff;
+}
+/* line 1557, ../../scss/app.scss */
+#modal-form-window .main-form-wrapper .second-form .radio-container {
+  position: relative;
+  width: 330px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  text-align: left;
+}
+/* line 1563, ../../scss/app.scss */
+#modal-form-window .main-form-wrapper .second-form .radio-container span {
+  font-size: 25px;
+  font-family: "work_sansregular";
+  color: #fff;
+}
+/* line 1568, ../../scss/app.scss */
+#modal-form-window .main-form-wrapper .second-form .radio-container .radio {
+  vertical-align: top;
+  width: 17px;
+  height: 17px;
+  margin: 0 3px 0 0;
+}
+/* line 1574, ../../scss/app.scss */
+#modal-form-window .main-form-wrapper .second-form .radio-container .radio + label {
+  cursor: pointer;
+}
+/* line 1577, ../../scss/app.scss */
+#modal-form-window .main-form-wrapper .second-form .radio-container .radio:not(checked) {
+  position: absolute;
+  opacity: 0;
+}
+/* line 1581, ../../scss/app.scss */
+#modal-form-window .main-form-wrapper .second-form .radio-container .radio:not(checked) + label {
+  position: relative;
+  padding: 19px 0 0 35px;
+}
+/* line 1586, ../../scss/app.scss */
+#modal-form-window .main-form-wrapper .second-form .radio-container .radio:not(checked) + label:before {
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 22px;
+  height: 22px;
+  border: 3px solid #fff;
+}
+/* line 1595, ../../scss/app.scss */
+#modal-form-window .main-form-wrapper .second-form .radio-container .radio:not(checked) + label:after {
+  content: "\f00c";
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 20px;
+  height: 20px;
+  color: #fff;
+  opacity: 0;
+  transition: all .2s;
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+/* line 1612, ../../scss/app.scss */
+#modal-form-window .main-form-wrapper .second-form .radio-container .radio:checked + label:after {
+  opacity: 1;
+}
+/* line 1615, ../../scss/app.scss */
+#modal-form-window .main-form-wrapper .second-form .radio-container .radio:focus + label:before {
+  box-shadow: 0 0 0 3px rgba(255, 255, 0, 0.5);
+}
+/* line 1620, ../../scss/app.scss */
+#modal-form-window .main-form-wrapper .second-form form input {
+  width: 100%;
+  border: 0;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  padding: 8px 12px;
+  outline: 0;
+  resize: none;
+}
+/* line 1631, ../../scss/app.scss */
+#modal-form-window .main-form-wrapper .second-form .form-control {
+  display: block;
+  width: 100%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+/* line 1650, ../../scss/app.scss */
+#modal-form-window .main-form-wrapper .third-form {
+  height: 500px;
+  background: url("../images/bg-form-2.png") no-repeat;
+  background-size: 200%;
+  background-position-y: 232px;
+}
+/* line 1655, ../../scss/app.scss */
+#modal-form-window .main-form-wrapper .third-form .modal-form {
+  margin-top: 50px;
+  margin-left: 50px;
+}
+/* line 1659, ../../scss/app.scss */
+#modal-form-window .main-form-wrapper .third-form .title {
+  background: #531979;
+  padding: 101px;
+}
+/* line 1663, ../../scss/app.scss */
+#modal-form-window .main-form-wrapper .third-form .title p {
+  margin-bottom: 0px;
+  font-size: 25px;
+  font-family: "work_sansregular";
+  color: #fff;
+}
+/* line 1669, ../../scss/app.scss */
+#modal-form-window .main-form-wrapper .third-form .radio-container {
+  display: inline-block;
+  position: relative;
+  width: 200px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  text-align: left;
+}
+/* line 1676, ../../scss/app.scss */
+#modal-form-window .main-form-wrapper .third-form .radio-container span {
+  position: absolute;
+  top: 65px;
+  left: 50px;
+  font-size: 25px;
+  font-family: "work_sansregular";
+  color: #fff;
+}
+/* line 1684, ../../scss/app.scss */
+#modal-form-window .main-form-wrapper .third-form .radio-container .pos-left {
+  left: 30px;
+}
+/* line 1687, ../../scss/app.scss */
+#modal-form-window .main-form-wrapper .third-form .radio-container .radio {
+  vertical-align: top;
+  width: 17px;
+  height: 17px;
+  margin: 0 3px 0 0;
+}
+/* line 1693, ../../scss/app.scss */
+#modal-form-window .main-form-wrapper .third-form .radio-container .radio + label {
+  cursor: pointer;
+}
+/* line 1696, ../../scss/app.scss */
+#modal-form-window .main-form-wrapper .third-form .radio-container .radio:not(checked) {
+  position: absolute;
+  opacity: 0;
+}
+/* line 1700, ../../scss/app.scss */
+#modal-form-window .main-form-wrapper .third-form .radio-container .radio:not(checked) + label {
+  position: relative;
+  padding: 19px 0 0 35px;
+}
+/* line 1705, ../../scss/app.scss */
+#modal-form-window .main-form-wrapper .third-form .radio-container .radio:not(checked) + label:before {
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 160px;
+  height: 160px;
+  background: #c6c6c6;
+  border-radius: 50%;
+}
+/* line 1715, ../../scss/app.scss */
+#modal-form-window .main-form-wrapper .third-form .radio-container .radio:not(checked) + label:after {
+  content: " ";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 160px;
+  height: 160px;
+  color: #fff;
+  opacity: 0;
+  transition: all .2s;
+  border: 10px solid #fff;
+  border-radius: 50%;
+}
+/* line 1728, ../../scss/app.scss */
+#modal-form-window .main-form-wrapper .third-form .radio-container .orange-col:not(checked) + label:after {
+  background: #f0ad26;
+}
+/* line 1731, ../../scss/app.scss */
+#modal-form-window .main-form-wrapper .third-form .radio-container .violet-col:not(checked) + label:after {
+  background: #782a95;
+}
+/* line 1734, ../../scss/app.scss */
+#modal-form-window .main-form-wrapper .third-form .radio-container .pink-col:not(checked) + label:after {
+  background: #f27ae0;
+}
+/* line 1737, ../../scss/app.scss */
+#modal-form-window .main-form-wrapper .third-form .radio-container .radio:checked + label:after {
+  opacity: 1;
+}
+/* line 1740, ../../scss/app.scss */
+#modal-form-window .main-form-wrapper .third-form .radio-container .radio:focus + label:before {
+  box-shadow: 0 0 0 3px rgba(255, 255, 0, 0.5);
+}
+/* line 1745, ../../scss/app.scss */
+#modal-form-window .main-form-wrapper .third-form form input {
+  width: 100%;
+  border: 0;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  padding: 8px 12px;
+  outline: 0;
+  resize: none;
+}
+/* line 1756, ../../scss/app.scss */
+#modal-form-window .main-form-wrapper .third-form .form-control {
+  display: block;
+  width: 100%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+/* line 1775, ../../scss/app.scss */
+#modal-form-window .main-form-wrapper .last-form {
+  height: 500px;
+  background: url("../images/bg-form-2.png") no-repeat;
+  background-size: 200%;
+  background-position-y: 232px;
+}
+/* line 1780, ../../scss/app.scss */
+#modal-form-window .main-form-wrapper .last-form .modal-form {
+  margin-top: 40px;
+}
+/* line 1783, ../../scss/app.scss */
+#modal-form-window .main-form-wrapper .last-form .title {
+  background: #531979;
+  padding: 101px;
+}
+/* line 1787, ../../scss/app.scss */
+#modal-form-window .main-form-wrapper .last-form .title p {
+  margin-bottom: 0px;
+  font-size: 25px;
+  font-family: "work_sansregular";
+  color: #fff;
+}
+/* line 1793, ../../scss/app.scss */
+#modal-form-window .main-form-wrapper .last-form .radio-container {
+  position: relative;
+  margin-bottom: 10px;
+  margin-left: 125px;
+  text-align: left;
+}
+/* line 1798, ../../scss/app.scss */
+#modal-form-window .main-form-wrapper .last-form .radio-container span {
+  font-size: 25px;
+  font-family: "work_sansregular";
+  color: #fff;
+}
+/* line 1803, ../../scss/app.scss */
+#modal-form-window .main-form-wrapper .last-form .radio-container .radio {
+  vertical-align: top;
+  width: 17px;
+  height: 17px;
+  margin: 0 3px 0 0;
+}
+/* line 1809, ../../scss/app.scss */
+#modal-form-window .main-form-wrapper .last-form .radio-container .radio + label {
+  cursor: pointer;
+}
+/* line 1812, ../../scss/app.scss */
+#modal-form-window .main-form-wrapper .last-form .radio-container .radio:not(checked) {
+  position: absolute;
+  opacity: 0;
+}
+/* line 1816, ../../scss/app.scss */
+#modal-form-window .main-form-wrapper .last-form .radio-container .radio:not(checked) + label {
+  position: relative;
+  padding: 19px 0 0 35px;
+}
+/* line 1821, ../../scss/app.scss */
+#modal-form-window .main-form-wrapper .last-form .radio-container .radio:not(checked) + label:before {
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 22px;
+  height: 22px;
+  border: 3px solid #fff;
+}
+/* line 1830, ../../scss/app.scss */
+#modal-form-window .main-form-wrapper .last-form .radio-container .radio:not(checked) + label:after {
+  content: "\f00c";
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 20px;
+  height: 20px;
+  color: #fff;
+  opacity: 0;
+  transition: all .2s;
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+/* line 1847, ../../scss/app.scss */
+#modal-form-window .main-form-wrapper .last-form .radio-container .radio:checked + label:after {
+  opacity: 1;
+}
+/* line 1850, ../../scss/app.scss */
+#modal-form-window .main-form-wrapper .last-form .radio-container .radio:focus + label:before {
+  box-shadow: 0 0 0 3px rgba(255, 255, 0, 0.5);
+}
+/* line 1855, ../../scss/app.scss */
+#modal-form-window .main-form-wrapper .last-form form input {
+  width: 100%;
+  border: 0;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  padding: 8px 12px;
+  outline: 0;
+  resize: none;
+}
+/* line 1866, ../../scss/app.scss */
+#modal-form-window .main-form-wrapper .last-form .form-control {
+  display: block;
+  width: 100%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+/* line 1884, ../../scss/app.scss */
+#modal-form-window .main-form-wrapper .last-form .btn-container {
+  width: 515px;
+  margin-top: 10px;
+  margin-left: 125px;
+}
+/* line 1889, ../../scss/app.scss */
+#modal-form-window .main-form-wrapper .last-form .alt {
+  width: 250px;
+  padding-left: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-right: 10px;
+  background: #fff;
+  font-size: 23px;
+  color: #838383;
+  text-align: left;
+  border: 2px solid #361f5b;
+  letter-spacing: 1px;
+}
+/* line 1902, ../../scss/app.scss */
+#modal-form-window .main-form-wrapper .last-form .btn-subm {
+  width: 250px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background: #531979;
+  font-size: 23px;
+  color: #fff;
+  border: 2px solid #531979;
+  letter-spacing: 1px;
+}
+
+/* line 1915, ../../scss/app.scss */
+.result-vis {
+  display: block !important;
+}
+
+/* line 1918, ../../scss/app.scss */
+.slick-slider {
+  overflow: hidden;
+}
+
+/* line 1921, ../../scss/app.scss */
+.slick-arrow {
+  width: 124px;
+  height: 128px;
+}
+
+/* line 1925, ../../scss/app.scss */
+.slick-prev {
+  left: -52px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  visibility: hidden;
+}
+/* line 1931, ../../scss/app.scss */
+.slick-prev:before {
+  right: 25px;
+  background: url(..//images/sageata-left.png) no-repeat;
+  background-size: 28px;
+}
+
+/* line 1937, ../../scss/app.scss */
+.slick-next {
+  right: -52px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  transition: .6s ease a;
+}
+/* line 1943, ../../scss/app.scss */
+.slick-next:before {
+  left: 35px;
+  background: url(..//images/sageata-right.png) no-repeat;
+  background-size: 28px;
+}
+
+/* line 1949, ../../scss/app.scss */
+.slick-prev, .slick-next {
+  top: 65%;
+  background: #f4dd7f;
+  z-index: 9999;
+}
+/* line 1953, ../../scss/app.scss */
+.slick-prev:before, .slick-next:before {
+  content: "";
+  position: absolute;
+  top: 35px;
+  width: 35px;
+  height: 66px;
+}
+
+/* line 1961, ../../scss/app.scss */
+.slick-prev:hover, .slick-prev:focus, .slick-next:hover, .slick-next:focus {
+  background: #e2cd76;
+}
+
+/* line 1964, ../../scss/app.scss */
+.card-service {
+  transition: all 200ms ease-in;
+}
+
+/* line 1967, ../../scss/app.scss */
+.mob-sidebar.mob-sidebar-opened {
+  display: block;
 }

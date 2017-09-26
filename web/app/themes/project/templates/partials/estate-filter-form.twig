@@ -93,9 +93,9 @@
                                 <li class="filter-group js-equal-height">
                                     <div class="title">{{ __('Niveluri imobil', 'project') }}</div>
                                     <div class="content">
-                                        {% include 'partials/forms/radio.twig' with {name: 'form[floor_range]', title: '1-4', value: '1-4' } %}
-                                        {% include 'partials/forms/radio.twig' with {name: 'form[floor_range]', title: '5-10', value: '5-10' } %}
-                                        {% include 'partials/forms/radio.twig' with {name: 'form[floor_range]', title: '10+', value: '10+' } %}
+                                        {% include 'partials/forms/radio.twig' with {name: 'form[floor_range1]', title: '1-4', value: '1-4' } %}
+                                        {% include 'partials/forms/radio.twig' with {name: 'form[floor_range2]', title: '5-10', value: '5-10' } %}
+                                        {% include 'partials/forms/radio.twig' with {name: 'form[floor_range3]', title: '10+', value: '10+' } %}
                                     </div>
                                 </li>
                             </ul>
@@ -103,7 +103,7 @@
                     </li>
                     <li>
                         <button class="submit-form js-submit-form" type="submit">{{ __('Cauta', 'project') }}</button>
-                        <button class="reset-search-form">
+                        <button class="reset-search-form" type="reset" onclick="location.href='/projects'">
                             <i class="fa fa-close"></i>
                             <span class="hidden">
                                 {{ __('Resetare căutare', 'project') }}
