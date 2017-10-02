@@ -332,8 +332,11 @@ project.Behavior.modalSliderForm = function (context) {
 	$('.btn-subm').on('click', function (e) {
 		$('#modal-form-window').iziModal('close');
 	});
-
-}
+};
+project.Behavior.homeSearchForm = function (context) {
+	var $select = $('.js-switch-home-form-post-type', context);
+	
+};
 
 
 /**

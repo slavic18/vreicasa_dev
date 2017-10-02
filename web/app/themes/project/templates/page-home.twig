@@ -38,19 +38,12 @@
                                         </select>
                                     </li>
                                     <li class="with-sub-menu sub-menu-bg  w-250">
-                                        <select class="switch-select" name="form[property_type]">
-                                            <optgroup label="{{ __('Casă/Apartament', 'project') }}">
-                                                <option value="apartament">{{ __('Apartament', 'project') }}</option>
-                                                <option value="garsoniera">{{ __('Garsonieră', 'project') }}</option>
-                                                <option value="casa">{{ __('Casă', 'project') }}</option>
-                                                <option value="duplex">{{ __('Duplex', 'project') }}</option>
-                                                <option value="penthouse">{{ __('Penthouse', 'project') }}</option>
-                                            </optgroup>
-                                            <optgroup label="{{ __('Alte tipuri', 'project') }}">
-                                                <option value="projects">{{ __('Proiecte imobiliare', 'project') }}</option>
-                                                <option value="teren">{{ __('Teren', 'project') }}</option>
-                                                <option value="commercial_spaces">{{ __('Spatii comerciale', 'project') }}</option>
-                                            </optgroup>
+                                        <select class="switch-select js-switch-home-form-post-type" name="form[post_type]">
+                                            <option value="apartament">{{ __('Apartament', 'project') }}</option>
+                                            <option value="houses">{{ __('Casă', 'project') }}</option>
+                                            <option value="projects">{{ __('Proiecte imobiliare', 'project') }}</option>
+                                            <option value="teren">{{ __('Teren', 'project') }}</option>
+                                            <option value="commercial_spaces">{{ __('Spatii comerciale', 'project') }}</option>
                                         </select>
                                         {#<span>{{ __('Casă/Apartament', 'project') }}</span>#}
                                         {#<div class="sub-menu">#}
