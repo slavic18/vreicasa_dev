@@ -2,59 +2,7 @@
 {% block content %}
     <section class="details">
         <h3 class="section-title pink">{{ __('Detalii proiect', 'project') }}</h3>
-        <div class="container">
-            <div class="row">
-                <div class="image-preview-wrapper">
-                    <div class="col-md-8">
-                        {% if post.thumbnail is not empty %}
-                            <div class="image-preview image-preview-first" >
-                                <a href="{{ post.thumbnail.src }}" data-lightbox="image-1">
-                                    <img src="{{ post.thumbnail.src }}" />
-                                </a>
-                            </div>
-                        {% endif %}
-                    </div>
-                    {% if post.images_gallery is not empty %}
-                        <div class="col-md-4 p-no">
-                            {% for field in post.get_field('images_gallery') %}
-                                {% if loop.index <= 2 %}
-                                    <div class="col-md-12 ">
-                                        <div class="image-preview {{ loop.index == 2  ? 'more-image-wrapper' }}">
-                                            <a href="{{ field.image |resize(350, 230)}}" data-lightbox="image-2">
-                                             <img src="{{ field.image }}"/>
-                                            </a>
-                                            {% if loop.index == 2 %}
-                                                {% set remainingImages =  loop.length - 2 %}
-                                                <a href="{{ field.image }}" class="more-image" data-lightbox="image-3">
-                                                    {{ remainingImages }} {{ __('imagini', 'project') }}
-                                                </a>
-                                            {% endif %}
-                                        </div>
-                                    </div>
-                                {% endif %}
-                            {% endfor %}
-                        </div>
-                    {% endif %}
-                </div>
-            </div>
-            {% if post.images_gallery is not empty %}
-                <div class="image-hide-block">
-                    <div class="row mb-35">
-                        {% for field in post.get_field('images_gallery') %}
-                            {% if loop.index > 2 %}
-                                <div class="col-md-4">
-                                    <div class="image-preview">
-                                        <a href="{{ field.image|resize(360, 250) }}" data-lightbox="image-5" >
-                                        <img src="{{ field.image|resize(360, 250) }}"/>
-                                        </a>
-                                    </div>
-                                </div>
-                            {% endif %}
-                        {% endfor %}
-                    </div>
-                </div>
-            {% endif %}
-        </div>
+        {% include 'partials/single-post/gallery.twig' %}
     </section>
     <section class="contact-row">
         <div class="container">
@@ -76,7 +24,8 @@
                     {% endif %}
                 </div>
                 <div class="col-md-4 add-favorit-wrapper tc">
-                    <a href="#" class="add-favorit js-add-to-favorites {{  post.isFavoritePost() ? 'active'  }}" data-post_id="{{ post.id }}">{{ __('Adaugă la favorite', 'project') }}</a>
+                    <a href="#" class="add-favorit js-add-to-favorites {{ post.isFavoritePost() ? 'active' }}"
+                       data-post_id="{{ post.id }}">{{ __('Adaugă la favorite', 'project') }}</a>
                 </div>
             </div>
         </div>
@@ -115,7 +64,7 @@
                                                 </div>
                                                 <div class="info-item-content">
                                                     <h5>{{ __('Dat în exploatare', 'project') }}</h5>
-                                                    <p>{{ post.dat_in_exploatare }}</p>
+                                                    <p>{{ post.get_field('dat_in_exploatare') }}</p>
                                                 </div>
                                             </div>
                                         {% endif %}
@@ -381,16 +330,16 @@
                 </div>
             </div>
         </div>
-        <div class="container">
-            <h3 class="section-title pink">{{ __('Apartamente disponibile', 'project') }}</h3>
-        </div>
 
-        {% if relatedPosts is not empty %}
+        {% if post.related_appartments is not empty %}
+            <div class="container">
+                <h3 class="section-title pink">{{ __('Apartamente disponibile', 'project') }}</h3>
+            </div>
             <div class="estate-list mt-35">
                 <div class="container">
                     <div class="row">
-                        {% for post in relatedPosts %}
-                            {% include 'partials/related-item-teaser.twig' %}
+                        {% for field in post.get_field('related_appartments') %}
+                            {% include 'partials/related-item-teaser.twig' with {post: TimberPost(field.related_appartment)} %}
                         {% endfor %}
                     </div>
                 </div>

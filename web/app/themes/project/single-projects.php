@@ -15,7 +15,7 @@ $context['post'] = $post;
 $context['relatedPosts'] = Timber::get_posts([
     'post_type' => 'projects',
     'posts_per_page' => 3,
-    'posts__not_in' => [$context['post']->id],
+    'post__not_in' => [$context['post']->id],
     'orderby' => 'rand'
 ], 'CustomTimberPost');
 

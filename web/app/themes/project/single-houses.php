@@ -13,11 +13,10 @@ $context = Timber::get_context();
 $post = Timber::query_post(false, 'CustomTimberPost');
 $context['post'] = $post;
 $context['relatedPosts'] = Timber::get_posts([
-    'post_type' => 'apartments',
+    'post_type' => 'houses',
     'posts_per_page' => 3,
     'post__not_in' => [$context['post']->id],
     'orderby' => 'rand'
 ], 'CustomTimberPost');
-
 
 Timber::render( array( 'single-' . $post->ID . '.twig', 'single-' . $post->post_type . '.twig', 'single.twig' ), $context );

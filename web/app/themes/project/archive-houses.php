@@ -6,7 +6,7 @@
  * @subpackage  Timber
  * @since   Timber 0.2
  */
-$templates = ['archive-teren.twig'];
+$templates = ['archive-houses.twig'];
 $context = Timber::get_context();
 
 global $paged;
@@ -19,8 +19,7 @@ if (isset($_REQUEST['form']) && $_REQUEST['form']) {
     $build = new BuildSearchQuery($form);
     $build->buildQuery();
 }
-
-$context['postType'] = 'teren';
+$context['postType'] = 'houses';
 $context['posts'] = Timber::get_posts(false, 'CustomTimberPost');
 $context['pagination'] = Timber::get_pagination(['show_all' => false, 'mid_size' => 4, 'end_size' => 1,]);
 $context['actualLink'] = "http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];

@@ -35,12 +35,12 @@
                                 <label>
                                     <input type="checkbox"
                                            name="login[remember]" {{ form.remember ? 'checked' }}
-                                            value="1"/>
+                                           value="1"/>
                                     <span>
                                         {{ __('Tine-mă minte', 'project') }}
                                     </span>
                                 </label>
-                                <a href="{{ getPermalink('restore-password') }}"class="float-left">Am uitat parola
+                                <a href="/wp/wp-login.php?action=lostpassword" class="float-left">Am uitat parola
                                 </a>
                             </div>
                         </div>
@@ -61,8 +61,9 @@
                     </div>
                     <div class="col-md-10 col-md-offset-1">
                         <a href="{{ getPermalink("register") }}" class="pink-button">
-                        {{ __('Creaza-ti un cont nou', 'project') }}
+                            {{ __('Creaza-ti un cont nou', 'project') }}
                         </a>
+                        {{ fn('do_action', 'wordpress_social_login') }}
                     </div>
                 </div>
             </div>

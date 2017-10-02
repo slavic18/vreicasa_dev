@@ -287,6 +287,25 @@
             "placeholder": "",
             "prepend": "",
             "append": "",
+            "key": "field_59cac7b41f162",
+            "label": "Emailul pentru pareri",
+            "name": "testimonials_email",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
             "key": "field_5969f61a2dd7d",
             "label": "Telefon",
             "name": "phone",
@@ -434,5 +453,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1501783830
+    "modified": 1506461713
 }

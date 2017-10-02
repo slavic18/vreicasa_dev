@@ -11,7 +11,7 @@
                                name="form[address]" value="{{ getFormNumberValue('form[address]') }}"/>
                     </div>
                 </li>
-                <li class="with-sub-menu"><span>{{ __('Preț', 'project') }}</span>
+                <li class="with-sub-menu"><span>{{ __('Buget', 'project') }}</span>
                     <div class="sub-menu price-submenu js-price-submenu">
                         <div class="switch-currency-container hidden">
                             <div class="currency">
@@ -33,15 +33,6 @@
                             {% include 'partials/forms/radio.twig' with {name: 'form[range]', value: '10000,150000',title: '100.000 - 150.000 €' } %}
                             {% include 'partials/forms/radio.twig' with {name: 'form[range]', value: '150000,300000',title: '150.000 - 300.000 €' } %}
                         </div>
-                    </div>
-                </li>
-                <li class="with-sub-menu">
-                    <span>{{ __('Camere', 'project') }}</span>
-                    <div class="sub-menu">
-                        {% include 'partials/forms/checkbox.twig' with {name: 'form[rooms][1]', title: '1', value: '1' } %}
-                        {% include 'partials/forms/checkbox.twig' with {name: 'form[rooms][2]', title: '2', value: '2' } %}
-                        {% include 'partials/forms/checkbox.twig' with {name: 'form[rooms][3]', title: '3', value: '3' } %}
-                        {% include 'partials/forms/checkbox.twig' with {name: 'form[rooms][4+]', title: '4+', value: '4+' } %}
                     </div>
                 </li>
                 <li class="with-sub-menu">
@@ -68,18 +59,8 @@
                 <ul class="filter-list">
                     <li class="with-sub-menu filter-group-container">
                         <span class="js-open-more-filters">{{ __('Mai multe', 'project') }}</span>
-                        <div class="sub-menu">
+                        <div class="sub-menu col-2">
                             <ul class="filter-group-list">
-                                <li class="filter-group js-equal-height">
-                                    <div class="title">{{ __('Tipul proprietății', 'project') }}</div>
-                                    <div class="content">
-                                        {% include 'partials/forms/checkbox.twig' with {name: 'form[property_type][garsoniera]',  value: 'garsoniera', title: 'Garsonieră', } %}
-                                        {% include 'partials/forms/checkbox.twig' with {name: 'form[property_type][apartament]',  value: 'apartament', title: 'Apartament', } %}
-                                        {#{% include 'partials/forms/checkbox.twig' with {name: 'form[property_type][casa]',  value: 'casa', title: 'Casă', } %}#}
-                                        {#{% include 'partials/forms/checkbox.twig' with {name: 'form[property_type][duplex]',  value: 'duplex', title: 'Duplex', } %}#}
-                                        {% include 'partials/forms/checkbox.twig' with {name: 'form[property_type][penthouse]',  value: 'penthouse', title: 'Penthouse', } %}
-                                    </div>
-                                </li>
                                 <li class="filter-group js-equal-height">
                                     <div class="title">{{ __('Utilități', 'project') }}</div>
                                     <div class="content">
@@ -93,9 +74,9 @@
                                 <li class="filter-group js-equal-height">
                                     <div class="title">{{ __('Niveluri imobil', 'project') }}</div>
                                     <div class="content">
-                                        {% include 'partials/forms/checkbox.twig' with {name: 'form[floor_range][1-4]', title: '1-4', value: '1-4' } %}
-                                        {% include 'partials/forms/checkbox.twig' with {name: 'form[floor_range][5-10]', title: '5-10', value: '5-10' } %}
-                                        {% include 'partials/forms/checkbox.twig' with {name: 'form[floor_range][10+]', title: '10+', value: '10+' } %}
+                                        {% include 'partials/forms/checkbox.twig' with {name: 'form[floor_range1]', title: '1-4', value: '1-4' } %}
+                                        {% include 'partials/forms/checkbox.twig' with {name: 'form[floor_range2]', title: '5-10', value: '5-10' } %}
+                                        {% include 'partials/forms/checkbox.twig' with {name: 'form[floor_range3]', title: '10+', value: '10+' } %}
                                     </div>
                                 </li>
                             </ul>

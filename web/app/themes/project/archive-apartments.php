@@ -20,6 +20,7 @@ if (isset($_REQUEST['form']) && $_REQUEST['form']) {
     $build->buildQuery();
 }
 
+$context['postType'] = 'apartments';
 $context['posts'] = Timber::get_posts(false, 'CustomTimberPost');
 $context['pagination'] = Timber::get_pagination(['show_all' => false, 'mid_size' => 4, 'end_size' => 1,]);
 $context['actualLink'] = "http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];

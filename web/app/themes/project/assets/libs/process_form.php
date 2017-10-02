@@ -118,7 +118,7 @@ function registerUser()
                 throw new Exception($userId->get_error_message());
             }
             // register users with physical type
-            if($form['subscribe']) {
+            if ($form['subscribe']) {
                 update_user_meta($userId, 'allow_to_subscribe', '1');
             }
 
@@ -137,8 +137,6 @@ function registerUser()
 }
 
 add_action('init', 'registerUser', 1);
-
-
 
 
 function loginByFormData()
@@ -171,12 +169,11 @@ function loginByFormData()
                 }
             }
         }
-        project_errors()->add('login_errors', __('Eroare', 'project'));
+        project_errors()->add('login_errors', __('Eroare: Ati introdus email-ul sau parola gresit', 'project'));
     }
 }
 
 add_action('init', 'loginByFormData', 1);
-
 
 
 function updateMainUserData()
@@ -234,3 +231,33 @@ function updateMainUserData()
 }
 
 add_action('init', 'updateMainUserData', 1);
+
+
+function processTestimonialsContactForm()
+{
+    if (isset($_SERVER['REQUEST_METHOD']) && ($_SERVER['REQUEST_METHOD'] == 'POST' && !empty($_POST['form_type']) && $_POST['form_type'] == 'testimonials')) {
+        try {
+            $sanitizedFormFields = [];
+            $form = $_POST['form'];
+            foreach (['how-you-find-site', 'nota-pentru-site', 'folosire-de-vreicasa', 'ajustari', 'alt-sfat'] as $field) {
+                if (isset($form[$field])) {
+                    $sanitizedFormFields[$field] = sanitize_text_field($form[$field]);
+                }
+            }
+
+            $html = '';
+            $subject = __('O noua parere despre site ', 'project') . get_bloginfo('name');
+            foreach ($sanitizedFormFields as $key => $field) {
+                $html .= $key . ' : ' . $field . PHP_EOL;
+            }
+            wp_mail(get_field('testimonials_email','options'), $subject, $html);
+            project_errors()->add('successfully_send_testimonial_email', __('Success', 'project'));
+        } catch (Exception $e) {
+            project_errors()->add('notify_on_available_errors', __($e->getMessage(), 'project'));
+        }
+    }
+}
+
+add_action('init', 'processTestimonialsContactForm', 1);
+
+

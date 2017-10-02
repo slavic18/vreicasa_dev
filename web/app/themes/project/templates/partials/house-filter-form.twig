@@ -68,18 +68,8 @@
                 <ul class="filter-list">
                     <li class="with-sub-menu filter-group-container">
                         <span class="js-open-more-filters">{{ __('Mai multe', 'project') }}</span>
-                        <div class="sub-menu">
+                        <div class="sub-menu col-2">
                             <ul class="filter-group-list">
-                                <li class="filter-group js-equal-height">
-                                    <div class="title">{{ __('Tipul proprietății', 'project') }}</div>
-                                    <div class="content">
-                                        {% include 'partials/forms/checkbox.twig' with {name: 'form[property_type][garsoniera]',  value: 'garsoniera', title: 'Garsonieră', } %}
-                                        {% include 'partials/forms/checkbox.twig' with {name: 'form[property_type][apartament]',  value: 'apartament', title: 'Apartament', } %}
-                                        {#{% include 'partials/forms/checkbox.twig' with {name: 'form[property_type][casa]',  value: 'casa', title: 'Casă', } %}#}
-                                        {#{% include 'partials/forms/checkbox.twig' with {name: 'form[property_type][duplex]',  value: 'duplex', title: 'Duplex', } %}#}
-                                        {% include 'partials/forms/checkbox.twig' with {name: 'form[property_type][penthouse]',  value: 'penthouse', title: 'Penthouse', } %}
-                                    </div>
-                                </li>
                                 <li class="filter-group js-equal-height">
                                     <div class="title">{{ __('Utilități', 'project') }}</div>
                                     <div class="content">

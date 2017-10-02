@@ -50,7 +50,6 @@
     "php": ">=5.5",
     "composer/installers": "~1.0.12",
     "vlucas/phpdotenv": "1.0.9",
-    "johnpbloch/wordpress": "~4.4.2",
     "oscarotero/env": "^1.0",
     "wpackagist-plugin/wp-mobile-detect": "~2.0",
     "wpackagist-plugin/wordpress-seo": "~3.0",
@@ -66,7 +65,9 @@
     "wpackagist-plugin/wp-seo-qtranslate-x": "~1.1",
     "wpackagist-plugin/timber-library": "~1.1",
     "wpackagist-plugin/profilepress": "~0.0.7",
-    "wpackagist-plugin/favicon-by-realfavicongenerator": "~1.3"
+    "wpackagist-plugin/wordpress-social-login": "~2.3.3",
+    "wpackagist-plugin/favicon-by-realfavicongenerator": "~1.3",
+    "johnpbloch/wordpress": "4.7.3"
   },
   "require-dev": {
     "wpackagist-plugin/what-the-file": "~1.5",
@@ -89,5 +90,3 @@
     "wordpress-install-dir": "web/wp"
   }
 }
-
-

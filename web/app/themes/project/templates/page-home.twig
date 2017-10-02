@@ -25,7 +25,9 @@
 
                                     <li class="sub-menu-full-width">
                                         <div class="address-input-container">
-                                            <input type="text" class="js-autocomplete-address ui-autocomplete-input" placeholder="Localitate, zonă" name="form[address]" autocomplete="off">
+                                            <input type="text" class="js-autocomplete-address ui-autocomplete-input"
+                                                   placeholder="Localitate, zonă" name="form[address]"
+                                                   autocomplete="off">
                                         </div>
                                     </li>
 
@@ -35,17 +37,31 @@
                                             <option value="rent">{{ __('Închiriază', 'project') }}</option>
                                         </select>
                                     </li>
-                                    <li class="with-sub-menu sub-menu-bg">
-                                        <span>{{ __('Casă/Apartament', 'project') }}</span>
-                                        <div class="sub-menu">
-                                            {% include 'partials/forms/checkbox.twig' with {name: 'form[property_type][garsoniera]',  value: 'garsoniera', title: 'Garsonieră', } %}
-                                            {% include 'partials/forms/checkbox.twig' with {name: 'form[property_type][apartament]',  value: 'apartament', title: 'Apartament', } %}
-                                            {% include 'partials/forms/checkbox.twig' with {name: 'form[property_type][casa]',  value: 'casa', title: 'Casă', } %}
-                                            {% include 'partials/forms/checkbox.twig' with {name: 'form[property_type][duplex]',  value: 'duplex', title: 'Duplex', } %}
-                                            {% include 'partials/forms/checkbox.twig' with {name: 'form[property_type][penthouse]',  value: 'penthouse', title: 'Penthouse', } %}
-                                            {% include 'partials/forms/checkbox.twig' with {name: 'form[property_type][teren]',  value: 'teren', title: 'Teren', } %}
-                                            {% include 'partials/forms/checkbox.twig' with {name: 'form[property_type][spatii]',  value: 'spatii', title: 'Spatii-comerciale', } %}
-                                        </div>
+                                    <li class="with-sub-menu sub-menu-bg  w-250">
+                                        <select class="switch-select" name="form[property_type]">
+                                            <optgroup label="{{ __('Casă/Apartament', 'project') }}">
+                                                <option value="apartament">{{ __('Apartament', 'project') }}</option>
+                                                <option value="garsoniera">{{ __('Garsonieră', 'project') }}</option>
+                                                <option value="casa">{{ __('Casă', 'project') }}</option>
+                                                <option value="duplex">{{ __('Duplex', 'project') }}</option>
+                                                <option value="penthouse">{{ __('Penthouse', 'project') }}</option>
+                                            </optgroup>
+                                            <optgroup label="{{ __('Alte tipuri', 'project') }}">
+                                                <option value="projects">{{ __('Proiecte imobiliare', 'project') }}</option>
+                                                <option value="teren">{{ __('Teren', 'project') }}</option>
+                                                <option value="commercial_spaces">{{ __('Spatii comerciale', 'project') }}</option>
+                                            </optgroup>
+                                        </select>
+                                        {#<span>{{ __('Casă/Apartament', 'project') }}</span>#}
+                                        {#<div class="sub-menu">#}
+                                        {#{% include 'partials/forms/checkbox.twig' with {name: 'form[property_type][garsoniera]',  value: 'garsoniera', title: 'Garsonieră', } %}#}
+                                        {#{% include 'partials/forms/checkbox.twig' with {name: 'form[property_type][apartament]',  value: 'apartament', title: 'Apartament', } %}#}
+                                        {#{% include 'partials/forms/checkbox.twig' with {name: 'form[property_type][casa]',  value: 'casa', title: 'Casă', } %}#}
+                                        {#{% include 'partials/forms/checkbox.twig' with {name: 'form[property_type][duplex]',  value: 'duplex', title: 'Duplex', } %}#}
+                                        {#{% include 'partials/forms/checkbox.twig' with {name: 'form[property_type][penthouse]',  value: 'penthouse', title: 'Penthouse', } %}#}
+                                        {#{% include 'partials/forms/checkbox.twig' with {name: 'form[property_type][teren]',  value: 'teren', title: 'Teren', } %}#}
+                                        {#{% include 'partials/forms/checkbox.twig' with {name: 'form[property_type][spatii]',  value: 'spatii', title: 'Spatii-comerciale', } %}#}
+                                        {#</div>#}
                                     </li>
                                     <li class="with-sub-menu sub-menu-mobile">
                                         <span>{{ __('Camere', 'project') }}</span>
@@ -116,45 +132,12 @@
                             {% for field in options.recommended_projects %}
                                 {% if field.project is not empty %}
                                     {% set post = customTimberPost(field.project) %}
-                                    <div class="item">
+                                    <div class="item item_bg_{{ loop.index }}">
                                         <div class="card-project">
                                             {% if post.thumbnail is not empty %}
                                                 <img src="{{ post.thumbnail.src|resize(265, 265) }}"/>
                                             {% endif %}
-                                            <div class="card-descroption" style="background: {{ random(['#8f164b'])  }}">
-                                                <p>{{ post.title }}</p>
-                                                <a href="{{ post.link }}">{{ __('Detalii', 'project') }}</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="card-project">
-                                            {% if post.thumbnail is not empty %}
-                                                <img src="{{ post.thumbnail.src|resize(265, 265) }}"/>
-                                            {% endif %}
-                                            <div class="card-descroption" style="background: {{ random(['#bd5011'])  }}">
-                                                <p>{{ post.title }}</p>
-                                                <a href="{{ post.link }}">{{ __('Detalii', 'project') }}</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="card-project">
-                                            {% if post.thumbnail is not empty %}
-                                                <img src="{{ post.thumbnail.src|resize(265, 265) }}"/>
-                                            {% endif %}
-                                            <div class="card-descroption" style="background: {{ random(['#400d4a'])  }}">
-                                                <p>{{ post.title }}</p>
-                                                <a href="{{ post.link }}">{{ __('Detalii', 'project') }}</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="card-project">
-                                            {% if post.thumbnail is not empty %}
-                                                <img src="{{ post.thumbnail.src|resize(265, 265) }}"/>
-                                            {% endif %}
-                                            <div class="card-descroption" style="background: {{ random(['#400d4a', '#bd5011', '#8f164b'])  }}">
+                                            <div class="card-descroption">
                                                 <p>{{ post.title }}</p>
                                                 <a href="{{ post.link }}">{{ __('Detalii', 'project') }}</a>
                                             </div>

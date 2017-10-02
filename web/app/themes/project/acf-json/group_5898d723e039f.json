@@ -289,8 +289,6 @@
             "choices": {
                 "garsoniera": "Garsoniera",
                 "apartament": "Apartament",
-                "casa": "Casa",
-                "duplex": "Duplex",
                 "penthouse": "Penthouse"
             },
             "default_value": [
@@ -398,27 +396,6 @@
             "label": "Utilitati",
             "name": "",
             "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            }
-        },
-        {
-            "default_value": "",
-            "min": 1950,
-            "max": 2030,
-            "step": 1,
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "key": "field_5898dcfe29c40",
-            "label": "Constructie",
-            "name": "constructie",
-            "type": "number",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -764,5 +741,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1487504085
+    "modified": 1506898995
 }

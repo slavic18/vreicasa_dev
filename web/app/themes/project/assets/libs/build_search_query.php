@@ -5,12 +5,28 @@ class BuildSearchQuery
     public $query = [];
     public $args = [];
     public $filterOptions = [];
-
+    public $postType = 'appartments';
+    public $priceField = 'price';
+    public $areaMinField = 'suprafata_min';
+    public $areaMaxField = 'suprafata_max';
+    const PROJECTS_POST_TYPE = 'projects';
+    const APARTMENTS_POST_TYPE = 'projects';
 
     public function __construct($args)
     {
         $this->filterOptions = require_once __DIR__ . '/filter_options.php';
         $this->args = $args;
+    }
+
+    public function updatePostType()
+    {
+        $queriedObject = get_queried_object();
+        if ($queriedObject) {
+            $this->query['post_type'] = $queriedObject->name;
+            $this->postType = $queriedObject->name;
+            $this->priceField = $this->postType == 'projects' ? 'pret_minim' : 'price';
+
+        }
     }
 
     public function updateAddressQuery()
@@ -30,29 +46,35 @@ class BuildSearchQuery
 
     public function updatePriceQuery()
     {
-        if (isset($this->args['min_price']) && $this->args['max_price']) {
+        if (!empty($this->args['min_price']) && !empty($this->args['max_price'])) {
             $this->query['meta_query'][] = [
-                'key' => 'price',
+                'key' => $this->priceField,
                 'value' => [sanitize_text_field($this->args['min_price']), sanitize_text_field($this->args['max_price'])],
-                'compare' => 'BETWEEN'
+                'compare' => 'BETWEEN',
+                'type' => 'NUMERIC'
+
             ];
-        } elseif (isset($this->args['min_price'])) {
+        } elseif (!empty($this->args['min_price'])) {
             $this->query['meta_query'][] = [
-                'key' => 'price',
+                'key' => $this->priceField,
                 'value' => sanitize_text_field($this->args['min_price']),
-                'compare' => '>='
+                'compare' => '>=',
+                'type' => 'NUMERIC'
+
             ];
-        } elseif (isset($this->args['max_price'])) {
+        } elseif (!empty($this->args['max_price'])) {
             $this->query['meta_query'][] = [
-                'key' => 'price',
+                'key' => $this->priceField,
                 'value' => sanitize_text_field($this->args['max_price']),
-                'compare' => '<='
+                'compare' => '<=',
+                'type' => 'NUMERIC'
+
             ];
         }
-        if (isset($this->args['range'])) {
+        if (!empty($this->args['range'])) {
             $range = explode(',', $this->args['range']);
             $this->query['meta_query'][] = [
-                'key' => 'price',
+                'key' => $this->priceField,
                 'value' => [sanitize_text_field($range[0]), sanitize_text_field($range[1])],
                 'compare' => 'BETWEEN',
                 'type' => 'NUMERIC'
@@ -63,14 +85,36 @@ class BuildSearchQuery
 
     public function updateAreaQuery()
     {
-        if (isset($this->args['min_area']) && $this->args['max_area']) {
+        if ($this->postType == self::PROJECTS_POST_TYPE) {
+            if (!empty($this->args['min_area'])) {
+                $this->query['meta_query'][] = [
+                    'key' => $this->areaMinField,
+                    'value' => sanitize_text_field($this->args['min_area']),
+                    'compare' => '<=',
+                    'type' => 'NUMERIC'
+
+                ];
+            }
+            if (!empty($this->args['max_area'])) {
+                $this->query['meta_query'][] = [
+                    'key' => $this->areaMaxField,
+                    'value' => sanitize_text_field($this->args['max_area']),
+                    'compare' => '>=',
+                    'type' => 'NUMERIC'
+                ];
+            }
+            return false;
+        }
+
+
+        if (!empty($this->args['min_area']) && !empty($this->args['max_area'])) {
             $this->query['meta_query'][] = [
                 'key' => 'area',
                 'value' => [sanitize_text_field($this->args['min_area']), sanitize_text_field($this->args['max_area'])],
                 'compare' => 'BETWEEN',
                 'type' => 'NUMERIC'
             ];
-        } elseif (isset($this->args['min_area'])) {
+        } elseif (!empty($this->args['min_area'])) {
             $this->query['meta_query'][] = [
                 'key' => 'area',
                 'value' => sanitize_text_field($this->args['min_area']),
@@ -78,7 +122,7 @@ class BuildSearchQuery
                 'type' => 'NUMERIC'
 
             ];
-        } elseif (isset($this->args['max_area'])) {
+        } elseif (!empty($this->args['max_area'])) {
             $this->query['meta_query'][] = [
                 'key' => 'area',
                 'value' => sanitize_text_field($this->args['max_area']),
@@ -90,34 +134,32 @@ class BuildSearchQuery
 
     public function updateFloorQuery()
     {
+        $minFloor = 0;
+        $maxFloor = 0;
         if (isset($this->args['floor_range'])) {
-            switch ($this->args['floor_range']) {
-                case '1-4':
-                    $this->query['meta_query'][] = [
-                        'key' => 'floor',
-                        'value' => [1, 4],
-                        'compare' => 'BETWEEN',
-                        'type' => 'NUMERIC'
-                    ];
-                    break;
-                case '5-10':
-                    $this->query['meta_query'][] = [
-                        'key' => 'floor',
-                        'value' => [5, 10],
-                        'compare' => 'BETWEEN',
-                        'type' => 'NUMERIC'
+            foreach ($this->args['floor_range'] as $key => $floor) {
+                switch ($key) {
+                    case '1-4':
+                        $minFloor = 1;
+                        $maxFloor = max(4, $maxFloor);
+                        break;
+                    case '5-10':
+                        $minFloor = $minFloor ? min(5, $minFloor) : 5;
+                        $maxFloor = max(10, $maxFloor);
+                        break;
+                    case '10+':
+                        $minFloor = $minFloor ? min(10, $minFloor) : 10;
+                        $maxFloor = max(99, $maxFloor);
+                        break;
+                }
 
-                    ];
-                    break;
-                case '10':
-                    $this->query['meta_query'][] = [
-                        'key' => 'floor',
-                        'value' => 10,
-                        'compare' => '>=',
-                        'type' => 'NUMERIC'
-                    ];
-                    break;
             }
+            $this->query['meta_query'][] = [
+                'key' => 'floor',
+                'value' => [$minFloor, $maxFloor],
+                'compare' => 'BETWEEN',
+                'type' => 'NUMERIC'
+            ];
         }
 
     }
@@ -166,11 +208,14 @@ class BuildSearchQuery
                     $this->query['order'] = 'DESC';
                     break;
                 case 'price-asc':
-                    $this->query['meta_key'] = 'price';
+                    $this->query['meta_key'] = $this->priceField;
                     $this->query['meta_type'] = 'NUMERIC';
                     $this->query['orderby'] = 'meta_value_num';
                     $this->query['order'] = 'ASC';
                 case 'price-desc':
+                    $this->query['meta_key'] = $this->priceField;
+                    $this->query['meta_type'] = 'NUMERIC';
+                    $this->query['orderby'] = 'meta_value_num';
                     $this->query['order'] = 'DESC';
                     break;
             }
@@ -179,10 +224,10 @@ class BuildSearchQuery
 
     public function updatePostsPerPageQuery()
     {
-        if (isset($this->args['perPage'])) {
-//            $this->query['posts_per_page'] = sanitize_text_field($this->args['perPage']);
-        }
         $this->query['posts_per_page'] = 12;
+        if (isset($this->args['perPage'])) {
+            $this->query['posts_per_page'] = sanitize_text_field($this->args['perPage']);
+        }
 
     }
 
@@ -195,6 +240,9 @@ class BuildSearchQuery
         }
         $this->query['post_type'] = 'apartments';
         $this->query['meta_query']['relation'] = 'AND';
+
+        // post type
+        $this->updatePostType();
 
         // orderby
         $this->updateOrderByQuery();
@@ -216,7 +264,8 @@ class BuildSearchQuery
 
         // other options
         $this->updateOtherOptionsQuery();
-//        deploy($this->query);
+//        deploy($this->query, false);
+//        deploy([$this->query, get_posts($this->query)]);
         query_posts($this->query);
 //        deploy($this->query);
     }

@@ -1,0 +1,192 @@
+<div class="izi-modal" id="modal-form-window">
+    <div class="main-form-wrapper">
+        <form class="form-slick" id="js-testimonials-form" method="post">
+            <div class="second-form">
+                <input type="hidden" name="form_type" value="testimonials">
+                <div class="title">
+                    <p>{{ __('Cum ai aflat de Vrei casa.ro', 'project') }}</p>
+                </div>
+                <div class="modal-form">
+                    <div class="radio-container">
+                        <input type="radio" class="radio" id="radio-6" name="form[how-you-find-site]"
+                               value="Pe internet" checked/>
+                        <label for="radio-6">
+                            <span>{{ __('Pe internet', 'project') }}</span>
+                        </label>
+                    </div>
+                    <div class="radio-container">
+                        <input type="radio" class="radio" id="radio-7" name="form[how-you-find-site]"
+                               value="Reviste, pliante"/>
+                        <label for="radio-7">
+                            <span>{{ __('Reviste, pliante', 'project') }}</span>
+                        </label>
+                    </div>
+                    <div class="radio-container">
+                        <input type="radio" class="radio" id="radio-8" name="form[how-you-find-site]"
+                               value="Banere, postere"/>
+                        <label for="radio-8">
+                            <span>{{ __('Banere, postere', 'project') }}</span>
+                        </label>
+                    </div>
+                    <div class="radio-container">
+                        <input type="radio" class="radio" id="radio-9" name="form[how-you-find-site]"
+                               value="De la prieteni sa familie"/>
+                        <label for="radio-9">
+                            <span>{{ __('De la prieteni sa familie', 'project') }}</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="first-form">
+                <div class="title">
+                    <p>{{ __('Spuneţi-ne despre experienţa cu noi', 'project') }}</p>
+                    <p>{{ __('Părerea voastră ne va ajuta să fim mai buni', 'project') }}</p>
+                    <p>{{ __('Ai recomanda Vrei casă.ro prietenilor tăi?', 'project') }}</p>
+                </div>
+                <div class="modal-form">
+                    <div data-attr="1" class="radio-container">
+                        <input type="radio" class="radio" id="radio-1" name="form[nota-pentru-site]" value="1"/>
+                        <label for="radio-1" class="bg-color-1">
+                            <span>1</span>
+                        </label>
+                    </div>
+                    <div data-attr="2" class="radio-container">
+                        <input type="radio" class="radio" id="radio-2" name="form[nota-pentru-site]" value="2"/>
+                        <label for="radio-2" class="bg-color-2">
+                            <span>2</span>
+                        </label>
+                    </div>
+                    <div data-attr="3" class="radio-container">
+                        <input type="radio" class="radio" id="radio-3" name="form[nota-pentru-site]" value="3"/>
+                        <label for="radio-3" class="bg-color-3">
+                            <span>3</span>
+                        </label>
+                    </div>
+                    <div data-attr="4" class="radio-container">
+                        <input type="radio" class="radio" id="radio-4" name="form[nota-pentru-site]" value="4"/>
+                        <label for="radio-4" class="bg-color-4">
+                            <span>4</span>
+                        </label>
+                    </div>
+                    <div data-attr="5" class="radio-container">
+                        <input type="radio" class="radio" id="radio-5" name="form[nota-pentru-site]" value="5" checked/>
+                        <label for="radio-5" class="bg-color-5">
+                            <span>5</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="result-rating">
+                    <div data-attr="1" class="result">
+                        <div class="img-container">
+                            <img src="{{ theme.link }}/assets/images/smile-5.png"/>
+                        </div>
+                        <div class="gray-letter">
+                            <p>{{ __('În nici un caz', 'project') }}</p>
+                        </div>
+                    </div>
+                    <div data-attr="2" class="result">
+                        <div class="img-container">
+                            <img src="{{ theme.link }}/assets/images/smile-4.png"/>
+                        </div>
+                        <div class="gray-letter">
+                            <p>{{ __('Nu încă', 'project') }}</p>
+                        </div>
+                    </div>
+                    <div data-attr="3" class="result">
+                        <div class="img-container">
+                            <img src="{{ theme.link }}/assets/images/smile-3.png"/>
+                        </div>
+                        <div class="gray-letter">
+                            <p>{{ __('Da, o să recomand', 'project') }}</p>
+                        </div>
+                    </div>
+                    <div data-attr="4" class="result">
+                        <div class="img-container">
+                            <img src="{{ theme.link }}/assets/images/smile-2.png"/>
+                        </div>
+                        <div class="gray-letter">
+                            <p>{{ __('În fine', 'project') }}</p>
+                        </div>
+                    </div>
+                    <div data-attr="5" class="result result-vis">
+                        <div class="img-container">
+                            <img src="{{ theme.link }}/assets/images/smile.png"/>
+                        </div>
+                        <div class="gray-letter">
+                            <p>{{ __('Deja am recomandat', 'project') }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="third-form">
+                <div class="title">
+                    <p>{{ __('Folosirea Vrei casă.ro este:', 'project') }}</p>
+                </div>
+                <div class="modal-form">
+                    <div class="radio-container">
+                        <input type="radio" class="radio orange-col" id="radio-10" name="form[folosire-de-vreicasa"
+                               value="Greu"/>
+                        <label for="radio-10">
+                            <span>{{ __('Greu', 'project') }}</span>
+                        </label>
+                    </div>
+                    <div class="radio-container">
+                        <input type="radio" class="radio violet-col" id="radio-11" name="form[folosire-de-vreicasa]"
+                               value="În regulă"/>
+                        <label for="radio-11">
+                            <span class="pos-left">{{ __('În regulă', 'project') }}</span>
+                        </label>
+                    </div>
+                    <div class="radio-container">
+                        <input type="radio" class="radio pink-col" id="radio-12" name="form[folosire-de-vreicasa]"
+                               value="Uşor"/>
+                        <label for="radio-12">
+                            <span>{{ __('Uşor', 'project') }}</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="last-form">
+                <div class="title">
+                    <p>{{ __('Aveţi sfaturi pentru noi?', 'project') }}</p>
+                </div>
+                <div class="modal-form">
+                    <div class="radio-container">
+                        <input type="radio" class="radio" id="radio-13" name="form[ajustari]"
+                               value="Pozele pot fi mai bune"/>
+                        <label for="radio-13">
+                            <span>{{ __('Pozele pot fi mai bune', 'project') }}</span>
+                        </label>
+                    </div>
+                    <div class="radio-container">
+                        <input type="radio" class="radio" id="radio-14" name="form[ajustari]"
+                               value="Necesita mai multe informaţii referitoare la amplasament"/>
+                        <label for="radio-14">
+                            <span>{{ __('Necesita mai multe informaţii referitoare la amplasament', 'project') }}</span>
+                        </label>
+                    </div>
+                    <div class="radio-container">
+                        <input type="radio" class="radio" id="radio-15" name="form[ajustari]"
+                               value="Postaţi mai multe oferte"/>
+                        <label for="radio-15">
+                            <span>{{ __('Postaţi mai multe oferte', 'project') }}</span>
+                        </label>
+                    </div>
+                    <div class="radio-container">
+                        <input type="radio" class="radio" id="radio-16" name="form[ajustari]"
+                               value="Rectificaţi informaţiile greşite"/>
+                        <label for="radio-16">
+                            <span>{{ __('Rectificaţi informaţiile greşite', 'project') }}</span>
+                        </label>
+                    </div>
+                    <div class="btn-container">
+                        <input type="text" class="alt" name="form[alt-sfat]"
+                               placeholder="{{ __('Alt sfat', 'project') }}"/>
+                        <button type="submit" class="btn-subm">{{ __('Trimite', 'project') }}</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

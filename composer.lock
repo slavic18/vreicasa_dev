@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "eea0feb1730cb6c0a1e34e3b6453720a",
-    "content-hash": "cb09d5c979fee9648312e2d7c2d247ae",
+    "hash": "26938009ad2b03af82d15085cf62fcd8",
+    "content-hash": "b464cc1f1a44308dca24bc40ac087efb",
     "packages": [
         {
             "name": "composer/installers",
@@ -109,20 +109,58 @@
         },
         {
             "name": "johnpbloch/wordpress",
-            "version": "4.4.7",
+            "version": "4.7.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/johnpbloch/wordpress.git",
-                "reference": "58d11366b280db486325d25264e3c05bf3cb680c"
+                "reference": "9f1f8eb6c37d10d73b9d7946c0ab5425a5492a9a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/johnpbloch/wordpress/zipball/58d11366b280db486325d25264e3c05bf3cb680c",
-                "reference": "58d11366b280db486325d25264e3c05bf3cb680c",
+                "url": "https://api.github.com/repos/johnpbloch/wordpress/zipball/9f1f8eb6c37d10d73b9d7946c0ab5425a5492a9a",
+                "reference": "9f1f8eb6c37d10d73b9d7946c0ab5425a5492a9a",
                 "shasum": ""
             },
             "require": {
+                "johnpbloch/wordpress-core": "4.7.3",
                 "johnpbloch/wordpress-core-installer": "~0.2",
+                "php": ">=5.3.2"
+            },
+            "type": "package",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "WordPress Community",
+                    "homepage": "http://wordpress.org/about/"
+                }
+            ],
+            "description": "WordPress is web software you can use to create a beautiful website or blog.",
+            "homepage": "http://wordpress.org/",
+            "keywords": [
+                "blog",
+                "cms",
+                "wordpress"
+            ],
+            "time": "2017-03-18 04:47:24"
+        },
+        {
+            "name": "johnpbloch/wordpress-core",
+            "version": "4.7.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/johnpbloch/wordpress-core.git",
+                "reference": "21255f593ac7db93892724321f468c276b15aa65"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/johnpbloch/wordpress-core/zipball/21255f593ac7db93892724321f468c276b15aa65",
+                "reference": "21255f593ac7db93892724321f468c276b15aa65",
+                "shasum": ""
+            },
+            "require": {
                 "php": ">=5.3.2"
             },
             "type": "wordpress-core",
@@ -140,9 +178,10 @@
             "homepage": "http://wordpress.org/",
             "keywords": [
                 "blog",
-                "cms"
+                "cms",
+                "wordpress"
             ],
-            "time": "2017-01-26 18:32:03"
+            "time": "2017-03-06 18:43:41"
         },
         {
             "name": "johnpbloch/wordpress-core-installer",
@@ -393,6 +432,26 @@
             "homepage": "https://wordpress.org/plugins/favicon-by-realfavicongenerator/"
         },
         {
+            "name": "wpackagist-plugin/profilepress",
+            "version": "0.0.7",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/profilepress/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/profilepress.zip?timestamp=1427856342",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/profilepress/"
+        },
+        {
             "name": "wpackagist-plugin/qtranslate-x",
             "version": "3.4.6.8",
             "source": {
@@ -491,6 +550,26 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/wordpress-seo/"
+        },
+        {
+            "name": "wpackagist-plugin/wordpress-social-login",
+            "version": "2.3.3",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/wordpress-social-login/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/wordpress-social-login.zip?timestamp=1491677726",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wordpress-social-login/"
         },
         {
             "name": "wpackagist-plugin/wp-mail-smtp",
